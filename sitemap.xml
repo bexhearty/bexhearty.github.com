@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>http://jaimes.me</loc>
+    <lastmod>2015-05-13T20:04:25.792Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+    <url>
+      <loc>http://jaimes.me/an-example-article</loc>
+      <lastmod>2015-05-13T20:04:25.792Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>http://jaimes.me/an-example-link</loc>
+      <lastmod>2015-05-13T20:04:25.792Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+</urlset>
