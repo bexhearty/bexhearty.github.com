@@ -1,14 +1,10 @@
 
 # test form
 
-<form role="form">
-    <div class="form-group">
-        <label for="email">Waitlist</label>
-        <input name="email" id="email" placeholder="Email" class="form-control" type="email">
-    </div>
-    <div class="form-group">
-        <input value="Send!" class="form-control" type="submit">
-    </div>
+<form name="email" method="post">
+  <label></label>
+  <input type="text" name="EMAIL" value="" placeholder="Email" />
+  <input type="submit" name="submit" value="submit" />
 </form>
 <script type="text/javascript">
   function identify(){
