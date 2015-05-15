@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-05-15T00:01:29.832Z</updated>
+  <updated>2015-05-15T00:14:12.155Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -30,15 +30,11 @@
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;form role=&quot;form&quot;&gt;</summary>
-    <content type="html">&lt;p&gt;&lt;form role=&quot;form&quot;&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;label for=&quot;email&quot;&gt;Waitlist&lt;/label&gt;
-        &lt;input name=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email&quot; class=&quot;form-control&quot; type=&quot;email&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;input value=&quot;Send!&quot; class=&quot;form-control&quot; type=&quot;submit&quot;&gt;
-    &lt;/div&gt;
+    <summary type="html">&lt;form name=&quot;email&quot; method=&quot;post&quot;&gt;</summary>
+    <content type="html">&lt;p&gt;&lt;form name=&quot;email&quot; method=&quot;post&quot;&gt;
+  &lt;label&gt;&lt;/label&gt;
+  &lt;input type=&quot;text&quot; name=&quot;EMAIL&quot; value=&quot;&quot; placeholder=&quot;Email&quot; /&gt;
+  &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;submit&quot; /&gt;
 &lt;/form&gt;&lt;/p&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   function identify(){
@@ -47,7 +43,8 @@
     return true;
   }
   document.forms[&quot;email&quot;].onsubmit = identify;  
-&lt;/script&gt;</content>
+&lt;/script&gt;
+</content>
   </entry>
   <entry>
     <title>An Example Link</title>
