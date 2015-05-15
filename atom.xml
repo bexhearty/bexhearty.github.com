@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-05-13T20:04:25.792Z</updated>
+  <updated>2015-05-15T00:01:29.832Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -21,6 +21,33 @@
     <content type="html">&lt;p&gt;For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much—the wheel, New York, wars and so on—whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man—for precisely the same reasons.&lt;/p&gt;
 &lt;p&gt;this is new stuff on this article. new stuff is awesome.&lt;/p&gt;
 </content>
+  </entry>
+  <entry>
+    <title>test form</title>
+    <link href="http://jaimes.me/test"/>
+    <id>http://jaimes.me/test</id>
+    <updated>2014-12-02T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;form role=&quot;form&quot;&gt;</summary>
+    <content type="html">&lt;p&gt;&lt;form role=&quot;form&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;email&quot;&gt;Waitlist&lt;/label&gt;
+        &lt;input name=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email&quot; class=&quot;form-control&quot; type=&quot;email&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input value=&quot;Send!&quot; class=&quot;form-control&quot; type=&quot;submit&quot;&gt;
+    &lt;/div&gt;
+&lt;/form&gt;&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  function identify(){
+    var email = this[&quot;EMAIL&quot;].value;
+    analytics.identify(email, { email: email });
+    return true;
+  }
+  document.forms[&quot;email&quot;].onsubmit = identify;  
+&lt;/script&gt;</content>
   </entry>
   <entry>
     <title>An Example Link</title>
