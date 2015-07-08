@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-08T22:15:13.991Z</updated>
+  <updated>2015-07-08T22:49:11.053Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -65,8 +65,7 @@ On that &lt;code&gt;index.html&lt;/code&gt; file, insert the following text, and
                 &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
                 &amp;lt;input name=&amp;quot;submit&amp;quot; type=&amp;quot;submit&amp;quot; value=&amp;quot;submit&amp;quot; style=&amp;quot;color: #ffffff; background: #63686b; font-size: 1em; border: none;&amp;quot;/&amp;gt;
                 &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
-                &amp;lt;/form&amp;gt;        
-        /form&amp;gt; 
+                &amp;lt;/form&amp;gt;       
         &amp;lt;/div&amp;gt;
         &amp;lt;/div&amp;gt;
         &amp;lt;footer&amp;gt;
