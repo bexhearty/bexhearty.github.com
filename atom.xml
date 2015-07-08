@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-08T20:09:34.277Z</updated>
+  <updated>2015-07-08T20:14:27.579Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -20,6 +20,177 @@
 </summary>
     <content type="html">&lt;p&gt;For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much—the wheel, New York, wars and so on—whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man—for precisely the same reasons.&lt;/p&gt;
 &lt;p&gt;this is new stuff on this article. new stuff is awesome.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Module 1. </title>
+    <link href="http://jaimes.me/module-1"/>
+    <id>http://jaimes.me/module-1</id>
+    <updated>2015-07-07T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;Module 1 (45 Minutes): Make a website and implement Segment from scratch in ten steps. &lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;Module 1 (45 Minutes): Make a website and implement Segment from scratch in ten steps. &lt;/p&gt;
+&lt;p&gt;1.
+Create an account in GitHub (&lt;a href=&quot;https://github.com/new&quot;&gt;https://github.com/new&lt;/a&gt;) or sign in.&lt;/p&gt;
+&lt;p&gt;2.
+Create a new repository (click on the black + sign on the top right) and call it &lt;code&gt;yourusername.github.io&lt;/code&gt; . In my case, my new repository is called &lt;code&gt;thebecky.github.io&lt;/code&gt;, check the box that initializes the repo with a README file, and click on the “Create repository” button.
+&lt;img src=&quot;https://lh4.googleusercontent.com/7pAUHBkudZZNE-2el-xvBiw847A_KJK4AfIE6J4hcZLOURkFUQO3h3juy6Rbo2Ga9ZcIo4LIiVymliSpjvr-4CVmahvcx9Ttm3kWIi8fvmWgG7pNqRCNcOfcboRvfg2MdjX7Mwk&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;3.
+Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)
+&lt;img src=&quot;https://lh3.googleusercontent.com/2gBmt3YAt1nut9kwvPxr0dEE3H5_1_cweeMmygZIgooQX7ButSFH48Hn4Dj1qADAINgXla6SZt40pl831XghO0nO_ULGgE2l-32nc73nerXnbgHbMc7fo0sd8DWdkL1sjUbYi28&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;4.
+On that &lt;code&gt;index.html&lt;/code&gt; file, insert the following text, and commit that file by clicking on the green “Commit” button:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+        &amp;lt;html&amp;gt;
+        &amp;lt;head&amp;gt;
+                &amp;lt;title&amp;gt;Travel Destinations&amp;lt;/title&amp;gt;
+                &amp;lt;!--Placeholder for Segment Snippet --&amp;gt;
+                &amp;lt;!--Placeholder for index.css link --&amp;gt;
+        &amp;lt;/head&amp;gt;
+        &amp;lt;body&amp;gt;
+        &amp;lt;nav&amp;gt;
+        &amp;lt;ul&amp;gt;
+                &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+                &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/countries&amp;quot;&amp;gt;Countries&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+                &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/blog&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+        &amp;lt;/nav&amp;gt;
+        &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+        &amp;lt;div class=&amp;quot;blurb&amp;quot;&amp;gt;        
+        &amp;lt;h1&amp;gt;What is your favorite place to travel?&amp;lt;/h1&amp;gt;
+                &amp;lt;p&amp;gt;I am building a directory of the sweetest travel destinations.&amp;lt;/p&amp;gt;
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                &amp;lt;form name=&amp;quot;travel&amp;quot; onsubmit=&amp;quot;identify(event)&amp;quot;&amp;gt;
+                Favorite Travel Destination:
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                &amp;lt;input name=&amp;quot;destination&amp;quot; required=&amp;quot;&amp;quot; size=&amp;quot;81&amp;quot; type=&amp;quot;text&amp;quot;/&amp;gt;
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                Cool things to do, places to see and restaurants to visit:
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                &amp;lt;textarea cols=&amp;quot;81&amp;quot; name=&amp;quot;details&amp;quot; required=&amp;quot;&amp;quot; rows=&amp;quot;10&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                Name:
+                &amp;lt;input name=&amp;quot;fullname&amp;quot; required=&amp;quot;&amp;quot; size=&amp;quot;75&amp;quot; type=&amp;quot;text&amp;quot;/&amp;gt;
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                Email:
+                &amp;lt;input name=&amp;quot;email&amp;quot; required=&amp;quot;&amp;quot; size=&amp;quot;75&amp;quot; type=&amp;quot;email&amp;quot;/&amp;gt;
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                &amp;lt;input name=&amp;quot;submit&amp;quot; type=&amp;quot;submit&amp;quot; value=&amp;quot;submit&amp;quot; style=&amp;quot;color: #ffffff; background: #63686b; font-size: 1em; border: none;&amp;quot;/&amp;gt;
+                &amp;lt;br&amp;gt;&amp;lt;br&amp;gt;
+                &amp;lt;/form&amp;gt;        
+        /form&amp;gt; 
+        &amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;footer&amp;gt;
+        &amp;lt;ul&amp;gt;
+               &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;mailto:beckyjaimes@gmail.com&amp;quot;&amp;gt;email me&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+        &amp;lt;/footer&amp;gt;
+        &amp;lt;/body&amp;gt;
+        &amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;5.
+On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look ugly like this:
+&lt;img src=&quot;https://lh4.googleusercontent.com/htMHBgB6SmAWH98_kNRSV6SpmImYisWdAcGcyRnOma1FH30C208_qo1MRMWtKIzM0Re_LK5MawP0dwX2Dg6NgjgEsbVxmexI6nIzK1Z0jaYGvVOKcjMhrMEfhRqDCbopFP5KpM0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SIX:&lt;/strong&gt; 
+To make it pretty,  create an &lt;code&gt;index.css&lt;/code&gt; file. Insert the following text on that file, and press the green commit button:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;body {
+    font-family: &amp;#39;Helvetica&amp;#39;, &amp;#39;Arial&amp;#39;, &amp;#39;Sans-Serif&amp;#39;;
+    font-size:1em;
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family:&amp;#39;Helvetica&amp;#39;, &amp;#39;Arial&amp;#39;, &amp;#39;Sans-Serif&amp;#39;;
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 2em;
+    font-family:&amp;#39;Helvetica&amp;#39;, &amp;#39;Arial&amp;#39;, &amp;#39;Sans-Serif&amp;#39;;
+}
+p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    color: #333;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Your project code should now look like this: 
+&lt;img src=&quot;https://lh6.googleusercontent.com/WElic7ObgxtawSB7YpoMqwRQYxxORQT6vKz62p5XcCuPP2kJ19ac59at2LPC8Vood63_9W81oB7GwDjnlHnRBR_USO1EQdyh5jKg7cyXmIMMyJnUtqCq__MvFZkYg-KzpIv-cOY&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SEVEN:&lt;/strong&gt; 
+Go back to the first file we created, the &lt;code&gt;index.html&lt;/code&gt; file, click on the pencil on the top right (to edit) and replace the text that reads &lt;code&gt;&amp;lt;!--Placeholder for index.css link --&amp;gt;&lt;/code&gt; in line 6  with &lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/index.css&amp;quot;&amp;gt;&lt;/code&gt;. The new file should look like this:
+&lt;img src=&quot;https://lh6.googleusercontent.com/Bipyrmp-mMQrgwTkRS_ZEkDm8mLjXG7J_LusLIx8thjRvW6Waua6Ng3HwyJmYnrluoruoTOlSlRGOFIQUs8Xq_7DWSCXgcjKJQJeWGITTEutoMDOk7K8dekiYaRGKYNwsqcxI08&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;After committing the change, and refreshing your &lt;code&gt;yourusename.github.io&lt;/code&gt; website, it should be stylin like this:
+&lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279269707_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EIGHT:&lt;/strong&gt; 
+Segment on your site. 
+First create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
+&lt;img src=&quot;https://lh6.googleusercontent.com/ue6swDWFchY5LllpF-fw60ig5peul0A7eYrMEeP-euZz9BnfSekldy1jwHL_bBjjKyI3Fec-ReOE9NxoJjC1YIdpO5g5twfIEdP5ycdsJMiSEC6Yn8jqHdUZUf5RMRF6v2EeIdI&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Copy the full snippet from the box on your segment dashboard, go back to your &lt;code&gt;index.html&lt;/code&gt; file, select the pencil to edit, and replace the line that reads &lt;code&gt;&amp;lt;!--Placeholder for Segment Snippet --&amp;gt;&lt;/code&gt; (mine is line 5) with the Segment snippet.&lt;/p&gt;
+&lt;p&gt;Your new file should look like this:
+&lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436248776313_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NINE:&lt;/strong&gt; 
+Identify those users that submit a destination. To do so, create a little function that captures the input from the form, and sends some of that data as parameters in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 44) and insert the following text.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        function identify(e){
+        e.preventDefault();
+        var form = e.target;
+        var email = form[&amp;quot;email&amp;quot;].value;
+        var fullname = form[&amp;quot;fullname&amp;quot;].value;
+        var destination = form[&amp;quot;destination&amp;quot;];
+        var details = form[&amp;quot;details&amp;quot;].value;
+        var user = {email: email, name: fullname, details: details};
+        analytics.identify(email, {email: email, name: fullname});
+        analytics.track(&amp;#39;destination submitted&amp;#39;, user, function() {
+            window.location.href = &amp;quot;/blog&amp;quot;;
+        });
+        }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Your index.html file should contain code similar to the one found here (with your project’s Segment write key in line 7).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TEN:&lt;/strong&gt; 
+Commit the changes. Go back to your website and submit a travel recommendation form.
+&lt;img src=&quot;https://lh6.googleusercontent.com/XwmCdFqs7yF7nMYndphwPR_kyPoMVQipuUedClecnF9tjO5rh5XG77wpqa7C4znkBkBHJhN8vv2q9qSHwSewIqgTV3b-Nn0lmh8AFtAvxCYs1K2EMVKM2YwK3AmSNPUBcXQ4tvg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Go back to your site’s debugger on the Segment’s dash. You should be able to see the following 3 calls:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436278764869_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace &lt;code&gt;analytics.page()&lt;/code&gt; in your index.html file (mine is in line 8) with  &lt;code&gt;analytics.page(document.title)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;your calls should now look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279711665_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Congratulations! You just finished Module 1 of this training series.&lt;/p&gt;
+&lt;p&gt;One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.&lt;/p&gt;
+&lt;p&gt;What is in &lt;strong&gt;Module 2&lt;/strong&gt;?   Notice how after submitting your form you were taken to a 404 page. That is because we redirected the user after pressing the “submit” button to the website’s blog (yourusername.github.io/blog) - but we haven’t created one yet! In module 2 we will create a blog page and a countries page using Jekyll.
+We will also integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
 </content>
   </entry>
   <entry>
