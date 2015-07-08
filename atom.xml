@@ -3,11 +3,25 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-08T20:51:55.437Z</updated>
+  <updated>2015-07-08T21:57:22.470Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
+  <entry>
+    <title>An Example Article</title>
+    <link href="http://jaimes.me/an-example-article"/>
+    <id>http://jaimes.me/an-example-article</id>
+    <updated>2042-04-02T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much—the wheel, New York, wars and so on—whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man—for precisely the same reasons.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much—the wheel, New York, wars and so on—whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man—for precisely the same reasons.&lt;/p&gt;
+&lt;p&gt;this is new stuff on this article. new stuff is awesome.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>How to build website and implement Segment from scratch in ten steps (45 minutes). </title>
     <link href="http://jaimes.me/module-1"/>
@@ -176,6 +190,30 @@ Commit the changes. Go back to your website and submit a travel recommendation f
 &lt;p&gt;One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.&lt;/p&gt;
 &lt;p&gt;What is in &lt;strong&gt;Module 2&lt;/strong&gt;?   Notice how after submitting your form you were taken to a 404 page. That is because we redirected the user after pressing the “submit” button to the website’s blog (yourusername.github.io/blog) - but we haven’t created one yet! In module 2 we will create a blog page and a countries page using Jekyll.
 We will also integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>test form</title>
+    <link href="http://jaimes.me/test"/>
+    <id>http://jaimes.me/test</id>
+    <updated>2014-12-02T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;form name=&quot;email&quot; method=&quot;post&quot;&gt;</summary>
+    <content type="html">&lt;p&gt;&lt;form name=&quot;email&quot; method=&quot;post&quot;&gt;
+  &lt;label&gt;&lt;/label&gt;
+  &lt;input type=&quot;text&quot; name=&quot;EMAIL&quot; value=&quot;&quot; placeholder=&quot;Email&quot; /&gt;
+  &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;submit&quot; /&gt;
+&lt;/form&gt;&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  function identify(){
+    var email = this[&quot;EMAIL&quot;].value;
+    analytics.identify(email, { email: email });
+    return true;
+  }
+  document.forms[&quot;email&quot;].onsubmit = identify;  
+&lt;/script&gt;
 </content>
   </entry>
 </feed>
