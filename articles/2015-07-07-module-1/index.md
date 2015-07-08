@@ -54,8 +54,7 @@ On that `index.html` file, insert the following text, and commit that file by cl
                 <br><br><br>
                 <input name="submit" type="submit" value="submit" style="color: #ffffff; background: #63686b; font-size: 1em; border: none;"/>
                 <br><br>
-                </form>        
-        /form> 
+                </form>       
         </div>
         </div>
         <footer>
