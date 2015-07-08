@@ -1,7 +1,5 @@
 
-# Module 1. 
-
-Module 1 (45 Minutes): Make a website and implement Segment from scratch in ten steps. 
+# Module 1 (45 Minutes): Make a website and implement Segment from scratch in ten steps. 
 
 1.
 Create an account in GitHub (https://github.com/new) or sign in.
