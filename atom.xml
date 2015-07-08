@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-08T20:28:44.195Z</updated>
+  <updated>2015-07-08T20:30:37.709Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -177,19 +177,6 @@ Commit the changes. Go back to your website and submit a travel recommendation f
 &lt;p&gt;One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.&lt;/p&gt;
 &lt;p&gt;What is in &lt;strong&gt;Module 2&lt;/strong&gt;?   Notice how after submitting your form you were taken to a 404 page. That is because we redirected the user after pressing the “submit” button to the website’s blog (yourusername.github.io/blog) - but we haven’t created one yet! In module 2 we will create a blog page and a countries page using Jekyll.
 We will also integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>An Example Link</title>
-    <link href="http://en.wikipedia.org/wiki/Nineteen_Eighty-Four"/>
-    <id>http://jaimes.me/an-example-link</id>
-    <updated>1984-01-13T00:00:00.000Z</updated>
-    <author>
-      <name>Becky Jaimes</name>
-    </author>
-    <summary type="html">&lt;p&gt;Doublethink means the power of holding two contradictory beliefs in one’s mind simultaneously, and accepting both of them.&lt;/p&gt;
-</summary>
-    <content type="html">&lt;p&gt;Doublethink means the power of holding two contradictory beliefs in one’s mind simultaneously, and accepting both of them.&lt;/p&gt;
 </content>
   </entry>
 </feed>
