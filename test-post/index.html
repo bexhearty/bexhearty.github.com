@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Becky Jaimes</title>
+    <title>An Example Link</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:creator" content="theebecky">
@@ -38,55 +38,22 @@
           <a class="Profile-twitter-button twitter-follow-button" href="https://twitter.com/theebecky" data-show-count="false">Follow @theebecky</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>      </div>
-      <div class="Layout-main"><div class="Summaries">
-  <ol class="Summaries-list">
-    <li class="Summaries-list-item">
-      <div class="Summary">
-        <h3 class="Summary-title Heading Heading--medium">
-          <a class="Summary-link" href="/an-example-article">An Example Article</a>
-        </h3>
-        <time class="Summary-date" datetime="2042-04-02T00:00:00.000Z">April 2042</time>
-        <div class="Summary-excerpt Prose Prose--medium">
-          <p>For instance, on the planet Earth, man had always assumed that he was more intelligent than dolphins because he had achieved so much—the wheel, New York, wars and so on—whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man—for precisely the same reasons.</p>
-      
-        </div>
-      </div>    </li>
-    <li class="Summaries-list-item">
-      <div class="Summary">
-        <h3 class="Summary-title Heading Heading--medium">
-          <a class="Summary-link Summary-external-link" href="http://en.wikipedia.org/wiki/Nineteen_Eighty-Four" data-domain="wikipedia.org">An Example Link</a>
-        </h3>
-        <time class="Summary-date" datetime="2015-07-07T00:00:00.000Z">July 2015</time>
-        <div class="Summary-excerpt Prose Prose--medium">
-          <p>Doublethink means the power of holding two contradictory beliefs in one’s mind simultaneously, and accepting both of them.</p>
-      
-        </div>
-      </div>    </li>
-    <li class="Summaries-list-item">
-      <div class="Summary">
-        <h3 class="Summary-title Heading Heading--medium">
-          <a class="Summary-link" href="/test">test form</a>
-        </h3>
-        <time class="Summary-date" datetime="2014-12-02T00:00:00.000Z">December 2014</time>
-        <div class="Summary-excerpt Prose Prose--medium">
-          <form name="email" method="post">
-        </div>
-      </div>    </li>
-    <li class="Summaries-list-item">
-      <div class="Summary">
-        <h3 class="Summary-title Heading Heading--medium">
-          <a class="Summary-link Summary-external-link" href="http://en.wikipedia.org/wiki/Nineteen_Eighty-Four" data-domain="wikipedia.org">An Example Link</a>
-        </h3>
-        <time class="Summary-date" datetime="1984-01-13T00:00:00.000Z">January 1984</time>
-        <div class="Summary-excerpt Prose Prose--medium">
-          <p>Doublethink means the power of holding two contradictory beliefs in one’s mind simultaneously, and accepting both of them.</p>
-      
-        </div>
-      </div>    </li>
-  </ol>
-</div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">An Example Link</h1>
+  <time class="Article-date" datetime="2015-07-07T00:00:00.000Z">Monday, 6 July 2015</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>Doublethink means the power of holding two contradictory beliefs in one’s mind simultaneously, and accepting both of them.</p>
+
+  </div>
+</article>
 <script>
-  analytics.page('Home');
+  analytics.page('Article', {
+    article: {
+      name: "An Example Link",
+      date: "2015-07-07T00:00:00.000Z"
+    }
+  });
 </script>
       </div>
     </div>

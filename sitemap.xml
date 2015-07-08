@@ -6,26 +6,32 @@
 
   <url>
     <loc>http://jaimes.me</loc>
-    <lastmod>2015-05-15T00:14:12.155Z</lastmod>
+    <lastmod>2015-07-08T20:05:14.935Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
     <url>
       <loc>http://jaimes.me/an-example-article</loc>
-      <lastmod>2015-05-15T00:14:12.155Z</lastmod>
+      <lastmod>2015-07-08T20:05:14.935Z</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>http://jaimes.me/test-post</loc>
+      <lastmod>2015-07-08T20:05:14.935Z</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
     <url>
       <loc>http://jaimes.me/test</loc>
-      <lastmod>2015-05-15T00:14:12.155Z</lastmod>
+      <lastmod>2015-07-08T20:05:14.935Z</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
     <url>
       <loc>http://jaimes.me/an-example-link</loc>
-      <lastmod>2015-05-15T00:14:12.155Z</lastmod>
+      <lastmod>2015-07-08T20:05:14.935Z</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
