@@ -12,6 +12,7 @@ Create a new repository (click on the black + sign on the top right) and call it
 
 3.
 Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)
+
 ![](https://lh3.googleusercontent.com/2gBmt3YAt1nut9kwvPxr0dEE3H5_1_cweeMmygZIgooQX7ButSFH48Hn4Dj1qADAINgXla6SZt40pl831XghO0nO_ULGgE2l-32nc73nerXnbgHbMc7fo0sd8DWdkL1sjUbYi28)
 
 4.
@@ -70,9 +71,10 @@ On that `index.html` file, insert the following text, and commit that file by cl
 
 5.
 On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look ugly like this:
+
 ![](https://lh4.googleusercontent.com/htMHBgB6SmAWH98_kNRSV6SpmImYisWdAcGcyRnOma1FH30C208_qo1MRMWtKIzM0Re_LK5MawP0dwX2Dg6NgjgEsbVxmexI6nIzK1Z0jaYGvVOKcjMhrMEfhRqDCbopFP5KpM0)
 
-**SIX:** 
+6.
 To make it pretty,  create an `index.css` file. Insert the following text on that file, and press the green commit button:
 
 ```
@@ -131,16 +133,18 @@ img {
 Your project code should now look like this: 
 ![](https://lh6.googleusercontent.com/WElic7ObgxtawSB7YpoMqwRQYxxORQT6vKz62p5XcCuPP2kJ19ac59at2LPC8Vood63_9W81oB7GwDjnlHnRBR_USO1EQdyh5jKg7cyXmIMMyJnUtqCq__MvFZkYg-KzpIv-cOY)
 
-**SEVEN:** 
+7.
 Go back to the first file we created, the `index.html` file, click on the pencil on the top right (to edit) and replace the text that reads `<!--Placeholder for index.css link -->` in line 6  with `<link rel="stylesheet" href="/index.css">`. The new file should look like this:
+
 ![](https://lh6.googleusercontent.com/Bipyrmp-mMQrgwTkRS_ZEkDm8mLjXG7J_LusLIx8thjRvW6Waua6Ng3HwyJmYnrluoruoTOlSlRGOFIQUs8Xq_7DWSCXgcjKJQJeWGITTEutoMDOk7K8dekiYaRGKYNwsqcxI08)
 
 After committing the change, and refreshing your `yourusename.github.io` website, it should be stylin like this:
 ![](https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279269707_undefined)
 
-**EIGHT:** 
+8.
 Segment on your site. 
 First create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
+
 ![](https://lh6.googleusercontent.com/ue6swDWFchY5LllpF-fw60ig5peul0A7eYrMEeP-euZz9BnfSekldy1jwHL_bBjjKyI3Fec-ReOE9NxoJjC1YIdpO5g5twfIEdP5ycdsJMiSEC6Yn8jqHdUZUf5RMRF6v2EeIdI)
 
 Copy the full snippet from the box on your segment dashboard, go back to your `index.html` file, select the pencil to edit, and replace the line that reads `<!--Placeholder for Segment Snippet -->` (mine is line 5) with the Segment snippet.
@@ -148,7 +152,7 @@ Copy the full snippet from the box on your segment dashboard, go back to your `i
 Your new file should look like this:
 ![](https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436248776313_undefined)
 
-**NINE:** 
+9.
 Identify those users that submit a destination. To do so, create a little function that captures the input from the form, and sends some of that data as parameters in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 44) and insert the following text.
 ```   
 <script type="text/javascript">
@@ -169,7 +173,7 @@ Identify those users that submit a destination. To do so, create a little functi
 ```
 Your index.html file should contain code similar to the one found here (with your project’s Segment write key in line 7).
 
-**TEN:** 
+10.
 Commit the changes. Go back to your website and submit a travel recommendation form.
 ![](https://lh6.googleusercontent.com/XwmCdFqs7yF7nMYndphwPR_kyPoMVQipuUedClecnF9tjO5rh5XG77wpqa7C4znkBkBHJhN8vv2q9qSHwSewIqgTV3b-Nn0lmh8AFtAvxCYs1K2EMVKM2YwK3AmSNPUBcXQ4tvg)
 
