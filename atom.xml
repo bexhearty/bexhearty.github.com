@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-08T20:24:51.839Z</updated>
+  <updated>2015-07-08T20:26:31.254Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -23,16 +23,17 @@
 </content>
   </entry>
   <entry>
-    <title>Module 1 (45 Minutes): Make a website and implement Segment from scratch in ten steps. </title>
+    <title>Make a website and implement Segment from scratch in ten steps. </title>
     <link href="http://jaimes.me/module-1"/>
     <id>http://jaimes.me/module-1</id>
     <updated>2015-07-07T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;1.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;This is Module 1 (45 minutes). &lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;1.
+    <content type="html">&lt;p&gt;This is Module 1 (45 minutes). &lt;/p&gt;
+&lt;p&gt;1.
 Create an account in GitHub (&lt;a href=&quot;https://github.com/new&quot;&gt;https://github.com/new&lt;/a&gt;) or sign in.&lt;/p&gt;
 &lt;p&gt;2.
 Create a new repository (click on the black + sign on the top right) and call it &lt;code&gt;yourusername.github.io&lt;/code&gt; . In my case, my new repository is called &lt;code&gt;thebecky.github.io&lt;/code&gt;, check the box that initializes the repo with a README file, and click on the “Create repository” button.
