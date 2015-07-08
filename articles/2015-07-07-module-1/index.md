@@ -1,5 +1,5 @@
 
-# How to buil website and implement Segment from scratch in ten steps (45 minutes). 
+# How to build website and implement Segment from scratch in ten steps (45 minutes). 
 
 1.
 Create an account in GitHub (https://github.com/new) or sign in.
