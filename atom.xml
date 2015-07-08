@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-08T20:05:14.935Z</updated>
+  <updated>2015-07-08T20:08:35.760Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -23,7 +23,7 @@
 </content>
   </entry>
   <entry>
-    <title>An Example Link</title>
+    <title>Thest Post</title>
     <link href="http://en.wikipedia.org/wiki/Nineteen_Eighty-Four"/>
     <id>http://jaimes.me/test-post</id>
     <updated>2015-07-07T00:00:00.000Z</updated>
