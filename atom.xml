@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T19:17:49.563Z</updated>
+  <updated>2015-07-09T19:39:46.229Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -95,7 +95,7 @@
 &lt;p&gt;Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/c245KeijI5E+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;6-bonus-step&quot;&gt;6. Bonus Step&lt;/h2&gt;
-&lt;p&gt;Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace &lt;code&gt;analytics.page()&lt;/code&gt; in your index.html file (mine is in line 11) with  &lt;code&gt;analytics.page(document.title)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Wouldnt it be nice that the page call had the actual title of the page? To do that, you just have to replace &lt;code&gt;analytics.page()&lt;/code&gt; in your index.html file (mine is in line 11) with  &lt;code&gt;analytics.page(document.title)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;your calls should now look like this:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/cbaLOR5Jjjb+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Congratulations! You just finished Module 1 of this training series.&lt;/p&gt;
