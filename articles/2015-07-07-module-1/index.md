@@ -86,15 +86,15 @@ Identify those users that submit a destination. To do so, we created a little fu
         var user = {email: email, name: fullname, details: details};
         analytics.identify(email, {email: email, name: fullname});
         analytics.track('destination submitted', user, function() {
-            window.location.href = "https://www.youtube.com/watch?v=R7vmHGAshi8";
+            window.location.href = "";
         });
         }
 </script>
 ```
-Your index.html file should contain code similar to the one found here (with your project’s Segment write key in line 7). Commit the changes. 
+Your index.html file should contain code similar to the one found [here](https://gist.github.com/TheBecky/76eaa40b43a82a900c82) (with your project’s Segment write key in line 10). Commit the changes. 
 
 8.
-Go back to your website (refresh to make sure all changes have been loaded)and submit a travel recommendation form.
+Go back to your website (refresh to make sure all changes have been loaded) and submit a travel recommendation form.
 ![](https://cloudup.com/cdWxA9BwOdr)
 
 Go back to your site’s debugger on the Segment’s dash. You should be able to see the following 3 calls:
