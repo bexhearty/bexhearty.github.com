@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T17:52:24.928Z</updated>
+  <updated>2015-07-09T18:27:07.759Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -22,11 +22,11 @@
 &lt;p&gt;1.
 Create an account in GitHub (&lt;a href=&quot;https://github.com/new&quot;&gt;https://github.com/new&lt;/a&gt;) or sign in.&lt;/p&gt;
 &lt;p&gt;2.
-Create a new repository (click on the black + sign on the top right) and call it &lt;code&gt;yourusername.github.io&lt;/code&gt; . In my case, my new repository is called &lt;code&gt;thebecky.github.io&lt;/code&gt;, check the box that initializes the repo with a README file, and click on the “Create repository” button.
-&lt;img src=&quot;https://lh4.googleusercontent.com/7pAUHBkudZZNE-2el-xvBiw847A_KJK4AfIE6J4hcZLOURkFUQO3h3juy6Rbo2Ga9ZcIo4LIiVymliSpjvr-4CVmahvcx9Ttm3kWIi8fvmWgG7pNqRCNcOfcboRvfg2MdjX7Mwk&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+Create a new repository (click on the black + sign on the top right) and call it &lt;code&gt;yourusername.github.io&lt;/code&gt; . In my case, my new repository is called &lt;code&gt;beckyjaimes.github.io&lt;/code&gt;, check the box that initializes the repo with a README file, and click on the “Create repository” button.
+&lt;img src=&quot;https://cloudup.com/ch3rFGk5D3P&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;3.
 Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/2gBmt3YAt1nut9kwvPxr0dEE3H5_1_cweeMmygZIgooQX7ButSFH48Hn4Dj1qADAINgXla6SZt40pl831XghO0nO_ULGgE2l-32nc73nerXnbgHbMc7fo0sd8DWdkL1sjUbYi28&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c0cFaR-2xwe&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;4.
 On that &lt;code&gt;index.html&lt;/code&gt; file, insert the following text, and commit that file by clicking on the green “Commit” button:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
@@ -67,16 +67,16 @@ On that &lt;code&gt;index.html&lt;/code&gt; file, insert the following text, and
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;5.
 On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/htMHBgB6SmAWH98_kNRSV6SpmImYisWdAcGcyRnOma1FH30C208_qo1MRMWtKIzM0Re_LK5MawP0dwX2Dg6NgjgEsbVxmexI6nIzK1Z0jaYGvVOKcjMhrMEfhRqDCbopFP5KpM0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c7XrmvISWfJ&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;6.
 Segment on your site. 
 Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/ue6swDWFchY5LllpF-fw60ig5peul0A7eYrMEeP-euZz9BnfSekldy1jwHL_bBjjKyI3Fec-ReOE9NxoJjC1YIdpO5g5twfIEdP5ycdsJMiSEC6Yn8jqHdUZUf5RMRF6v2EeIdI&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Copy the full snippet from the box on your segment dashboard, go back to your &lt;code&gt;index.html&lt;/code&gt; file, select the pencil to edit, and replace the line that reads &lt;code&gt;&amp;lt;!--Placeholder for Segment Snippet --&amp;gt;&lt;/code&gt; (mine is line 5) with the Segment snippet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/co7DtWt5aOO&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Copy the full snippet from the box on your segment dashboard, go back to your &lt;code&gt;index.html&lt;/code&gt; file, select the pencil to edit, and replace the line that reads &lt;code&gt;&amp;lt;!--Placeholder for Segment Snippet --&amp;gt;&lt;/code&gt; (mine is line 8) with the Segment snippet.&lt;/p&gt;
 &lt;p&gt;Your new file should look like this:
-&lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436248776313_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;https://cloudup.com/ckTqBYoDp7L&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;7.
-Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 44) and insert the following text.&lt;/p&gt;
+Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 38) and insert the following text.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
         function identify(e){
         e.preventDefault();
@@ -94,18 +94,18 @@ Identify those users that submit a destination. To do so, we created a little fu
 &amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Your index.html file should contain code similar to the one found here (with your project’s Segment write key in line 7). Commit the changes. &lt;/p&gt;
 &lt;p&gt;8.
-Go back to your website and submit a travel recommendation form.
-&lt;img src=&quot;https://lh6.googleusercontent.com/XwmCdFqs7yF7nMYndphwPR_kyPoMVQipuUedClecnF9tjO5rh5XG77wpqa7C4znkBkBHJhN8vv2q9qSHwSewIqgTV3b-Nn0lmh8AFtAvxCYs1K2EMVKM2YwK3AmSNPUBcXQ4tvg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+Go back to your website (refresh to make sure all changes have been loaded)and submit a travel recommendation form.
+&lt;img src=&quot;https://cloudup.com/cdWxA9BwOdr&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Go back to your site’s debugger on the Segment’s dash. You should be able to see the following 3 calls:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436278764869_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c245KeijI5E&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;9.
-Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace &lt;code&gt;analytics.page()&lt;/code&gt; in your index.html file (mine is in line 8) with  &lt;code&gt;analytics.page(document.title)&lt;/code&gt;.&lt;/p&gt;
+Bonus Step
+Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace &lt;code&gt;analytics.page()&lt;/code&gt; in your index.html file (mine is in line 11) with  &lt;code&gt;analytics.page(document.title)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;your calls should now look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279711665_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/cbaLOR5Jjjb&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Congratulations! You just finished Module 1 of this training series.&lt;/p&gt;
 &lt;p&gt;One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.&lt;/p&gt;
-&lt;p&gt;What is in &lt;strong&gt;Module 2&lt;/strong&gt;?   Notice how after submitting your form you were taken to a 404 page. That is because we redirected the user after pressing the “submit” button to the website’s blog (yourusername.github.io/blog) - but we haven’t created one yet! In module 2 we will create a blog page and a countries page using Jekyll.
-We will also integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
+&lt;p&gt;What is in &lt;strong&gt;Module 2&lt;/strong&gt;?  In module 2 we will  integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
 </content>
   </entry>
   <entry>
