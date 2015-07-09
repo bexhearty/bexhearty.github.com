@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T18:27:07.759Z</updated>
+  <updated>2015-07-09T18:38:49.940Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -88,13 +88,13 @@ Identify those users that submit a destination. To do so, we created a little fu
         var user = {email: email, name: fullname, details: details};
         analytics.identify(email, {email: email, name: fullname});
         analytics.track(&amp;#39;destination submitted&amp;#39;, user, function() {
-            window.location.href = &amp;quot;https://www.youtube.com/watch?v=R7vmHGAshi8&amp;quot;;
+            window.location.href = &amp;quot;&amp;quot;;
         });
         }
 &amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Your index.html file should contain code similar to the one found here (with your project’s Segment write key in line 7). Commit the changes. &lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Your index.html file should contain code similar to the one found &lt;a href=&quot;https://gist.github.com/TheBecky/76eaa40b43a82a900c82&quot;&gt;here&lt;/a&gt; (with your project’s Segment write key in line 10). Commit the changes. &lt;/p&gt;
 &lt;p&gt;8.
-Go back to your website (refresh to make sure all changes have been loaded)and submit a travel recommendation form.
+Go back to your website (refresh to make sure all changes have been loaded) and submit a travel recommendation form.
 &lt;img src=&quot;https://cloudup.com/cdWxA9BwOdr&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Go back to your site’s debugger on the Segment’s dash. You should be able to see the following 3 calls:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/c245KeijI5E&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
