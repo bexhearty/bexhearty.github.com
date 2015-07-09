@@ -3,7 +3,7 @@
 Build a single page website and implement Segment from scratch in 5 steps. Completion time 45 minutes
 
 ## 1. Create an Account
-Create an account in GitHub (https://github.com/new) or sign in.
+Create an account in GitHub (https://github.com/new)or sign in. If you are creating a new account, make sure to confirm your email address (go to your email and click on the confirm button on the message from Github). Some files will not update later if you haven’t confirmed your email address.
 
 ## 2. Create a Repo
 Create a new repository (click on the black + sign on the top right) and call it `yourusername.github.io` . Since we are using Github pages to host this site, make sure you follow the exact naming convention **[YOUR USERNAME].github.io**. In my case, my new repository is called `beckyjaimes.github.io`, check the box that initializes the repo with a README file, and click on the “Create repository” button.
