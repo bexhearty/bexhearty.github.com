@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T19:15:25.541Z</updated>
+  <updated>2015-07-09T19:17:49.563Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -91,7 +91,7 @@
 &amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Your index.html file should contain code similar to the one found &lt;a href=&quot;https://gist.github.com/TheBecky/76eaa40b43a82a900c82&quot;&gt;here&lt;/a&gt; (with your project’s Segment write key in line 10). Commit the changes. &lt;/p&gt;
 &lt;p&gt;Go back to your website (refresh to make sure all changes have been loaded) and submit a travel recommendation form.
-&lt;img src=&quot;https://cloudup.com/cdWxA9BwOdr&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;https://cloudup.com/cdWxA9BwOdr+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/c245KeijI5E+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;6-bonus-step&quot;&gt;6. Bonus Step&lt;/h2&gt;
