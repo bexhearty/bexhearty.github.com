@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T19:39:46.229Z</updated>
+  <updated>2015-07-09T21:27:14.494Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -22,7 +22,7 @@
 &lt;h2 id=&quot;1-create-an-account&quot;&gt;1. Create an Account&lt;/h2&gt;
 &lt;p&gt;Create an account in GitHub (&lt;a href=&quot;https://github.com/new&quot;&gt;https://github.com/new&lt;/a&gt;) or sign in.&lt;/p&gt;
 &lt;h2 id=&quot;2-create-a-repo&quot;&gt;2. Create a Repo&lt;/h2&gt;
-&lt;p&gt;Create a new repository (click on the black + sign on the top right) and call it &lt;code&gt;yourusername.github.io&lt;/code&gt; . In my case, my new repository is called &lt;code&gt;beckyjaimes.github.io&lt;/code&gt;, check the box that initializes the repo with a README file, and click on the “Create repository” button.
+&lt;p&gt;Create a new repository (click on the black + sign on the top right) and call it &lt;code&gt;yourusername.github.io&lt;/code&gt; . Since we are using Github pages to host this site, make sure you follow the exact naming convention &lt;strong&gt;[YOUR USERNAME].github.io&lt;/strong&gt;. In my case, my new repository is called &lt;code&gt;beckyjaimes.github.io&lt;/code&gt;, check the box that initializes the repo with a README file, and click on the “Create repository” button.
 &lt;img src=&quot;https://cloudup.com/ch3rFGk5D3P+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;3-create-an-index-html-file&quot;&gt;3. Create an index.html file&lt;/h2&gt;
 &lt;p&gt;Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)&lt;/p&gt;
@@ -67,13 +67,15 @@
 &lt;p&gt;On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/c7XrmvISWfJ+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;4-implement-segment&quot;&gt;4. Implement Segment&lt;/h2&gt;
-&lt;p&gt;Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)&lt;/p&gt;
+&lt;p&gt;Create an account on &lt;a href=&quot;https://segment.com&quot;&gt;Segment&lt;/a&gt;. Create a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+&lt;img src=&quot;https://cloudup.com/czuUe3gBBTj+&quot; alt=&quot;&quot;&gt;
+Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/co7DtWt5aOO+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Copy the full snippet from the box on your segment dashboard, go back to your &lt;code&gt;index.html&lt;/code&gt; file, select the pencil to edit, and replace the line that reads &lt;code&gt;&amp;lt;!--Placeholder for Segment Snippet --&amp;gt;&lt;/code&gt; (mine is line 8) with the Segment snippet.&lt;/p&gt;
 &lt;p&gt;Your new file should look like this:
 &lt;img src=&quot;https://cloudup.com/ckTqBYoDp7L+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;5-identify-users-and-track-an-event&quot;&gt;5. Identify Users and Track an Event&lt;/h2&gt;
-&lt;p&gt;Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 38) and insert the following text.&lt;/p&gt;
+&lt;p&gt;Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 38) and insert the following text.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
         function identify(e){
         e.preventDefault();
@@ -94,6 +96,8 @@
 &lt;img src=&quot;https://cloudup.com/cdWxA9BwOdr+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/c245KeijI5E+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Enable Google Analytics, MixPanel and KissMetrics. You might have to create an account on each of those services, to get the site IDs and keys to input in Segment’s dash.&lt;/p&gt;
+&lt;p&gt;If something is not right and you triple checked that your code is similar to the one &lt;a href=&quot;https://gist.github.com/TheBecky/76eaa40b43a82a900c82&quot;&gt;here&lt;/a&gt; (and you just created a Github account only for this project), make sure that you have confirmed your email address on that Github email.&lt;/p&gt;
 &lt;h2 id=&quot;6-bonus-step&quot;&gt;6. Bonus Step&lt;/h2&gt;
 &lt;p&gt;Wouldnt it be nice that the page call had the actual title of the page? To do that, you just have to replace &lt;code&gt;analytics.page()&lt;/code&gt; in your index.html file (mine is in line 11) with  &lt;code&gt;analytics.page(document.title)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;your calls should now look like this:&lt;/p&gt;

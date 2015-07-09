@@ -47,7 +47,7 @@
 <h2 id="1-create-an-account">1. Create an Account</h2>
 <p>Create an account in GitHub (<a href="https://github.com/new">https://github.com/new</a>) or sign in.</p>
 <h2 id="2-create-a-repo">2. Create a Repo</h2>
-<p>Create a new repository (click on the black + sign on the top right) and call it <code>yourusername.github.io</code> . In my case, my new repository is called <code>beckyjaimes.github.io</code>, check the box that initializes the repo with a README file, and click on the “Create repository” button.
+<p>Create a new repository (click on the black + sign on the top right) and call it <code>yourusername.github.io</code> . Since we are using Github pages to host this site, make sure you follow the exact naming convention <strong>[YOUR USERNAME].github.io</strong>. In my case, my new repository is called <code>beckyjaimes.github.io</code>, check the box that initializes the repo with a README file, and click on the “Create repository” button.
 <img src="https://cloudup.com/ch3rFGk5D3P+" alt=""></p>
 <h2 id="3-create-an-index-html-file">3. Create an index.html file</h2>
 <p>Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)</p>
@@ -92,13 +92,15 @@
 <p>On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:</p>
 <p><img src="https://cloudup.com/c7XrmvISWfJ+" alt=""></p>
 <h2 id="4-implement-segment">4. Implement Segment</h2>
-<p>Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)</p>
+<p>Create an account on <a href="https://segment.com">Segment</a>. Create a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+<img src="https://cloudup.com/czuUe3gBBTj+" alt="">
+Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)</p>
 <p><img src="https://cloudup.com/co7DtWt5aOO+" alt=""></p>
 <p>Copy the full snippet from the box on your segment dashboard, go back to your <code>index.html</code> file, select the pencil to edit, and replace the line that reads <code>&lt;!--Placeholder for Segment Snippet --&gt;</code> (mine is line 8) with the Segment snippet.</p>
 <p>Your new file should look like this:
 <img src="https://cloudup.com/ckTqBYoDp7L+" alt=""></p>
 <h2 id="5-identify-users-and-track-an-event">5. Identify Users and Track an Event</h2>
-<p>Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.</p>
+<p>Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
         function identify(e){
         e.preventDefault();
@@ -119,6 +121,8 @@
 <img src="https://cloudup.com/cdWxA9BwOdr+" alt=""></p>
 <p>Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:</p>
 <p><img src="https://cloudup.com/c245KeijI5E+" alt=""></p>
+<p>Enable Google Analytics, MixPanel and KissMetrics. You might have to create an account on each of those services, to get the site IDs and keys to input in Segment’s dash.</p>
+<p>If something is not right and you triple checked that your code is similar to the one <a href="https://gist.github.com/TheBecky/76eaa40b43a82a900c82">here</a> (and you just created a Github account only for this project), make sure that you have confirmed your email address on that Github email.</p>
 <h2 id="6-bonus-step">6. Bonus Step</h2>
 <p>Wouldnt it be nice that the page call had the actual title of the page? To do that, you just have to replace <code>analytics.page()</code> in your index.html file (mine is in line 11) with  <code>analytics.page(document.title)</code>.</p>
 <p>your calls should now look like this:</p>
