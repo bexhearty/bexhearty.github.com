@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T18:57:50.410Z</updated>
+  <updated>2015-07-09T19:07:29.482Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -23,7 +23,7 @@
 &lt;p&gt;Create an account in GitHub (&lt;a href=&quot;https://github.com/new&quot;&gt;https://github.com/new&lt;/a&gt;) or sign in.&lt;/p&gt;
 &lt;h2 id=&quot;2-create-a-repo&quot;&gt;2. Create a Repo&lt;/h2&gt;
 &lt;p&gt;Create a new repository (click on the black + sign on the top right) and call it &lt;code&gt;yourusername.github.io&lt;/code&gt; . In my case, my new repository is called &lt;code&gt;beckyjaimes.github.io&lt;/code&gt;, check the box that initializes the repo with a README file, and click on the “Create repository” button.
-&lt;img src=&quot;https://cloudup.com/ch3rFGk5D3P&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;https://cloudup.com/ch3rFGk5D3P+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;3-create-an-index-html-file&quot;&gt;3. Create an index.html file&lt;/h2&gt;
 &lt;p&gt;Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/c0cFaR-2xwe&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
