@@ -1,6 +1,6 @@
 
 # Module 1. Implementing Segment
-Build a single page website and implement Segment from scratch in nine steps. Completion time 45 minutes
+Build a single page website and implement Segment from scratch in 5 steps. Completion time 45 minutes
 
 ## 1. Create an Account
 Create an account in GitHub (https://github.com/new) or sign in.
