@@ -3,10 +3,10 @@
 Build a single page website and implement Segment from scratch in 5 steps. Completion time 45 minutes
 
 ## 1. Create an Account
-Create an account in GitHub (https://github.com/new)or sign in. If you are creating a new account, make sure to confirm your email address (go to your email and click on the confirm button on the message from Github). Some files will not update later if you haven’t confirmed your email address.
+Create an account in GitHub (https://github.com/new) or sign in. If you are creating a new account, make sure to confirm your email address (go to your email and click on the confirm button on the message from Github). Some files will not update later if you haven’t confirmed your email address.
 
 ## 2. Create a Repo
-Create a new repository (click on the black + sign on the top right) and call it `yourusername.github.io` . Since we are using Github pages to host this site, make sure you follow the exact naming convention **[YOUR USERNAME].github.io**. In my case, my new repository is called `beckyjaimes.github.io`, check the box that initializes the repo with a README file, and click on the “Create repository” button.
+Create a new repository (click on the black + sign on the top right) and call it `yourusername.github.io` . Since we are using Github pages to host this site, it is very important to follow the exact naming convention **[YOUR USERNAME].github.io**. In my case, my new repository is called `beckyjaimes.github.io`, check the box that initializes the repo with a README file, and click on the “Create repository” button.
 ![](https://cloudup.com/ch3rFGk5D3P+)
 
 ## 3. Create an index.html file
@@ -54,12 +54,12 @@ On that `index.html` file, insert the following text, and commit that file by cl
 </html>
 ```
 
-On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:
+To make sure everything is working this far, on a separate window, navigate to  yourusername.github.io. You should be able to see your new website (it might take a few minutes). Should look similar to this:
 
 ![](https://cloudup.com/c7XrmvISWfJ+)
 
 ## 4. Implement Segment 
-Create an account on [Segment](https://segment.com). Create a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+Create an account on [Segment](https://segment.com) and a new project by selecting “new project” from the top right dropdown menu from your dashboard:
 ![](https://cloudup.com/czuUe3gBBTj+)
 Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
 
