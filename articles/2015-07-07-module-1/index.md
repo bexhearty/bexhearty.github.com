@@ -90,7 +90,7 @@ Identify those users that submit a destination. To do so, we created a little fu
 Your index.html file should contain code similar to the one found [here](https://gist.github.com/TheBecky/76eaa40b43a82a900c82) (with your project’s Segment write key in line 10). Commit the changes. 
 
 Go back to your website (refresh to make sure all changes have been loaded) and submit a travel recommendation form.
-![](https://cloudup.com/cdWxA9BwOdr)
+![](https://cloudup.com/cdWxA9BwOdr+)
 
 Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:
 
