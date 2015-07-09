@@ -97,7 +97,7 @@ Go to your debugger on the Segment’s dash. You should be able to see the follo
 ![](https://cloudup.com/c245KeijI5E+)
 
 ## 6. Bonus Step
-Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace `analytics.page()` in your index.html file (mine is in line 11) with  `analytics.page(document.title)`.
+Wouldnt it be nice that the page call had the actual title of the page? To do that, you just have to replace `analytics.page()` in your index.html file (mine is in line 11) with  `analytics.page(document.title)`.
 
 your calls should now look like this:
 
