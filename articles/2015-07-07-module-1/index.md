@@ -6,7 +6,7 @@ Build a single page website and implement Segment from scratch in 5 steps. Compl
 Create an account in GitHub (https://github.com/new) or sign in.
 
 ## 2. Create a Repo
-Create a new repository (click on the black + sign on the top right) and call it `yourusername.github.io` . In my case, my new repository is called `beckyjaimes.github.io`, check the box that initializes the repo with a README file, and click on the “Create repository” button.
+Create a new repository (click on the black + sign on the top right) and call it `yourusername.github.io` . Since we are using Github pages to host this site, make sure you follow the exact naming convention **[YOUR USERNAME].github.io**. In my case, my new repository is called `beckyjaimes.github.io`, check the box that initializes the repo with a README file, and click on the “Create repository” button.
 ![](https://cloudup.com/ch3rFGk5D3P+)
 
 ## 3. Create an index.html file
@@ -59,7 +59,9 @@ On a separate window, navigate to  yourusername.github.io. There you should be a
 ![](https://cloudup.com/c7XrmvISWfJ+)
 
 ## 4. Implement Segment 
-Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
+Create an account on [Segment](https://segment.com). Create a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+![](https://cloudup.com/czuUe3gBBTj+)
+Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
 
 ![](https://cloudup.com/co7DtWt5aOO+)
 
@@ -69,7 +71,7 @@ Your new file should look like this:
 ![](https://cloudup.com/ckTqBYoDp7L+)
 
 ## 5. Identify Users and Track an Event
-Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.
+Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.
 ```   
 <script type="text/javascript">
         function identify(e){
@@ -95,6 +97,11 @@ Go back to your website (refresh to make sure all changes have been loaded) and 
 Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:
 
 ![](https://cloudup.com/c245KeijI5E+)
+
+Enable Google Analytics, MixPanel and KissMetrics. You might have to create an account on each of those services, to get the site IDs and keys to input in Segment’s dash.
+
+
+If something is not right and you triple checked that your code is similar to the one [here](https://gist.github.com/TheBecky/76eaa40b43a82a900c82) (and you just created a Github account only for this project), make sure that you have confirmed your email address on that Github email.
 
 ## 6. Bonus Step
 Wouldnt it be nice that the page call had the actual title of the page? To do that, you just have to replace `analytics.page()` in your index.html file (mine is in line 11) with  `analytics.page(document.title)`.
