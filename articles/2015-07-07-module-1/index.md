@@ -1,5 +1,5 @@
 
-# How to build website and implement Segment from scratch in ten steps. 
+# Build a single page website and implement Segment from scratch in ten steps. 
 Completion time 45 minutes
 
 1.
