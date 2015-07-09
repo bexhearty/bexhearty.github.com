@@ -168,11 +168,11 @@ Go back to the first file we created, the <code>index.html</code> file, click on
 <img src="https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279269707_undefined" alt=""></p>
 <p>8.
 Analytics on your site. 
-Google Analytics. Create a (Google Analytics)[<a href="http://www.google.com/analytics">http://www.google.com/analytics</a>] account and follow (this)[<a href="https://support.google.com/analytics/answer/1008080?hl=en">https://support.google.com/analytics/answer/1008080?hl=en</a>] instructions that generate the GA tracking code.</p>
+Google Analytics. Create a !(Google Analytics)[<a href="http://www.google.com/analytics">http://www.google.com/analytics</a>] account and follow !(this)[<a href="https://support.google.com/analytics/answer/1008080?hl=en">https://support.google.com/analytics/answer/1008080?hl=en</a>] instructions that generate the GA tracking code.</p>
 <p>Copy the full snippet from the box on your GA dashboard, go back to your <code>index.html</code> file, select the pencil to edit, and replace the line that reads <code>&lt;!--Placeholder for Google Analytics Snippet --&gt;</code> (mine is line 5) with the GA snippet.</p>
 <p>Your new file should look like this:
 <img src="https://cloudup.com/cRQJki2bS0a" alt=""></p>
-<p>We will repeat this step for KissMetrics and also for (MixPanel)[<a href="https://mixpanel.com/help/reference/tracking-an-event">https://mixpanel.com/help/reference/tracking-an-event</a>] -(for this one, dont track any events yet).</p>
+<p>We will repeat this step for KissMetrics and also for !(MixPanel)[<a href="https://mixpanel.com/help/reference/tracking-an-event">https://mixpanel.com/help/reference/tracking-an-event</a>] -(for this one, dont track any events yet).</p>
 <p>9.
 Identify those users that submit a destination. To do so, create a little function that captures the input from the form, and sends some of that data as parameters in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 44) and insert the following text.</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;

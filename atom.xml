@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T00:00:12.404Z</updated>
+  <updated>2015-07-09T00:01:52.439Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -313,11 +313,11 @@ Go back to the first file we created, the &lt;code&gt;index.html&lt;/code&gt; fi
 &lt;img src=&quot;https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279269707_undefined&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;8.
 Analytics on your site. 
-Google Analytics. Create a (Google Analytics)[&lt;a href=&quot;http://www.google.com/analytics&quot;&gt;http://www.google.com/analytics&lt;/a&gt;] account and follow (this)[&lt;a href=&quot;https://support.google.com/analytics/answer/1008080?hl=en&quot;&gt;https://support.google.com/analytics/answer/1008080?hl=en&lt;/a&gt;] instructions that generate the GA tracking code.&lt;/p&gt;
+Google Analytics. Create a !(Google Analytics)[&lt;a href=&quot;http://www.google.com/analytics&quot;&gt;http://www.google.com/analytics&lt;/a&gt;] account and follow !(this)[&lt;a href=&quot;https://support.google.com/analytics/answer/1008080?hl=en&quot;&gt;https://support.google.com/analytics/answer/1008080?hl=en&lt;/a&gt;] instructions that generate the GA tracking code.&lt;/p&gt;
 &lt;p&gt;Copy the full snippet from the box on your GA dashboard, go back to your &lt;code&gt;index.html&lt;/code&gt; file, select the pencil to edit, and replace the line that reads &lt;code&gt;&amp;lt;!--Placeholder for Google Analytics Snippet --&amp;gt;&lt;/code&gt; (mine is line 5) with the GA snippet.&lt;/p&gt;
 &lt;p&gt;Your new file should look like this:
 &lt;img src=&quot;https://cloudup.com/cRQJki2bS0a&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;We will repeat this step for KissMetrics and also for (MixPanel)[&lt;a href=&quot;https://mixpanel.com/help/reference/tracking-an-event&quot;&gt;https://mixpanel.com/help/reference/tracking-an-event&lt;/a&gt;] -(for this one, dont track any events yet).&lt;/p&gt;
+&lt;p&gt;We will repeat this step for KissMetrics and also for !(MixPanel)[&lt;a href=&quot;https://mixpanel.com/help/reference/tracking-an-event&quot;&gt;https://mixpanel.com/help/reference/tracking-an-event&lt;/a&gt;] -(for this one, dont track any events yet).&lt;/p&gt;
 &lt;p&gt;9.
 Identify those users that submit a destination. To do so, create a little function that captures the input from the form, and sends some of that data as parameters in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 44) and insert the following text.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
