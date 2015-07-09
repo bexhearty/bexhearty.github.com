@@ -2,19 +2,18 @@
 # Build a single page website and implement Segment from scratch in nine steps. 
 Completion time 45 minutes
 
-1.
+## 1. Create an Account
 Create an account in GitHub (https://github.com/new) or sign in.
 
-2.
+## 2. Create a Repo
 Create a new repository (click on the black + sign on the top right) and call it `yourusername.github.io` . In my case, my new repository is called `beckyjaimes.github.io`, check the box that initializes the repo with a README file, and click on the “Create repository” button.
 ![](https://cloudup.com/ch3rFGk5D3P)
 
-3.
+## 3. Create an index.html file
 Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)
 
 ![](https://cloudup.com/c0cFaR-2xwe)
 
-4.
 On that `index.html` file, insert the following text, and commit that file by clicking on the green "Commit” button:
 
 ```html 
@@ -55,14 +54,11 @@ On that `index.html` file, insert the following text, and commit that file by cl
 </html>
 ```
 
-5.
 On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:
 
 ![](https://cloudup.com/c7XrmvISWfJ)
 
-
-6.
-Segment on your site. 
+## 4. Implement Segment 
 Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
 
 ![](https://cloudup.com/co7DtWt5aOO)
@@ -72,7 +68,7 @@ Copy the full snippet from the box on your segment dashboard, go back to your `i
 Your new file should look like this:
 ![](https://cloudup.com/ckTqBYoDp7L)
 
-7.
+## 5. Identify Users and Track an Event
 Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.
 ```   
 <script type="text/javascript">
@@ -93,16 +89,14 @@ Identify those users that submit a destination. To do so, we created a little fu
 ```
 Your index.html file should contain code similar to the one found [here](https://gist.github.com/TheBecky/76eaa40b43a82a900c82) (with your project’s Segment write key in line 10). Commit the changes. 
 
-8.
 Go back to your website (refresh to make sure all changes have been loaded) and submit a travel recommendation form.
 ![](https://cloudup.com/cdWxA9BwOdr)
 
-Go back to your site’s debugger on the Segment’s dash. You should be able to see the following 3 calls:
+Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:
 
 ![](https://cloudup.com/c245KeijI5E)
 
-9.
-Bonus Step
+## 6. Bonus Step
 Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace `analytics.page()` in your index.html file (mine is in line 11) with  `analytics.page(document.title)`.
 
 your calls should now look like this:
