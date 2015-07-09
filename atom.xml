@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T19:07:29.482Z</updated>
+  <updated>2015-07-09T19:09:39.878Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -26,7 +26,7 @@
 &lt;img src=&quot;https://cloudup.com/ch3rFGk5D3P+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;3-create-an-index-html-file&quot;&gt;3. Create an index.html file&lt;/h2&gt;
 &lt;p&gt;Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c0cFaR-2xwe&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c0cFaR-2xwe+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;On that &lt;code&gt;index.html&lt;/code&gt; file, insert the following text, and commit that file by clicking on the green “Commit” button:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
 &amp;lt;html&amp;gt;
@@ -65,13 +65,13 @@
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c7XrmvISWfJ&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c7XrmvISWfJ+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;4-implement-segment&quot;&gt;4. Implement Segment&lt;/h2&gt;
 &lt;p&gt;Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cloudup.com/co7DtWt5aOO&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/co7DtWt5aOO+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Copy the full snippet from the box on your segment dashboard, go back to your &lt;code&gt;index.html&lt;/code&gt; file, select the pencil to edit, and replace the line that reads &lt;code&gt;&amp;lt;!--Placeholder for Segment Snippet --&amp;gt;&lt;/code&gt; (mine is line 8) with the Segment snippet.&lt;/p&gt;
 &lt;p&gt;Your new file should look like this:
-&lt;img src=&quot;https://cloudup.com/ckTqBYoDp7L&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;https://cloudup.com/ckTqBYoDp7L+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;5-identify-users-and-track-an-event&quot;&gt;5. Identify Users and Track an Event&lt;/h2&gt;
 &lt;p&gt;Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 38) and insert the following text.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
@@ -93,11 +93,11 @@
 &lt;p&gt;Go back to your website (refresh to make sure all changes have been loaded) and submit a travel recommendation form.
 &lt;img src=&quot;https://cloudup.com/cdWxA9BwOdr&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c245KeijI5E&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/c245KeijI5E+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;6-bonus-step&quot;&gt;6. Bonus Step&lt;/h2&gt;
 &lt;p&gt;Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace &lt;code&gt;analytics.page()&lt;/code&gt; in your index.html file (mine is in line 11) with  &lt;code&gt;analytics.page(document.title)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;your calls should now look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cloudup.com/cbaLOR5Jjjb&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cloudup.com/cbaLOR5Jjjb+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Congratulations! You just finished Module 1 of this training series.&lt;/p&gt;
 &lt;p&gt;One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.&lt;/p&gt;
 &lt;p&gt;What is in &lt;strong&gt;Module 2&lt;/strong&gt;?  In module 2 we will  integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
