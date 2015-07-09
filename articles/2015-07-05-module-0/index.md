@@ -143,14 +143,14 @@ After committing the change, and refreshing your `yourusename.github.io` website
 
 8.
 Analytics on your site. 
-Google Analytics. Create a !(Google Analytics)[http://www.google.com/analytics] account and follow !(this)[https://support.google.com/analytics/answer/1008080?hl=en] instructions that generate the GA tracking code.
+Google Analytics. Create a [Google Analytics](http://www.google.com/analytics) account and follow [this instructions](https://support.google.com/analytics/answer/1008080?hl=en) that generate the GA tracking code.
 
 Copy the full snippet from the box on your GA dashboard, go back to your `index.html` file, select the pencil to edit, and replace the line that reads `<!--Placeholder for Google Analytics Snippet -->` (mine is line 5) with the GA snippet.
 
 Your new file should look like this:
 ![](https://cloudup.com/cRQJki2bS0a)
 
-We will repeat this step for KissMetrics and also for !(MixPanel)[https://mixpanel.com/help/reference/tracking-an-event] -(for this one, dont track any events yet).
+We will repeat this step for KissMetrics and also for [MixPanel](https://mixpanel.com/help/reference/tracking-an-event) (for this one, dont track any events yet).
 
 9.
 Identify those users that submit a destination. To do so, create a little function that captures the input from the form, and sends some of that data as parameters in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 44) and insert the following text.
