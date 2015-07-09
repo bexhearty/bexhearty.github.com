@@ -12,7 +12,7 @@ Create a new repository (click on the black + sign on the top right) and call it
 ## 3. Create an index.html file
 Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)
 
-![](https://cloudup.com/c0cFaR-2xwe)
+![](https://cloudup.com/c0cFaR-2xwe+)
 
 On that `index.html` file, insert the following text, and commit that file by clicking on the green "Commit” button:
 
@@ -56,17 +56,17 @@ On that `index.html` file, insert the following text, and commit that file by cl
 
 On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:
 
-![](https://cloudup.com/c7XrmvISWfJ)
+![](https://cloudup.com/c7XrmvISWfJ+)
 
 ## 4. Implement Segment 
 Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
 
-![](https://cloudup.com/co7DtWt5aOO)
+![](https://cloudup.com/co7DtWt5aOO+)
 
 Copy the full snippet from the box on your segment dashboard, go back to your `index.html` file, select the pencil to edit, and replace the line that reads `<!--Placeholder for Segment Snippet -->` (mine is line 8) with the Segment snippet.
 
 Your new file should look like this:
-![](https://cloudup.com/ckTqBYoDp7L)
+![](https://cloudup.com/ckTqBYoDp7L+)
 
 ## 5. Identify Users and Track an Event
 Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.
@@ -94,14 +94,14 @@ Go back to your website (refresh to make sure all changes have been loaded) and 
 
 Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:
 
-![](https://cloudup.com/c245KeijI5E)
+![](https://cloudup.com/c245KeijI5E+)
 
 ## 6. Bonus Step
 Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace `analytics.page()` in your index.html file (mine is in line 11) with  `analytics.page(document.title)`.
 
 your calls should now look like this:
 
-![](https://cloudup.com/cbaLOR5Jjjb)
+![](https://cloudup.com/cbaLOR5Jjjb+)
 
 Congratulations! You just finished Module 1 of this training series.
 
