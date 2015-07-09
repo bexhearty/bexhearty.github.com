@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-09T19:14:36.711Z</updated>
+  <updated>2015-07-09T19:15:25.541Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -16,9 +16,9 @@
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;Build a single page website and implement Segment from scratch in nine steps. Completion time 45 minutes&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Build a single page website and implement Segment from scratch in 5 steps. Completion time 45 minutes&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Build a single page website and implement Segment from scratch in nine steps. Completion time 45 minutes&lt;/p&gt;
+    <content type="html">&lt;p&gt;Build a single page website and implement Segment from scratch in 5 steps. Completion time 45 minutes&lt;/p&gt;
 &lt;h2 id=&quot;1-create-an-account&quot;&gt;1. Create an Account&lt;/h2&gt;
 &lt;p&gt;Create an account in GitHub (&lt;a href=&quot;https://github.com/new&quot;&gt;https://github.com/new&lt;/a&gt;) or sign in.&lt;/p&gt;
 &lt;h2 id=&quot;2-create-a-repo&quot;&gt;2. Create a Repo&lt;/h2&gt;
