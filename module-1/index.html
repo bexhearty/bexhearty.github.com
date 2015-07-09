@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Build a single page website and implement Segment from scratch in ten steps. </title>
+    <title>Build a single page website and implement Segment from scratch in nine steps. </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:creator" content="theebecky">
@@ -40,7 +40,7 @@
         </div>      </div>
       <div class="Layout-main"><article class="Article">
   <a class="Article-home" href="/">Home</a>
-  <h1 class="Article-title Heading Heading--huge">Build a single page website and implement Segment from scratch in ten steps. </h1>
+  <h1 class="Article-title Heading Heading--huge">Build a single page website and implement Segment from scratch in nine steps. </h1>
   <time class="Article-date" datetime="2015-07-07T00:00:00.000Z">Monday, 6 July 2015</time>
   <div class="Article-content Prose Prose--medium">
     <p>Completion time 45 minutes</p>
@@ -55,124 +55,53 @@ Create a new file by clicking on the blue + symbol next to your new repository�
 <p>4.
 On that <code>index.html</code> file, insert the following text, and commit that file by clicking on the green “Commit” button:</p>
 <pre><code class="lang-html">&lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-        &lt;head&gt;
-                &lt;title&gt;Travel Destinations&lt;/title&gt;
-                &lt;!--Placeholder for Segment Snippet --&gt;
-                &lt;!--Placeholder for index.css link --&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-        &lt;nav&gt;
-        &lt;ul&gt;
-                &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;/countries&quot;&gt;Countries&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;/nav&gt;
-        &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;blurb&quot;&gt;        
-        &lt;h1&gt;What is your favorite place to travel?&lt;/h1&gt;
-                &lt;p&gt;I am building a directory of the sweetest travel destinations.&lt;/p&gt;
-                &lt;br&gt;&lt;br&gt;
-                &lt;form name=&quot;travel&quot; onsubmit=&quot;identify(event)&quot;&gt;
-                Favorite Travel Destination:
-                &lt;br&gt;&lt;br&gt;
-                &lt;input name=&quot;destination&quot; required=&quot;&quot; size=&quot;81&quot; type=&quot;text&quot;/&gt;
-                &lt;br&gt;&lt;br&gt;&lt;br&gt;
-                Cool things to do, places to see and restaurants to visit:
-                &lt;br&gt;&lt;br&gt;
-                &lt;textarea cols=&quot;81&quot; name=&quot;details&quot; required=&quot;&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
-                &lt;br&gt;&lt;br&gt;
-                Name:
-                &lt;input name=&quot;fullname&quot; required=&quot;&quot; size=&quot;75&quot; type=&quot;text&quot;/&gt;
-                &lt;br&gt;&lt;br&gt;
-                Email:
-                &lt;input name=&quot;email&quot; required=&quot;&quot; size=&quot;75&quot; type=&quot;email&quot;/&gt;
-                &lt;br&gt;&lt;br&gt;&lt;br&gt;
-                &lt;input name=&quot;submit&quot; type=&quot;submit&quot; value=&quot;submit&quot; style=&quot;color: #ffffff; background: #63686b; font-size: 1em; border: none;&quot;/&gt;
-                &lt;br&gt;&lt;br&gt;
-                &lt;/form&gt;       
-        &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;footer&gt;
-        &lt;ul&gt;
-               &lt;li&gt;&lt;a href=&quot;mailto:beckyjaimes@gmail.com&quot;&gt;email me&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;/footer&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;
+&lt;html&gt;
+&lt;head&gt;
+        &lt;title&gt;Travel Destinations&lt;/title&gt;
+        &lt;!--Placeholder for Google Analytics Snippet --&gt;
+        &lt;!--Placeholder for MixPanel Snippet --&gt;
+        &lt;!--Placeholder for KissMetrics Snippet --&gt;
+        &lt;!--Placeholder for Segment Snippet --&gt;
+        &lt;!--Placeholder for index.css link --&gt;
+&lt;/head&gt;
+&lt;body&gt;    
+&lt;br&gt;
+&lt;h1&gt;What is your favorite place to travel?&lt;/h1&gt;
+        &lt;p&gt;I am building a directory of the sweetest travel destinations.&lt;/p&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;form name=&quot;travel&quot; onsubmit=&quot;identify(event)&quot;&gt;
+        What is your favorite travel destination?
+        &lt;br&gt;&lt;br&gt;
+        &lt;input name=&quot;destination&quot; required=&quot;&quot; size=&quot;81&quot; type=&quot;text&quot;/&gt;
+        &lt;br&gt;&lt;br&gt;&lt;br&gt;
+        Any reccomendations (cool things to do, places to visit or restaurants to eat)?
+        &lt;br&gt;&lt;br&gt;
+        &lt;textarea cols=&quot;81&quot; name=&quot;details&quot; required=&quot;&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+        &lt;br&gt;&lt;br&gt;
+        Name:
+        &lt;input name=&quot;fullname&quot; required=&quot;&quot; size=&quot;75&quot; type=&quot;text&quot;/&gt;
+        &lt;br&gt;&lt;br&gt;
+        Email:
+        &lt;input name=&quot;email&quot; required=&quot;&quot; size=&quot;75&quot; type=&quot;email&quot;/&gt;
+        &lt;br&gt;&lt;br&gt;&lt;br&gt;
+        &lt;input name=&quot;submit&quot; type=&quot;submit&quot; value=&quot;submit&quot;/&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;/form&gt;       
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 <p>5.
-On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look ugly like this:</p>
+On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:</p>
 <p><img src="https://lh4.googleusercontent.com/htMHBgB6SmAWH98_kNRSV6SpmImYisWdAcGcyRnOma1FH30C208_qo1MRMWtKIzM0Re_LK5MawP0dwX2Dg6NgjgEsbVxmexI6nIzK1Z0jaYGvVOKcjMhrMEfhRqDCbopFP5KpM0" alt=""></p>
 <p>6.
-To make it pretty,  create an <code>index.css</code> file. Insert the following text on that file, and press the green commit button:</p>
-<pre><code>body {
-    font-family: &#39;Helvetica&#39;, &#39;Arial&#39;, &#39;Sans-Serif&#39;;
-    font-size:1em;
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
-    font-family:&#39;Helvetica&#39;, &#39;Arial&#39;, &#39;Sans-Serif&#39;;
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 2em;
-    font-family:&#39;Helvetica&#39;, &#39;Arial&#39;, &#39;Sans-Serif&#39;;
-}
-p {
-    font-size: 1.1em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-</code></pre><p>Your project code should now look like this: 
-<img src="https://lh6.googleusercontent.com/WElic7ObgxtawSB7YpoMqwRQYxxORQT6vKz62p5XcCuPP2kJ19ac59at2LPC8Vood63_9W81oB7GwDjnlHnRBR_USO1EQdyh5jKg7cyXmIMMyJnUtqCq__MvFZkYg-KzpIv-cOY" alt=""></p>
-<p>7.
-Go back to the first file we created, the <code>index.html</code> file, click on the pencil on the top right (to edit) and replace the text that reads <code>&lt;!--Placeholder for index.css link --&gt;</code> in line 6  with <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/index.css&quot;&gt;</code>. The new file should look like this:</p>
-<p><img src="https://lh6.googleusercontent.com/Bipyrmp-mMQrgwTkRS_ZEkDm8mLjXG7J_LusLIx8thjRvW6Waua6Ng3HwyJmYnrluoruoTOlSlRGOFIQUs8Xq_7DWSCXgcjKJQJeWGITTEutoMDOk7K8dekiYaRGKYNwsqcxI08" alt=""></p>
-<p>After committing the change, and refreshing your <code>yourusename.github.io</code> website, it should be stylin like this:
-<img src="https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279269707_undefined" alt=""></p>
-<p>8.
 Segment on your site. 
-First create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)</p>
+Create a Segment project and click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)</p>
 <p><img src="https://lh6.googleusercontent.com/ue6swDWFchY5LllpF-fw60ig5peul0A7eYrMEeP-euZz9BnfSekldy1jwHL_bBjjKyI3Fec-ReOE9NxoJjC1YIdpO5g5twfIEdP5ycdsJMiSEC6Yn8jqHdUZUf5RMRF6v2EeIdI" alt=""></p>
 <p>Copy the full snippet from the box on your segment dashboard, go back to your <code>index.html</code> file, select the pencil to edit, and replace the line that reads <code>&lt;!--Placeholder for Segment Snippet --&gt;</code> (mine is line 5) with the Segment snippet.</p>
 <p>Your new file should look like this:
 <img src="https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436248776313_undefined" alt=""></p>
-<p>9.
-Identify those users that submit a destination. To do so, create a little function that captures the input from the form, and sends some of that data as parameters in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 44) and insert the following text.</p>
+<p>7.
+Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as trais in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 44) and insert the following text.</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
         function identify(e){
         e.preventDefault();
@@ -184,17 +113,18 @@ Identify those users that submit a destination. To do so, create a little functi
         var user = {email: email, name: fullname, details: details};
         analytics.identify(email, {email: email, name: fullname});
         analytics.track(&#39;destination submitted&#39;, user, function() {
-            window.location.href = &quot;/blog&quot;;
+            window.location.href = &quot;https://www.youtube.com/watch?v=R7vmHGAshi8&quot;;
         });
         }
 &lt;/script&gt;
-</code></pre><p>Your index.html file should contain code similar to the one found here (with your project’s Segment write key in line 7).</p>
-<p>10.
-Commit the changes. Go back to your website and submit a travel recommendation form.
+</code></pre><p>Your index.html file should contain code similar to the one found here (with your project’s Segment write key in line 7). Commit the changes. </p>
+<p>8.
+Go back to your website and submit a travel recommendation form.
 <img src="https://lh6.googleusercontent.com/XwmCdFqs7yF7nMYndphwPR_kyPoMVQipuUedClecnF9tjO5rh5XG77wpqa7C4znkBkBHJhN8vv2q9qSHwSewIqgTV3b-Nn0lmh8AFtAvxCYs1K2EMVKM2YwK3AmSNPUBcXQ4tvg" alt=""></p>
 <p>Go back to your site’s debugger on the Segment’s dash. You should be able to see the following 3 calls:</p>
 <p><img src="https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436278764869_undefined" alt=""></p>
-<p>Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace <code>analytics.page()</code> in your index.html file (mine is in line 8) with  <code>analytics.page(document.title)</code>.</p>
+<p>9.
+Wouldnt it be nice that the page call had the actual title of the page? To make that happen, simple replace <code>analytics.page()</code> in your index.html file (mine is in line 8) with  <code>analytics.page(document.title)</code>.</p>
 <p>your calls should now look like this:</p>
 <p><img src="https://dchtm6r471mui.cloudfront.net/notes.dropbox.com_2KqZoOTMGXjhQh7myTv8k_d.2308_1436279711665_undefined" alt=""></p>
 <p>Congratulations! You just finished Module 1 of this training series.</p>
@@ -207,7 +137,7 @@ We will also integrate with Optimizely and Keen. Optimizely is an interesting on
 <script>
   analytics.page('Article', {
     article: {
-      name: "Build a single page website and implement Segment from scratch in ten steps. ",
+      name: "Build a single page website and implement Segment from scratch in nine steps. ",
       date: "2015-07-07T00:00:00.000Z"
     }
   });
