@@ -107,4 +107,4 @@ Congratulations! You just finished Module 1 of this training series.
 
 One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.
 
-What is in **Module 2**?  In module 2 we will  integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.
+In module 2 we will  integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.
