@@ -7,7 +7,7 @@ Create an account in GitHub (https://github.com/new) or sign in.
 
 ## 2. Create a Repo
 Create a new repository (click on the black + sign on the top right) and call it `yourusername.github.io` . In my case, my new repository is called `beckyjaimes.github.io`, check the box that initializes the repo with a README file, and click on the “Create repository” button.
-![](https://cloudup.com/ch3rFGk5D3P)
+![](https://cloudup.com/ch3rFGk5D3P+)
 
 ## 3. Create an index.html file
 Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)
