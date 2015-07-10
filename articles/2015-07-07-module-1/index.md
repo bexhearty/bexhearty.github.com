@@ -20,7 +20,7 @@ On that `index.html` file, insert the following text, and commit that file by cl
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Travel Destinations</title>
+        <title>Home Questionaire</title>
         <!--Placeholder for Google Analytics Snippet -->
         <!--Placeholder for MixPanel Snippet -->
         <!--Placeholder for KissMetrics Snippet -->
@@ -81,7 +81,7 @@ Identify those users that submit a destination. To do so, we created a little fu
         var fullname = form["fullname"].value;
         var destination = form["destination"];
         var details = form["details"].value;
-        var user = {email: email, name: fullname, details: details};
+        var user = {email: email, name: fullname, destination: destination, details: details};
         analytics.identify(email, {email: email, name: fullname});
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
@@ -98,15 +98,14 @@ Go to your debugger on the Segment’s dash. You should be able to see the follo
 
 ![](https://cloudup.com/c245KeijI5E+)
 
-Enable Google Analytics, MixPanel and KissMetrics. You might have to create an account on each of those services, to get the site IDs and keys to input in Segment’s dash.
+Enable Google Analytics, MixPanel and KissMetrics. You might have to create an account on each of those services to get the site IDs, tokens or keys necessary to input in Segment’s dash.
 
-
-If something is not right and you triple checked that your code is similar to the one [here](https://gist.github.com/TheBecky/76eaa40b43a82a900c82) (and you just created a Github account only for this project), make sure that you have confirmed your email address on that Github email.
+If something is not right and you triple checked that your code is similar to the one [here](https://gist.github.com/TheBecky/76eaa40b43a82a900c82) (and you just created a Github account only to complete this project), make sure that you have confirmed your email address on that Github email.
 
 ## 6. Bonus Step
-Wouldnt it be nice that the page call had the actual title of the page? To do that, you just have to replace `analytics.page()` in your index.html file (mine is in line 11) with  `analytics.page(document.title)`.
+Right now the debugger is showing “/” on our page call. This is because we are in the home page - if we were in another page, the debugger should show /blog or /countries or whatever path you are in. Wouldn’t it be nice that the page call had the actual title of the page instead of the path? To do that, you just have to replace `analytics.page()` in your index.html file (mine is in line 11) with  `analytics.page(document.title)`.
 
-your calls should now look like this:
+Your calls should now look like this:
 
 ![](https://cloudup.com/cbaLOR5Jjjb+)
 
