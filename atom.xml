@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-10T16:01:16.138Z</updated>
+  <updated>2015-07-10T16:05:08.764Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -67,7 +67,7 @@
 &lt;p&gt;To make sure everything is working this far, on a separate window, navigate to  yourusername.github.io. You should be able to see your new website (it might take a few minutes). Should look similar to this:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/c7XrmvISWfJ+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;4-implement-segment&quot;&gt;4. Implement Segment&lt;/h2&gt;
-&lt;p&gt;Create an account on &lt;a href=&quot;https://segment.com&quot;&gt;Segment&lt;/a&gt; and a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+&lt;p&gt;Create an account on &lt;a href=&quot;https://segment.com&quot;&gt;Segment&lt;/a&gt; and a new project by selecting “new project” from the top right dropdown menu:
 &lt;img src=&quot;https://cloudup.com/czuUe3gBBTj+&quot; alt=&quot;&quot;&gt;
 Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/co7DtWt5aOO+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -75,7 +75,7 @@ Click on the “install a library in your site or mobile app” option (or selec
 &lt;p&gt;Your new file should look like this:
 &lt;img src=&quot;https://cloudup.com/ckTqBYoDp7L+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;5-identify-users-and-track-an-event&quot;&gt;5. Identify Users and Track an Event&lt;/h2&gt;
-&lt;p&gt;Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;/form&gt; (mine is line 38) and insert the following text.&lt;/p&gt;
+&lt;p&gt;Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the &lt;code&gt;&amp;lt;/form&amp;gt;&lt;/code&gt; tag (mine is line 38) and insert the following text.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
         function identify(e){
         e.preventDefault();

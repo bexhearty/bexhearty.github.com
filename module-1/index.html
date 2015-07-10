@@ -92,7 +92,7 @@
 <p>To make sure everything is working this far, on a separate window, navigate to  yourusername.github.io. You should be able to see your new website (it might take a few minutes). Should look similar to this:</p>
 <p><img src="https://cloudup.com/c7XrmvISWfJ+" alt=""></p>
 <h2 id="4-implement-segment">4. Implement Segment</h2>
-<p>Create an account on <a href="https://segment.com">Segment</a> and a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+<p>Create an account on <a href="https://segment.com">Segment</a> and a new project by selecting “new project” from the top right dropdown menu:
 <img src="https://cloudup.com/czuUe3gBBTj+" alt="">
 Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)</p>
 <p><img src="https://cloudup.com/co7DtWt5aOO+" alt=""></p>
@@ -100,7 +100,7 @@ Click on the “install a library in your site or mobile app” option (or selec
 <p>Your new file should look like this:
 <img src="https://cloudup.com/ckTqBYoDp7L+" alt=""></p>
 <h2 id="5-identify-users-and-track-an-event">5. Identify Users and Track an Event</h2>
-<p>Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.</p>
+<p>Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the <code>&lt;/form&gt;</code> tag (mine is line 38) and insert the following text.</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
         function identify(e){
         e.preventDefault();
