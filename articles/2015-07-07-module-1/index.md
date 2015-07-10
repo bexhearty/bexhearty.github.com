@@ -59,7 +59,7 @@ To make sure everything is working this far, on a separate window, navigate to  
 ![](https://cloudup.com/c7XrmvISWfJ+)
 
 ## 4. Implement Segment 
-Create an account on [Segment](https://segment.com) and a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+Create an account on [Segment](https://segment.com) and a new project by selecting “new project” from the top right dropdown menu:
 ![](https://cloudup.com/czuUe3gBBTj+)
 Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)
 
@@ -71,7 +71,7 @@ Your new file should look like this:
 ![](https://cloudup.com/ckTqBYoDp7L+)
 
 ## 5. Identify Users and Track an Event
-Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the </form> (mine is line 38) and insert the following text.
+Identify those users that submit a destination. To do so, we created a little function that captures the input from the form, and sends some of that data as traits in an identify call. While we are at it, lets also send an event using the .track method called “destination submitted.”  We are going to do that on the same index.html file, so if you haven’t committed your changes yet (if you have, just open to edit the index.html file again), scroll down to the line after the `</form>` tag (mine is line 38) and insert the following text.
 ```   
 <script type="text/javascript">
         function identify(e){
