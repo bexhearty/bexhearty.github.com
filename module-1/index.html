@@ -45,9 +45,9 @@
   <div class="Article-content Prose Prose--medium">
     <p>Build a single page website and implement Segment from scratch in 5 steps. Completion time 45 minutes</p>
 <h2 id="1-create-an-account">1. Create an Account</h2>
-<p>Create an account in GitHub (<a href="https://github.com/new)or">https://github.com/new)or</a> sign in. If you are creating a new account, make sure to confirm your email address (go to your email and click on the confirm button on the message from Github). Some files will not update later if you haven’t confirmed your email address.</p>
+<p>Create an account in GitHub (<a href="https://github.com/new">https://github.com/new</a>) or sign in. If you are creating a new account, make sure to confirm your email address (go to your email and click on the confirm button on the message from Github). Some files will not update later if you haven’t confirmed your email address.</p>
 <h2 id="2-create-a-repo">2. Create a Repo</h2>
-<p>Create a new repository (click on the black + sign on the top right) and call it <code>yourusername.github.io</code> . Since we are using Github pages to host this site, make sure you follow the exact naming convention <strong>[YOUR USERNAME].github.io</strong>. In my case, my new repository is called <code>beckyjaimes.github.io</code>, check the box that initializes the repo with a README file, and click on the “Create repository” button.
+<p>Create a new repository (click on the black + sign on the top right) and call it <code>yourusername.github.io</code> . Since we are using Github pages to host this site, it is very important to follow the exact naming convention <strong>[YOUR USERNAME].github.io</strong>. In my case, my new repository is called <code>beckyjaimes.github.io</code>, check the box that initializes the repo with a README file, and click on the “Create repository” button.
 <img src="https://cloudup.com/ch3rFGk5D3P+" alt=""></p>
 <h2 id="3-create-an-index-html-file">3. Create an index.html file</h2>
 <p>Create a new file by clicking on the blue + symbol next to your new repository’s name and call it index.html (this file will contain the code for your website’s default page)</p>
@@ -56,7 +56,7 @@
 <pre><code class="lang-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-        &lt;title&gt;Travel Destinations&lt;/title&gt;
+        &lt;title&gt;Home Questionaire&lt;/title&gt;
         &lt;!--Placeholder for Google Analytics Snippet --&gt;
         &lt;!--Placeholder for MixPanel Snippet --&gt;
         &lt;!--Placeholder for KissMetrics Snippet --&gt;
@@ -89,10 +89,10 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p>On a separate window, navigate to  yourusername.github.io. There you should be able to see your new website (it might take up to 5 minutes). Should look similar to this:</p>
+<p>To make sure everything is working this far, on a separate window, navigate to  yourusername.github.io. You should be able to see your new website (it might take a few minutes). Should look similar to this:</p>
 <p><img src="https://cloudup.com/c7XrmvISWfJ+" alt=""></p>
 <h2 id="4-implement-segment">4. Implement Segment</h2>
-<p>Create an account on <a href="https://segment.com">Segment</a>. Create a new project by selecting “new project” from the top right dropdown menu from your dashboard:
+<p>Create an account on <a href="https://segment.com">Segment</a> and a new project by selecting “new project” from the top right dropdown menu from your dashboard:
 <img src="https://cloudup.com/czuUe3gBBTj+" alt="">
 Click on the “install a library in your site or mobile app” option (or select it by clicking on the 6th icon called “setup project”)</p>
 <p><img src="https://cloudup.com/co7DtWt5aOO+" alt=""></p>
@@ -109,7 +109,7 @@ Click on the “install a library in your site or mobile app” option (or selec
         var fullname = form[&quot;fullname&quot;].value;
         var destination = form[&quot;destination&quot;];
         var details = form[&quot;details&quot;].value;
-        var user = {email: email, name: fullname, details: details};
+        var user = {email: email, name: fullname, destination: destination, details: details};
         analytics.identify(email, {email: email, name: fullname});
         analytics.track(&#39;destination submitted&#39;, user, function() {
             window.location.href = &quot;&quot;;
@@ -121,11 +121,11 @@ Click on the “install a library in your site or mobile app” option (or selec
 <img src="https://cloudup.com/cdWxA9BwOdr+" alt=""></p>
 <p>Go to your debugger on the Segment’s dash. You should be able to see the following 3 calls:</p>
 <p><img src="https://cloudup.com/c245KeijI5E+" alt=""></p>
-<p>Enable Google Analytics, MixPanel and KissMetrics. You might have to create an account on each of those services, to get the site IDs and keys to input in Segment’s dash.</p>
-<p>If something is not right and you triple checked that your code is similar to the one <a href="https://gist.github.com/TheBecky/76eaa40b43a82a900c82">here</a> (and you just created a Github account only for this project), make sure that you have confirmed your email address on that Github email.</p>
+<p>Enable Google Analytics, MixPanel and KissMetrics. You might have to create an account on each of those services to get the site IDs, tokens or keys necessary to input in Segment’s dash.</p>
+<p>If something is not right and you triple checked that your code is similar to the one <a href="https://gist.github.com/TheBecky/76eaa40b43a82a900c82">here</a> (and you just created a Github account only to complete this project), make sure that you have confirmed your email address on that Github email.</p>
 <h2 id="6-bonus-step">6. Bonus Step</h2>
-<p>Wouldnt it be nice that the page call had the actual title of the page? To do that, you just have to replace <code>analytics.page()</code> in your index.html file (mine is in line 11) with  <code>analytics.page(document.title)</code>.</p>
-<p>your calls should now look like this:</p>
+<p>Right now the debugger is showing “/” on our page call. This is because we are in the home page - if we were in another page, the debugger should show /blog or /countries or whatever path you are in. Wouldn’t it be nice that the page call had the actual title of the page instead of the path? To do that, you just have to replace <code>analytics.page()</code> in your index.html file (mine is in line 11) with  <code>analytics.page(document.title)</code>.</p>
+<p>Your calls should now look like this:</p>
 <p><img src="https://cloudup.com/cbaLOR5Jjjb+" alt=""></p>
 <p>Congratulations! You just finished Module 1 of this training series.</p>
 <p>One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.</p>
