@@ -17,7 +17,7 @@ Notice how flight 289 is ordered after flight 1009, and flight 570 is ordered af
 ######What are ASCII Values?
 ASCII stands for American Standard Code for Information Interchange. ASCII is a binary file format that assigns a 7-bit binary value (a string of seven 0s and 1s) to alphanumeric, numeric and some special characters -- most keys on the standard keyboard.
 
-ASCII code rose from a system used in telegraphy and it first included only numbers and capital letters. In 1967 lower case letters were included as well as some additional characters for a total of 128 characters. In ASCII, numbers **0** to **9** are assigned smaller values than upper case letters **A** to **Z**, and upper case letters are assigned a smaller value than lower case letters **a** to **z**.
+ASCII code rose from a system used in telegraphy and it first included only numbers and capital letters. In 1967 lower case letters were included as well as some additional characters for a total of 128 characters. In ASCII, numbers **0** to **9** are assigned smaller values than upper case letters **A** to **Z**, and upper case letters are assigned a smaller values than lower case letters **a** to **z**.
 
 In the above example, the flight data is sorted based on ASCII values (UA5445 is a smaller value than UA570 because 4 precedes 7). This type of sorting is efficient for machines and produces reasonable results for the English alphabet. Since its American centric, ASCII presents issues for Asian languages and those languages such as French, Portuguese or Spanish, that contain characters outside of the English alphabet.
 
