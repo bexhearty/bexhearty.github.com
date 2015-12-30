@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-12-30T17:57:47.871Z</updated>
+  <updated>2015-12-30T18:13:38.308Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -16,9 +16,9 @@
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;Using a program to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when ordering a list of flights in ascending order, the results are most likely to resemble the following list:&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Using a program to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when ordering a list of flights in ascending order, the results are most likely to resemble the following:&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Using a program to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when ordering a list of flights in ascending order, the results are most likely to resemble the following list:&lt;/p&gt;
+    <content type="html">&lt;p&gt;Using a program to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when ordering a list of flights in ascending order, the results are most likely to resemble the following:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -55,7 +55,7 @@
 &lt;p&gt;Notice how flight 289 is ordered after flight 1009, and flight 570 is ordered after flight 5445. Most text editors serve as binary-to-symbol translators. In this case, the document you are reading was typed on a text editor and was stored in some location as a set of ASCII, Unicode or some type of binary file containing a bunch of 1s and 0s.  &lt;/p&gt;
 &lt;h6 id=&quot;what-are-ascii-values-&quot;&gt;What are ASCII Values?&lt;/h6&gt;
 &lt;p&gt;ASCII stands for American Standard Code for Information Interchange. ASCII is a binary file format that assigns a 7-bit binary value (a string of seven 0s and 1s) to alphanumeric, numeric and some special characters — most keys on the standard keyboard.&lt;/p&gt;
-&lt;p&gt;ASCII code rose from a system used in telegraphy and it first included only numbers and capital letters. In 1967 lower case letters were included as well as some additional characters for a total of 128 characters. In ASCII, numbers are assigned smaller values than capital letters, and capital letters are assigned a smaller value than lower case letters. ASCII define the sets of numbers &lt;strong&gt;0&lt;/strong&gt; to &lt;strong&gt;9&lt;/strong&gt;, upper case letters &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;Z&lt;/strong&gt;, and lower case letters &lt;strong&gt;a&lt;/strong&gt; to &lt;strong&gt;z&lt;/strong&gt; in ascending numeric value.&lt;/p&gt;
+&lt;p&gt;ASCII code rose from a system used in telegraphy and it first included only numbers and capital letters. In 1967 lower case letters were included as well as some additional characters for a total of 128 characters. In ASCII, numbers &lt;strong&gt;0&lt;/strong&gt; to &lt;strong&gt;9&lt;/strong&gt; are assigned smaller values than upper case letters &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;Z&lt;/strong&gt;, and upper case letters are assigned a smaller value than lower case letters &lt;strong&gt;a&lt;/strong&gt; to &lt;strong&gt;z&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In the above example, the flight data is sorted based on ASCII values (UA5445 is a smaller value than UA570 because 4 precedes 7). This type of sorting is efficient for machines and produces reasonable results for the English alphabet. Since its American centric, ASCII presents issues for Asian languages and those languages such as French, Portuguese or Spanish, that contain characters outside of the English alphabet.&lt;/p&gt;
 &lt;h6 id=&quot;unicode&quot;&gt;Unicode&lt;/h6&gt;
 &lt;p&gt;Unicode is a newer standard for representing characters, which is becoming more popular. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 65,000 character representations (as opposed to ASCII’s 128 character limit), and includes characters from most popular languages. Unicode preserved the order of the first 128 ASCII characters. Many languages are still based on ASCII (Python, R, C and C++), but Unicode is now becoming more popular (Java, Javascript).&lt;/p&gt;
