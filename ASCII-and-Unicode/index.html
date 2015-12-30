@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ASCII and Unicode</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:creator" content="theebecky">
+    <meta name="twitter:card" content="">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role">Success Lead at <a class="Link" href="https://segment.com">Segment</a></p>
+        
+          <ul class="Profile-links">
+            <a class="Profile-link Profile-twitter-link" href="https://twitter.com/theebecky">Twitter</a>
+            <a class="Profile-link Profile-github-link" href="https://github.com/thebecky">GitHub</a>
+            
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+          <a class="Profile-twitter-button twitter-follow-button" href="https://twitter.com/theebecky" data-show-count="false">Follow @theebecky</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">ASCII and Unicode</h1>
+  <time class="Article-date" datetime="2015-12-23T00:00:00.000Z">Tuesday, 22 December 2015</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>Using a program to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when ordering a list of flights in ascending order, the results are most likely to resemble the following list:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Flight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">UA1006</td>
+</tr>
+<tr>
+<td style="text-align:left">UA1008</td>
+</tr>
+<tr>
+<td style="text-align:left">UA1009</td>
+</tr>
+<tr>
+<td style="text-align:left">UA289</td>
+</tr>
+<tr>
+<td style="text-align:left">UA327</td>
+</tr>
+<tr>
+<td style="text-align:left">UA3444</td>
+</tr>
+<tr>
+<td style="text-align:left">UA5445</td>
+</tr>
+<tr>
+<td style="text-align:left">UA570</td>
+</tr>
+</tbody>
+</table>
+<p>That is because most text editors serve as binary-to-symbol translators. In this case, the document you are reading was typed on a text editor and was stored in a server as a set of ASCII, Unicode or some type of binary file containing a bunch of 1s and 0s. </p>
+<h6 id="what-are-ascii-values-">What are ASCII Values?</h6>
+<p>ASCII stands for American Standard Code for Information Interchange and is a binary file format that assigns a 7-bit binary value (a string of seven 0s and 1s) to alphanumeric, numeric and some special characters — most keys on the standard keyboard.</p>
+<p>ASCII code rose from a system used in telegraphy and it first included only numbers and capital letters. In 1967 lower case letters were included as well as some additional characters for a total of 128 characters. In ASCII, numbers are assigned smaller values than capital letters, and capital letters are assigned a smaller value than lower case letters. ASCII define the sets of numbers <strong>0</strong> to <strong>9</strong>, letters <strong>A</strong> to <strong>Z</strong>, and letters <strong>a</strong> to <strong>z</strong> in ascending numeric value.</p>
+<p>In the above example, the flight data is sorted based on ASCII values (UA5445 is a smaller value than UA570 because 4 precedes 7). This type of sorting is efficient for machines and produces reasonable results for the English alphabet. Since its American centric (after al, the A stands for American) ASCII presents issues for Asian languages and those languages such as french, portuguese or spanish, that contain characters outside of the English alphabet.</p>
+<h6 id="unicode">Unicode</h6>
+<p>Unicode is a newer standard for character sets, which is becoming more popular. Rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 65,000 character representations (as opposed to ASCII’s 128 character limit), and includes characters from most popular languages. Unicode preserved the order of the first 128 ASCII characters. </p>
+<p>Although many languages are still based on ASCII (Python, R, C and C++), Unicode is now becoming the norm (Javascript uses Unicode).</p>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "ASCII and Unicode",
+      date: "2015-12-23T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
