@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2015-07-10T16:05:08.764Z</updated>
+  <updated>2015-12-30T05:21:04.514Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -104,7 +104,7 @@ Click on the “install a library in your site or mobile app” option (or selec
 &lt;p&gt;&lt;img src=&quot;https://cloudup.com/cbaLOR5Jjjb+&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Congratulations! You just finished Module 1 of this training series.&lt;/p&gt;
 &lt;p&gt;One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.&lt;/p&gt;
-&lt;p&gt;In module 2 we will  integrate with Optimizely and Keen. Optimizely is an interesting one, as it only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
+&lt;p&gt;In module 2 we will  integrate with Optimizely and Keen. Optimizely is an interesting one, as its the only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
 </content>
   </entry>
 </feed>
