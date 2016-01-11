@@ -9,6 +9,8 @@ If you use your one really good password on every site, you will be better off l
 
 Initially, you may be confused why Google, Github, or Twitter would offer a free service to handle logins through oAuth. Altruism? One motivation is to leverage as many services as possible to your account in order to reduce the chances of you churning and closing that account. For Google, the motivation might be more geared towards tracking which apps you use and how often. A newer and more interesting oAuth service provider is the banking industry. Now you can use your American Express login credentials to sign up to AirBnb, granting AirBnb access some data from your Amex account. When using oAuth is always important to check what data access or permissions you are granting to the new site.
 
+![](http://i.imgur.com/LxgZ0Ry.png)
+
 For me, the benefits from oAuth almost always outweighs the risk of compromising my REALLY good password. Even if that means granting access to additional data points so that Google can have a clearer picture of "Who you are to Google."  
 
 Coming next: Who you are to Google 
