@@ -1,4 +1,4 @@
-Sign in with Google, Github, or Twitter
+# Sign in with Google, Github, or Twitter
 Why should you, or should you not
 
 Password creation is annoying. Some sites require at least 6 characters, others require at least one number, and others require you to have both a capital and a lower case letter... But, make sure that capital is not the first or last character. Inevitably, we all end up creating just one password. One really good password, you know, something like pAssw0rd! and then use that REALLY good password for every site.
