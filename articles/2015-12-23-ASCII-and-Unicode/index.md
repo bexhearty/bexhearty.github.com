@@ -1,7 +1,7 @@
-#ASCII and Unicode
-Using a program to order lists that contain both letters and numbers will often times yield unexpected results. 
+#ASCII, Unicode and alphanumeric lists
+Why native sorting looks funky
 
-For instance, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:
+Using native sorting functions to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:
 
 | Flight |
 |:------|
@@ -21,7 +21,7 @@ ASCII stands for American Standard Code for Information Interchange. ASCII is a 
 
 ASCII code was first introduced in the early 1960's and was based on a system used in telegraphy. In ASCII, numbers **0** to **9** are assigned smaller values than upper case letters **A** to **Z**, and upper case letters are assigned smaller values than lower case letters **a** to **z**.
 
-In the above example, the flight data is sorted based on ASCII values (UA5445 preceds UA570 because 4 precedes 7). This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.
+This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.
 
 ######Unicode
-Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII's 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages are still based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies such as XML, Java and Javascript.
+Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII's 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages were originally based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies such as XML, Java and Javascript and supported by most languages.
