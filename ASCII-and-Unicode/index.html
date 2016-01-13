@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ASCII and Unicode</title>
+    <title>ASCII, Unicode and alphanumeric lists</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:creator" content="theebecky">
@@ -40,11 +40,11 @@
         </div>      </div>
       <div class="Layout-main"><article class="Article">
   <a class="Article-home" href="/">Home</a>
-  <h1 class="Article-title Heading Heading--huge">ASCII and Unicode</h1>
+  <h1 class="Article-title Heading Heading--huge">ASCII, Unicode and alphanumeric lists</h1>
   <time class="Article-date" datetime="2015-12-23T00:00:00.000Z">Tuesday, 22 December 2015</time>
   <div class="Article-content Prose Prose--medium">
-    <p>Using a program to order lists that contain both letters and numbers will often times yield unexpected results. </p>
-<p>For instance, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:</p>
+    <p>Why native sorting looks funky</p>
+<p>Using native sorting functions to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:</p>
 <table>
 <thead>
 <tr>
@@ -82,16 +82,16 @@
 <h6 id="what-are-ascii-values-">What are ASCII Values?</h6>
 <p>ASCII stands for American Standard Code for Information Interchange. ASCII is a binary file format that assigns a 7-bit binary value (a string of seven 0s and 1s) to alphanumeric, numeric and some special characters — most keys on the standard keyboard.</p>
 <p>ASCII code was first introduced in the early 1960’s and was based on a system used in telegraphy. In ASCII, numbers <strong>0</strong> to <strong>9</strong> are assigned smaller values than upper case letters <strong>A</strong> to <strong>Z</strong>, and upper case letters are assigned smaller values than lower case letters <strong>a</strong> to <strong>z</strong>.</p>
-<p>In the above example, the flight data is sorted based on ASCII values (UA5445 preceds UA570 because 4 precedes 7). This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.</p>
+<p>This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.</p>
 <h6 id="unicode">Unicode</h6>
-<p>Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII’s 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages are still based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies such as XML, Java and Javascript.</p>
+<p>Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII’s 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages were originally based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies such as XML, Java and Javascript and supported by most languages.</p>
 
   </div>
 </article>
 <script>
   analytics.page('Article', {
     article: {
-      name: "ASCII and Unicode",
+      name: "ASCII, Unicode and alphanumeric lists",
       date: "2015-12-23T00:00:00.000Z"
     }
   });

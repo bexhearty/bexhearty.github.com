@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2016-01-11T22:21:00.606Z</updated>
+  <updated>2016-01-13T19:42:22.430Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
@@ -16,31 +16,31 @@
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;Why should you, or should you not&lt;/p&gt;
+    <summary type="html">&lt;p&gt;When you should or shouldn’t&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Why should you, or should you not&lt;/p&gt;
-&lt;p&gt;The joys of password creation! Some sites require passwords with at least 6 characters, others require at least one number and a character (but make sure its not \ ), and others require you to have both a capital and a lower case letter… but, make sure that capital is not at the begining or at the end of the password. Oh, also make sure your password is unique to the site, and that you change it often. Inevitably, we all end up creating just one password. One really good password, you know, something like &lt;code&gt;pAssw0rd!&lt;/code&gt; and then use that REALLY good password for every site. And never change it. Like never, ever, ever.&lt;/p&gt;
+    <content type="html">&lt;p&gt;When you should or shouldn’t&lt;/p&gt;
+&lt;p&gt;The joys of password creation! Some sites require passwords with at least 6 characters, others require at least one number and a character (but make sure its not \ ), and others require you to have both a capital and a lower case letter… but, make sure that capital is not at the begining or at the end of the password. Oh, also make sure your password is unique to the site, and that you change it often. Inevitably, we all end up creating just one password. One really good password, you know, something like &lt;code&gt;pAssw0rd!&lt;/code&gt; and then use that REALLY good password for every site. And never change it. &lt;/p&gt;
 &lt;p&gt;One problem with this technique is that if a site’s database is compromised, access to all other sites is compromised. We’ve heard that a thousand times already, however, and to most of us, the risk outweighs the annoyance. Note: If you click on “Forgot password” on any site and get an email with your actual password, run away from that service - your data is being handled by amateurs. If the site is able to send an email with the password you created, it means that the site is either saving your password in plain text, or is storing a simple encryption of your password. Storing plaintext or encrypted passwords with a simple key are the easiest methods for developers to handle passwords, and also the easiest to access by an attacker. A safer way for sites to deal with passwords is by saving a salted version of the &lt;a href=&quot;https://crackstation.net/hashing-security.htm&quot;&gt;hashed password&lt;/a&gt; - a little more involved process from the developer standpoint. An even safer way to deal with passwords is using an encryption algorithm such as &lt;a href=&quot;http://bcrypt.sourceforge.net/&quot;&gt;bcryt&lt;/a&gt;, which is (you guessed it) an even more involved process for the developer. The safest way for sites to deal with passwords is to not deal with passwords at all. &lt;/p&gt;
 &lt;p&gt;If you use your one really good password on every site, you will be better off logging in with either Google, Github, Twitter or any other site that offers a login service—in particular if your really good password is what you also use to login into any of those sites. The service is called oAuth. oAuth exchanges security keys between the new site and Google, Github or Twitter and they handle the logging without involving the creation of new passwords. Sometimes the new sites will ask your permission to export into their site additional data from Google, usually, your email address and avatar. Some more creepy services ask for permission to access your contacts, demographic and geographic data, and others ask your permission to actually act on your behalf into the service (i.e. Tweet for you). &lt;/p&gt;
 &lt;p&gt;Initially, you may be confused why Google, Github, or Twitter would offer a free service to handle logins through oAuth. Altruism? One motivation is to leverage as many services as possible to your account in order to reduce the chances of you churning and closing that account. For Google, the motivation might be more geared towards tracking which apps you use and how often. A newer and more interesting oAuth service provider is the banking industry. Now you can use your American Express login credentials to sign up to AirBnb, granting AirBnb access some data from your Amex account. When using oAuth is always important to check what data access or permissions you are granting to the new site.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/LxgZ0Ry.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Unless the new site is asking for too much data, for me, the benefits from oAuth almost always outweighs the risk of compromising my REALLY good password. Even if that means granting access to additional basic data points so that Google can have a clearer picture of “Who you are to Google.”&lt;/p&gt;
-&lt;p&gt;To review the list of authorized applications: &lt;a href=&quot;https://security.google.com/settings/security/permissions&quot;&gt;Google&lt;/a&gt;, &lt;a href=&quot;https://help.github.com/articles/keeping-your-ssh-keys-and-application-access-tokens-safe/#reviewing-your-authorized-applications-oauth&quot;&gt;Github&lt;/a&gt;, and &lt;a href=&quot;https://twitter.com/settings/applications&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To review the list of authorized applications on each of your accounts go to: &lt;a href=&quot;https://security.google.com/settings/security/permissions&quot;&gt;Google&lt;/a&gt;, &lt;a href=&quot;https://help.github.com/articles/keeping-your-ssh-keys-and-application-access-tokens-safe/#reviewing-your-authorized-applications-oauth&quot;&gt;Github&lt;/a&gt;, and &lt;a href=&quot;https://twitter.com/settings/applications&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Coming next: Who you are to Google &lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <title>ASCII and Unicode</title>
+    <title>ASCII, Unicode and alphanumeric lists</title>
     <link href="http://jaimes.me/ASCII-and-Unicode"/>
     <id>http://jaimes.me/ASCII-and-Unicode</id>
     <updated>2015-12-23T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;Using a program to order lists that contain both letters and numbers will often times yield unexpected results. &lt;/p&gt;
+    <summary type="html">&lt;p&gt;Why native sorting looks funky&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Using a program to order lists that contain both letters and numbers will often times yield unexpected results. &lt;/p&gt;
-&lt;p&gt;For instance, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:&lt;/p&gt;
+    <content type="html">&lt;p&gt;Why native sorting looks funky&lt;/p&gt;
+&lt;p&gt;Using native sorting functions to order lists that contain both letters and numbers will often times yield unexpected results. For instance, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -78,9 +78,9 @@
 &lt;h6 id=&quot;what-are-ascii-values-&quot;&gt;What are ASCII Values?&lt;/h6&gt;
 &lt;p&gt;ASCII stands for American Standard Code for Information Interchange. ASCII is a binary file format that assigns a 7-bit binary value (a string of seven 0s and 1s) to alphanumeric, numeric and some special characters — most keys on the standard keyboard.&lt;/p&gt;
 &lt;p&gt;ASCII code was first introduced in the early 1960’s and was based on a system used in telegraphy. In ASCII, numbers &lt;strong&gt;0&lt;/strong&gt; to &lt;strong&gt;9&lt;/strong&gt; are assigned smaller values than upper case letters &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;Z&lt;/strong&gt;, and upper case letters are assigned smaller values than lower case letters &lt;strong&gt;a&lt;/strong&gt; to &lt;strong&gt;z&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;In the above example, the flight data is sorted based on ASCII values (UA5445 preceds UA570 because 4 precedes 7). This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.&lt;/p&gt;
+&lt;p&gt;This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.&lt;/p&gt;
 &lt;h6 id=&quot;unicode&quot;&gt;Unicode&lt;/h6&gt;
-&lt;p&gt;Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII’s 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages are still based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies such as XML, Java and Javascript.&lt;/p&gt;
+&lt;p&gt;Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII’s 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages were originally based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies such as XML, Java and Javascript and supported by most languages.&lt;/p&gt;
 </content>
   </entry>
   <entry>
