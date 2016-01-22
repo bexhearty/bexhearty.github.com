@@ -3,11 +3,24 @@
   <title>Becky Jaimes</title>
   <link href="http://jaimes.me/atom.xml" rel="self"/>
   <link href="http://jaimes.me"/>
-  <updated>2016-01-15T04:15:01.043Z</updated>
+  <updated>2016-01-22T04:11:07.670Z</updated>
   <id>http://jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
+  <entry>
+    <title>When to ship without analytics</title>
+    <link href="http://jaimes.me/when-to-ship-without-analytics"/>
+    <id>http://jaimes.me/when-to-ship-without-analytics</id>
+    <updated>2016-01-21T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;Never.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;Never.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Sign in with Google, Github, or Twitter</title>
     <link href="http://jaimes.me/Sign-in-with-Google-Github-or-Twitter"/>
