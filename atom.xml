@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Becky Jaimes</title>
-  <link href="http://jaimes.me/atom.xml" rel="self"/>
-  <link href="http://jaimes.me"/>
-  <updated>2016-02-17T00:36:45.772Z</updated>
-  <id>http://jaimes.me</id>
+  <link href="http://blog.jaimes.me/atom.xml" rel="self"/>
+  <link href="http://blog.jaimes.me"/>
+  <updated>2016-02-17T01:24:34.968Z</updated>
+  <id>http://blog.jaimes.me</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
   <entry>
     <title>Who you are</title>
-    <link href="http://jaimes.me/Who-you-are-to"/>
-    <id>http://jaimes.me/Who-you-are-to</id>
+    <link href="http://blog.jaimes.me/Who-you-are-to"/>
+    <id>http://blog.jaimes.me/Who-you-are-to</id>
     <updated>2016-02-02T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
@@ -26,8 +26,8 @@
   </entry>
   <entry>
     <title>When to ship without analytics</title>
-    <link href="http://jaimes.me/when-to-ship-without-analytics"/>
-    <id>http://jaimes.me/when-to-ship-without-analytics</id>
+    <link href="http://blog.jaimes.me/when-to-ship-without-analytics"/>
+    <id>http://blog.jaimes.me/when-to-ship-without-analytics</id>
     <updated>2016-01-21T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
@@ -39,8 +39,8 @@
   </entry>
   <entry>
     <title>Sign in with Google, Github, or Twitter</title>
-    <link href="http://jaimes.me/Sign-in-with-Google-Github-or-Twitter"/>
-    <id>http://jaimes.me/Sign-in-with-Google-Github-or-Twitter</id>
+    <link href="http://blog.jaimes.me/Sign-in-with-Google-Github-or-Twitter"/>
+    <id>http://blog.jaimes.me/Sign-in-with-Google-Github-or-Twitter</id>
     <updated>2016-01-10T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
@@ -63,8 +63,8 @@
   </entry>
   <entry>
     <title>ASCII, Unicode and alphanumeric lists</title>
-    <link href="http://jaimes.me/ASCII-and-Unicode"/>
-    <id>http://jaimes.me/ASCII-and-Unicode</id>
+    <link href="http://blog.jaimes.me/ASCII-and-Unicode"/>
+    <id>http://blog.jaimes.me/ASCII-and-Unicode</id>
     <updated>2015-12-23T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
@@ -118,8 +118,8 @@
   </entry>
   <entry>
     <title>Build a simple website and implement Segment</title>
-    <link href="http://jaimes.me/Implement-Segment"/>
-    <id>http://jaimes.me/Implement-Segment</id>
+    <link href="http://blog.jaimes.me/Implement-Segment"/>
+    <id>http://blog.jaimes.me/Implement-Segment</id>
     <updated>2015-07-07T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
