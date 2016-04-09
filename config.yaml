@@ -3,7 +3,7 @@
 # Config.
 #
 
-url: http://jaimes.me
+url: http://blog.datasommelier.com
 writeKey: GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC
 
 #
@@ -11,11 +11,12 @@ writeKey: GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC
 #
 
 name: Becky Jaimes
-role: Success Lead
+role: Data Sommelier
 
 #
 # Social.
 #
 
-twitter: theebecky
-github: thebecky
+twitter: 
+github: TheBecky
+email: becky@datasommelier.com

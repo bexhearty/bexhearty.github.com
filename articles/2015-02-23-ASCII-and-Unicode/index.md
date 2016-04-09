@@ -1,5 +1,5 @@
 #ASCII, Unicode and alphanumeric lists
-Why native sorting looks funky
+Intricacies of native sorting
 
 Using native sorting functions to order lists that contain alphanumeric strings will _most of the time_ yield unexpected results. For example, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:
 

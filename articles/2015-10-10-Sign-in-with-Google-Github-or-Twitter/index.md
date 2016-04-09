@@ -20,6 +20,6 @@ Initially, you may be confused why Google, Github, or Twitter would offer a free
 
 Unless the new site is asking for too much data, for me, the benefits from oAuth almost always outweighs the risk of compromising my REALLY good password. Even if that means granting access to additional basic data points so that Google can have a clearer picture of "Who you are to Google."
 
-To review the list of authorized applications on each of your accounts go to: [Google](https://security.google.com/settings/security/permissions), [Github](https://help.github.com/articles/keeping-your-ssh-keys-and-application-access-tokens-safe/#reviewing-your-authorized-applications-oauth), and [Twitter](https://twitter.com/settings/applications).
+To review the list of authorized applications on each of your accounts go to: [Google](https://security.google.com/settings/security/permissions), [Github](https://github.com/settings/applications), and [Twitter](https://twitter.com/settings/applications).
 
 Coming next: Who you are to Google 

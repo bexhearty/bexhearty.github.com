@@ -1,0 +1,9 @@
+fixin plato scync issues with github multple accts
+
+        · Error: Remote url mismatch.  Got "git@github.com:TheBecky/thebecky.github.com.git" but expected "git@github.com:data-sommelier/datasommelier.github.com.git" in ../../../thebecky/plato/node_modules/gh-pages/.cache.  If you have changed your "repo" option, try running the "clean" task first.
+
+
+
+
+
+go to plato>node_modules/gh-pages>.cache>.git>config
