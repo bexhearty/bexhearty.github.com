@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Becky Jaimes</title>
-  <link href="http://blog.jaimes.me/atom.xml" rel="self"/>
-  <link href="http://blog.jaimes.me"/>
-  <updated>2016-04-09T03:59:35.785Z</updated>
-  <id>http://blog.jaimes.me</id>
+  <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
+  <link href="http://blog.datasommelier.com"/>
+  <updated>2016-04-09T15:48:11.939Z</updated>
+  <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
   <entry>
-    <title>Who you are</title>
-    <link href="http://blog.jaimes.me/Who-you-are-to"/>
-    <id>http://blog.jaimes.me/Who-you-are-to</id>
-    <updated>2016-02-02T00:00:00.000Z</updated>
-    <author>
-      <name>Becky Jaimes</name>
-    </author>
-    <summary type="html">&lt;p&gt;To Google, Twitter, Github and other services.&lt;/p&gt;
-</summary>
-    <content type="html">&lt;p&gt;To Google, Twitter, Github and other services.&lt;/p&gt;
-&lt;p&gt;If you’re like me, you use your Google, Twitter or Github credentials (a service that is called oAuth) to login to  websites instead of creating new usernames or passwords. &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/LxgZ0Ry.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;When I started building applications, I was curious to learn what data was available and who had I given access to it, so I built a visualization tool that shows what basic data is shared when using oAuth. You can access it by going &lt;a href=&quot;http://whoyouare.jaimes.me&quot;&gt;here&lt;/a&gt; - if you see something there you don’t like, or would like to see (and edit) the services that have access to this data, follow the appropriate link at the bottom of each page.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
     <title>When to ship without analytics</title>
-    <link href="http://blog.jaimes.me/when-to-ship-without-analytics"/>
-    <id>http://blog.jaimes.me/when-to-ship-without-analytics</id>
+    <link href="http://blog.datasommelier.com/when-to-ship-without-analytics"/>
+    <id>http://blog.datasommelier.com/when-to-ship-without-analytics</id>
     <updated>2016-01-21T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
@@ -38,10 +22,26 @@
 </content>
   </entry>
   <entry>
+    <title>Who you are</title>
+    <link href="http://blog.datasommelier.com/Who-you-are-to"/>
+    <id>http://blog.datasommelier.com/Who-you-are-to</id>
+    <updated>2015-12-02T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;To Google, Twitter, Github and other services&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;To Google, Twitter, Github and other services&lt;/p&gt;
+&lt;p&gt;If you’re like me, you use your Google, Twitter or Github credentials (a service that is called oAuth) to login to  websites instead of creating new usernames or passwords. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/LxgZ0Ry.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When I started building applications, I was curious to learn what data was available and who had I given access to it, so I built a visualization tool that shows what basic data is shared when using oAuth. You can access it by going &lt;a href=&quot;http://whoyouare.jaimes.me&quot;&gt;here&lt;/a&gt; - if you see something there you don’t like, or would like to see (and edit) the services that have access to this data, follow the appropriate link at the bottom of each page.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>Sign in with Google, Github, or Twitter</title>
-    <link href="http://blog.jaimes.me/Sign-in-with-Google-Github-or-Twitter"/>
-    <id>http://blog.jaimes.me/Sign-in-with-Google-Github-or-Twitter</id>
-    <updated>2016-01-10T00:00:00.000Z</updated>
+    <link href="http://blog.datasommelier.com/Sign-in-with-Google-Github-or-Twitter"/>
+    <id>http://blog.datasommelier.com/Sign-in-with-Google-Github-or-Twitter</id>
+    <updated>2015-10-10T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
     </author>
@@ -62,64 +62,9 @@
 </content>
   </entry>
   <entry>
-    <title>ASCII, Unicode and alphanumeric lists</title>
-    <link href="http://blog.jaimes.me/ASCII-and-Unicode"/>
-    <id>http://blog.jaimes.me/ASCII-and-Unicode</id>
-    <updated>2015-12-23T00:00:00.000Z</updated>
-    <author>
-      <name>Becky Jaimes</name>
-    </author>
-    <summary type="html">&lt;p&gt;Why native sorting looks funky&lt;/p&gt;
-</summary>
-    <content type="html">&lt;p&gt;Why native sorting looks funky&lt;/p&gt;
-&lt;p&gt;Using native sorting functions to order lists that contain alphanumeric strings will &lt;em&gt;most of the time&lt;/em&gt; yield unexpected results. For example, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Flight&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA1006&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA1008&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA1009&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA289&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA327&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA3444&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA5445&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;UA570&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Most text editors serve as binary-to-symbol translators. In this case, the above table was typed on a text editor and was stored in some location as a set of ASCII, Unicode or some other type of binary values. The result of sorting that translation is a “lexical” sort meaning that “1006” comes before “289”.&lt;/p&gt;
-&lt;h6 id=&quot;what-are-ascii-values-&quot;&gt;What are ASCII Values?&lt;/h6&gt;
-&lt;p&gt;ASCII stands for American Standard Code for Information Interchange. ASCII is a binary file format that assigns a 7-bit binary value (a string of seven 0s and 1s) to alphanumeric, numeric and some special characters — most keys on the standard keyboard.&lt;/p&gt;
-&lt;p&gt;ASCII code was first introduced in the early 1960’s and was based on a system used in telegraphy. In ASCII, numbers &lt;strong&gt;0&lt;/strong&gt; to &lt;strong&gt;9&lt;/strong&gt; are assigned smaller values than upper case letters &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;Z&lt;/strong&gt;, and upper case letters are assigned smaller values than lower case letters &lt;strong&gt;a&lt;/strong&gt; to &lt;strong&gt;z&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.&lt;/p&gt;
-&lt;h6 id=&quot;unicode&quot;&gt;Unicode&lt;/h6&gt;
-&lt;p&gt;Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII’s 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages were originally based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies and supported by most languages.&lt;/p&gt;
-&lt;p&gt;When sorting lists that allow alphanumeric characters on a string, in most programs, is necessary to define a custom sorting algorithm that does not relay in the order of individual character’s codes - some places refer to it as “natural sorting.” A comprehensive list of natural sorting algorithms in most languages can be found &lt;a href=&quot;http://rosettacode.org/wiki/Natural_sorting&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
     <title>Build a simple website and implement Segment</title>
-    <link href="http://blog.jaimes.me/Implement-Segment"/>
-    <id>http://blog.jaimes.me/Implement-Segment</id>
+    <link href="http://blog.datasommelier.com/Implement-Segment"/>
+    <id>http://blog.datasommelier.com/Implement-Segment</id>
     <updated>2015-07-07T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
@@ -213,6 +158,61 @@ Click on the “install a library in your site or mobile app” option (or selec
 &lt;p&gt;Congratulations! You just finished Module 1 of this training series.&lt;/p&gt;
 &lt;p&gt;One thing worth pointing out is that for simplicity purposes we didn’t follow Segment’s best practices when assigning a random userID for each user. Instead, we sent our user’s email address as the userID and that will not make Sperandio proud. The reason that sending the email is less than ideal, is because users can have many email addresses and we dont want to count one user multiple times.&lt;/p&gt;
 &lt;p&gt;In module 2 we will  integrate with Optimizely and Keen. Optimizely is an interesting one, as its the only integration that requires their snippet to also be loaded into our page.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>ASCII, Unicode and alphanumeric lists</title>
+    <link href="http://blog.datasommelier.com/ASCII-and-Unicode"/>
+    <id>http://blog.datasommelier.com/ASCII-and-Unicode</id>
+    <updated>2015-02-23T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;Intricacies of native sorting&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;Intricacies of native sorting&lt;/p&gt;
+&lt;p&gt;Using native sorting functions to order lists that contain alphanumeric strings will &lt;em&gt;most of the time&lt;/em&gt; yield unexpected results. For example, when using a program to order a list of flights in ascending order, the results are most likely to resemble the following:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Flight&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA1006&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA1008&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA1009&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA289&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA327&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA3444&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA5445&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;UA570&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Most text editors serve as binary-to-symbol translators. In this case, the above table was typed on a text editor and was stored in some location as a set of ASCII, Unicode or some other type of binary values. The result of sorting that translation is a “lexical” sort meaning that “1006” comes before “289”.&lt;/p&gt;
+&lt;h6 id=&quot;what-are-ascii-values-&quot;&gt;What are ASCII Values?&lt;/h6&gt;
+&lt;p&gt;ASCII stands for American Standard Code for Information Interchange. ASCII is a binary file format that assigns a 7-bit binary value (a string of seven 0s and 1s) to alphanumeric, numeric and some special characters — most keys on the standard keyboard.&lt;/p&gt;
+&lt;p&gt;ASCII code was first introduced in the early 1960’s and was based on a system used in telegraphy. In ASCII, numbers &lt;strong&gt;0&lt;/strong&gt; to &lt;strong&gt;9&lt;/strong&gt; are assigned smaller values than upper case letters &lt;strong&gt;A&lt;/strong&gt; to &lt;strong&gt;Z&lt;/strong&gt;, and upper case letters are assigned smaller values than lower case letters &lt;strong&gt;a&lt;/strong&gt; to &lt;strong&gt;z&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This type of sorting is efficient for machines and produces reasonable results when using the English alphabet. However, since ASCII is American centric it presents limitations for Asian languages and other languages that contain characters outside of the English alphabet.&lt;/p&gt;
+&lt;h6 id=&quot;unicode&quot;&gt;Unicode&lt;/h6&gt;
+&lt;p&gt;Unicode is a newer (1987) standard for representing characters. It also stores characters in binary form, but rather than using only 7-bits, Unicode is based in 16-bit binary values which allows more than 1,000,000 possible character representations (as opposed to ASCII’s 128 character limit). Currently, Unicode includes characters from most popular languages and preserved the order of the first 128 ASCII characters. Although many languages were originally based on ASCII (Python, R, C and C++), Unicode has been implemented in many recent technologies and supported by most languages.&lt;/p&gt;
+&lt;p&gt;When sorting lists that allow alphanumeric characters on a string, in most programs, is necessary to define a custom sorting algorithm that does not relay in the order of individual character’s codes - some places refer to it as “natural sorting.” A comprehensive list of natural sorting algorithms in most languages can be found &lt;a href=&quot;http://rosettacode.org/wiki/Natural_sorting&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>
