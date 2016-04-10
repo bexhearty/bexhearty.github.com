@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-04-09T15:59:18.728Z</updated>
+  <updated>2016-04-10T01:26:59.965Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -38,17 +38,17 @@
 </content>
   </entry>
   <entry>
-    <title>Sign in with Google, Github, or Twitter</title>
+    <title>When to sign in with your Google account</title>
     <link href="http://blog.datasommelier.com/Sign-in-with-Google-Github-or-Twitter"/>
     <id>http://blog.datasommelier.com/Sign-in-with-Google-Github-or-Twitter</id>
     <updated>2015-10-10T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;When you should or shouldn’t&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Or Twitter, Facebook or any other account that provides the service&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;When you should or shouldn’t&lt;/p&gt;
-&lt;p&gt;The joys of password creation! Some sites require passwords with at least 6 characters, others require at least one number and a character (but make sure that the character is not a \ ), others require you to have both a capital and a lower case letter… and make sure that the capital letter is not at the begining or at the end of the password. Oh, also make sure your password is unique to the site, and that you change it often. &lt;/p&gt;
+    <content type="html">&lt;p&gt;Or Twitter, Facebook or any other account that provides the service&lt;/p&gt;
+&lt;p&gt;Some sites require passwords to have at least 6 characters, others require at least one number and a character (but make sure that the character is not a \ ), and others require you to have both a capital and a lower case letter… and make sure that the capital letter is not at the begining or at the end of the password. Oh, also make sure your password is unique to the site, and that you change it often. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/fUMJpI1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Inevitably, we all end up creating just one password. One really good password, you know, something like &lt;code&gt;pAssw0rd!&lt;/code&gt; and then use that REALLY good password for every site. And never change it. &lt;/p&gt;
 &lt;p&gt;One problem with this technique is that if a site’s database is compromised, access to all other sites is compromised. We’ve heard that a thousand times already, however, and to most of us, the risk outweighs the annoyance. Note: If you click on “Forgot password” on any site and get an email with your actual password, run away from that service - your data is being handled by amateurs. If the site is able to send an email with the password you created, it means that the site is either saving your password in plain text, or is storing a simple encryption of your password. &lt;/p&gt;
@@ -72,6 +72,7 @@
     <summary type="html">&lt;p&gt;5 steps. Completion time 45 minutes&lt;/p&gt;
 </summary>
     <content type="html">&lt;p&gt;5 steps. Completion time 45 minutes&lt;/p&gt;
+&lt;p&gt;Note: The tutorial that follows is intended to encourage active learning for a non technical audience.&lt;/p&gt;
 &lt;h2 id=&quot;1-create-an-account&quot;&gt;1. Create an Account&lt;/h2&gt;
 &lt;p&gt;Create an account in GitHub (&lt;a href=&quot;https://github.com/new&quot;&gt;https://github.com/new&lt;/a&gt;) or sign in. If you are creating a new account, make sure to confirm your email address (go to your email and click on the confirm button on the message from Github). Some files will not update later if you haven’t confirmed your email address.&lt;/p&gt;
 &lt;h2 id=&quot;2-create-a-repo&quot;&gt;2. Create a Repo&lt;/h2&gt;
