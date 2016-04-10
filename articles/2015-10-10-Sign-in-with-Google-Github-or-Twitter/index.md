@@ -1,7 +1,7 @@
-# Sign in with Google, Github, or Twitter
-When you should or shouldn't
+# When to sign in with your Google account
+Or Twitter, Facebook or any other account that provides the service
 
-The joys of password creation! Some sites require passwords with at least 6 characters, others require at least one number and a character (but make sure that the character is not a \ ), others require you to have both a capital and a lower case letter... and make sure that the capital letter is not at the begining or at the end of the password. Oh, also make sure your password is unique to the site, and that you change it often. 
+Some sites require passwords to have at least 6 characters, others require at least one number and a character (but make sure that the character is not a \ ), and others require you to have both a capital and a lower case letter... and make sure that the capital letter is not at the begining or at the end of the password. Oh, also make sure your password is unique to the site, and that you change it often. 
 
 ![](http://i.imgur.com/fUMJpI1.png)
 
