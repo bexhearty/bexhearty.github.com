@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-04-10T01:26:59.965Z</updated>
+  <updated>2016-04-11T17:12:32.334Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -22,16 +22,16 @@
 </content>
   </entry>
   <entry>
-    <title>Who you are</title>
+    <title>Who you are to Google</title>
     <link href="http://blog.datasommelier.com/Who-you-are-to"/>
     <id>http://blog.datasommelier.com/Who-you-are-to</id>
     <updated>2015-12-02T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;To Google, Twitter, Github and other services&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Data available from Google, Twitter, Github and other services when loging in with oAuth&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;To Google, Twitter, Github and other services&lt;/p&gt;
+    <content type="html">&lt;p&gt;Data available from Google, Twitter, Github and other services when loging in with oAuth&lt;/p&gt;
 &lt;p&gt;If you’re like me, you use your Google, Twitter or Github credentials (a service that is called oAuth) to login to  websites instead of creating new usernames or passwords. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/LxgZ0Ry.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;When I started building applications, I was curious to learn what data was available and who had I given access to it, so I built a visualization tool that shows what basic data is shared when using oAuth. You can access it by going &lt;a href=&quot;http://whoyouare.jaimes.me&quot;&gt;here&lt;/a&gt; - if you see something there you don’t like, or would like to see (and edit) the services that have access to this data, follow the appropriate link at the bottom of each page.&lt;/p&gt;
