@@ -1,5 +1,5 @@
-# Who you are
-To Google, Twitter, Github and other services
+# Who you are to Google
+Data available from Google, Twitter, Github and other services when loging in with oAuth
 
 If you’re like me, you use your Google, Twitter or Github credentials (a service that is called oAuth) to login to  websites instead of creating new usernames or passwords. 
 
