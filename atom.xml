@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-08-29T10:32:37.395Z</updated>
+  <updated>2016-08-29T19:37:20.792Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -46,7 +46,7 @@ class Phonebook(Base):
     def __repr__(self):
         return &amp;quot;&amp;lt;Phonebook(name=&amp;#39;%s&amp;#39;, email=&amp;#39;%s&amp;#39;, phone=&amp;#39;%s&amp;#39;)&amp;gt;&amp;quot;\
             %(self.name, self.email, self.phone)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that we have the engine, use the metadata &lt;code&gt;create_all&lt;/code&gt; method to actually create the database - if working on a mac, run this from the command line using ipython, if working from a PC just append this line to the .py file that we are building here:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that we have the engine, use the metadata &lt;code&gt;create_all&lt;/code&gt; method to actually create the database - if working on a mac, run this from the terminal using iPython, if working from a PC just append this line to the .py file that we are building here:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Base.metadata.create_all(engine)
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;add-instances-&quot;&gt;Add instances:&lt;/h3&gt;
 &lt;p&gt;Establish a session in order to interact with the database, and create instances and rows so that we can add them to the session:&lt;/p&gt;

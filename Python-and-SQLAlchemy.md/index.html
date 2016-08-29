@@ -67,7 +67,7 @@ class Phonebook(Base):
     def __repr__(self):
         return &quot;&lt;Phonebook(name=&#39;%s&#39;, email=&#39;%s&#39;, phone=&#39;%s&#39;)&gt;&quot;\
             %(self.name, self.email, self.phone)
-</code></pre><p>Now that we have the engine, use the metadata <code>create_all</code> method to actually create the database - if working on a mac, run this from the command line using ipython, if working from a PC just append this line to the .py file that we are building here:</p>
+</code></pre><p>Now that we have the engine, use the metadata <code>create_all</code> method to actually create the database - if working on a mac, run this from the terminal using iPython, if working from a PC just append this line to the .py file that we are building here:</p>
 <pre><code>Base.metadata.create_all(engine)
 </code></pre><h3 id="add-instances-">Add instances:</h3>
 <p>Establish a session in order to interact with the database, and create instances and rows so that we can add them to the session:</p>
