@@ -37,7 +37,7 @@ class Phonebook(Base):
             %(self.name, self.email, self.phone)
 ```
 
-Now that we have the engine, use the metadata `create_all` method to actually create the database - if working on a mac, run this from the command line using ipython, if working from a PC just append this line to the .py file that we are building here:
+Now that we have the engine, use the metadata `create_all` method to actually create the database - if working on a mac, run this from the terminal using iPython, if working from a PC just append this line to the .py file that we are building here:
 
 ```
 Base.metadata.create_all(engine)
