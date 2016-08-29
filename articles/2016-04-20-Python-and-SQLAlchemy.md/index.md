@@ -1,6 +1,6 @@
 #Python and SQLAlchemy
 
-Interacting with a SQL database using SQLAlchemy.
+Interacting with a SQL database using SQLAlchemy
 
 There are various packages and libraries that interact with SQL (SQLAlchemy, Django, pewee, SQLObject, Storm, pony) but the most popular and probably the best and most beautiful Python library ever written is SQLAlchemy.
 SQLAlchemy allows you to write raw SQL directly and operate in SQL tables using them essentially as Python classes - basically, read and write data using SQL and then treat that data as a Python container.
