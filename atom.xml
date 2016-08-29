@@ -3,11 +3,105 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-04-11T17:12:32.334Z</updated>
+  <updated>2016-08-29T10:31:41.618Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
+  <entry>
+    <title>Python and SQLAlchemy</title>
+    <link href="http://blog.datasommelier.com/Python-and-SQLAlchemy.md"/>
+    <id>http://blog.datasommelier.com/Python-and-SQLAlchemy.md</id>
+    <updated>2016-04-20T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;Interacting with a SQL database using SQLAlchemy.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;Interacting with a SQL database using SQLAlchemy.&lt;/p&gt;
+&lt;p&gt;There are various packages and libraries that interact with SQL (SQLAlchemy, Django, pewee, SQLObject, Storm, pony) but the most popular and probably the best and most beautiful Python library ever written is SQLAlchemy.
+SQLAlchemy allows you to write raw SQL directly and operate in SQL tables using them essentially as Python classes - basically, read and write data using SQL and then treat that data as a Python container.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-use-sqlalchemy-&quot;&gt;How to use SQLAlchemy:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an engine&lt;/li&gt;
+&lt;li&gt;Define tables&lt;/li&gt;
+&lt;li&gt;Add instances&lt;/li&gt;
+&lt;li&gt;Query&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;create-an-engine-&quot;&gt;Create an engine:&lt;/h3&gt;
+&lt;p&gt;Create an engine that establishes a connection with the database and sets the framework in order to make SQL requests. Like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from sqlalchemy import create_engine
+engine = create_engine(&amp;#39;sqlite:////phonebook.db&amp;#39;, echo=True)
+# if working on a PC use:  engine = create_engine(&amp;#39;sqlite:///C:\\folder\\path\\phonebook.db&amp;#39;, echo=True)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;define-tables-&quot;&gt;Define tables:&lt;/h3&gt;
+&lt;p&gt;Create a class call &lt;code&gt;Base&lt;/code&gt; (using &lt;code&gt;declarative_base&lt;/code&gt;) to define our various tables - SQLAlchemy will refer to this class to create the table schemas. Use the &lt;code&gt;__tablename__&lt;/code&gt; member to name the table and &lt;code&gt;__repr__&lt;/code&gt; method when printing a table row. Like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from sqlalchemy import Column, Integer, String
+class Phonebook(Base):
+    __tablename__ = &amp;quot;friends&amp;quot;
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    email = Column(String)
+    phone = Column(String)
+
+    def __repr__(self):
+        return &amp;quot;&amp;lt;Phonebook(name=&amp;#39;%s&amp;#39;, email=&amp;#39;%s&amp;#39;, phone=&amp;#39;%s&amp;#39;)&amp;gt;&amp;quot;\
+            %(self.name, self.email, self.phone)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that we have the engine, use the metadata &lt;code&gt;create_all&lt;/code&gt; method to actually create the database - if working on a mac, run this from the command line using ipython, if working from a PC just append this line to the .py file that we are building here:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Base.metadata.create_all(engine)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;add-instances-&quot;&gt;Add instances:&lt;/h3&gt;
+&lt;p&gt;Establish a session in order to interact with the database, and create instances and rows so that we can add them to the session:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# create a list with our friend&amp;#39;s numbers
+friends_numbers = [
+    {&amp;#39;name&amp;#39;: &amp;#39;James Rodriguez&amp;#39;,
+     &amp;#39;email&amp;#39;: &amp;#39;james@email.com&amp;#39;,
+     &amp;#39;phone&amp;#39;: &amp;#39;123-456-7890&amp;#39;},
+    {&amp;#39;name&amp;#39;: &amp;#39;Pibe Valderrama&amp;#39;,
+     &amp;#39;email&amp;#39;: &amp;#39;pibe@email.com&amp;#39;,
+     &amp;#39;phone&amp;#39;: &amp;#39;111-222-3333&amp;#39;},
+    {&amp;#39;name&amp;#39;: &amp;#39;Farid Mondragon&amp;#39;,
+     &amp;#39;email&amp;#39;: &amp;#39;farid@email.com&amp;#39;,
+     &amp;#39;phone&amp;#39;: &amp;#39;222-333-4444&amp;#39;}     
+     ]
+
+# create tables
+Base.metadata.create_all(engine)
+
+# establish a session
+from sqlalchemy.orm import sessionmaker
+
+session = sessionmaker(bind=engine)
+session = session()
+
+# create instances
+# use ** to unpack the key-value pairs
+james = Phonebook(**friends_numbers[0])
+
+# add james to the Phonebook database
+session.add(james)
+session.new
+
+# delete james from the Phonebook database
+session.expunge(james)
+session.new
+
+# add all records from the friends_numbers list into the db
+phonebook_rows = [Phonebook(**p) for p in friends_numbers]
+session.add_all(phonebook_rows)
+session.commit()
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;query-the-database&quot;&gt;Query the database&lt;/h3&gt;
+&lt;p&gt;Now you can go ahead a run any query you’d like. All you have to do is use the &lt;code&gt;session&lt;/code&gt; method. Like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# query the database
+# count how many records we have
+print session.query(Phonebook).count()
+
+# find James Rodriguez record using filter_by
+friend = session.query(Phonebook).filter_by(name=&amp;#39;James Rodriguez&amp;#39;)
+result = list(friend)
+print result
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For a list of all available methods, check SQLAlchemy documentation &lt;a href=&quot;http://docs.sqlalchemy.org/en/latest/orm/query.html&quot;&gt;here&lt;/a&gt;.
+The entire code for this article is available &lt;a href=&quot;https://github.com/TheBecky/python_awesomeness/blob/master/python_sql.py&quot;&gt;here&lt;/a&gt;. Send me a note if you have any issues with the above code and would like help debugging becky@datasommelier.com&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>When to ship without analytics</title>
     <link href="http://blog.datasommelier.com/when-to-ship-without-analytics"/>

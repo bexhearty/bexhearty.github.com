@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Python and SQLAlchemy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role"><a href="http://www.datasommelier.com/#/home">Data Sommelier </a></p>
+        
+          <ul class="Profile-links">
+            
+            <a class="Profile-link Profile-github-link" href="https://github.com/TheBecky">GitHub</a>
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-email-link" href="mailto:becky@datasommelier.com">Email</a>
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">Python and SQLAlchemy</h1>
+  <time class="Article-date" datetime="2016-04-20T00:00:00.000Z">Tuesday, 19 April 2016</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>Interacting with a SQL database using SQLAlchemy.</p>
+<p>There are various packages and libraries that interact with SQL (SQLAlchemy, Django, pewee, SQLObject, Storm, pony) but the most popular and probably the best and most beautiful Python library ever written is SQLAlchemy.
+SQLAlchemy allows you to write raw SQL directly and operate in SQL tables using them essentially as Python classes - basically, read and write data using SQL and then treat that data as a Python container.</p>
+<h2 id="how-to-use-sqlalchemy-">How to use SQLAlchemy:</h2>
+<ul>
+<li>Create an engine</li>
+<li>Define tables</li>
+<li>Add instances</li>
+<li>Query</li>
+</ul>
+<h3 id="create-an-engine-">Create an engine:</h3>
+<p>Create an engine that establishes a connection with the database and sets the framework in order to make SQL requests. Like so:</p>
+<pre><code>from sqlalchemy import create_engine
+engine = create_engine(&#39;sqlite:////phonebook.db&#39;, echo=True)
+# if working on a PC use:  engine = create_engine(&#39;sqlite:///C:\\folder\\path\\phonebook.db&#39;, echo=True)
+</code></pre><h3 id="define-tables-">Define tables:</h3>
+<p>Create a class call <code>Base</code> (using <code>declarative_base</code>) to define our various tables - SQLAlchemy will refer to this class to create the table schemas. Use the <code>__tablename__</code> member to name the table and <code>__repr__</code> method when printing a table row. Like so:</p>
+<pre><code>from sqlalchemy import Column, Integer, String
+class Phonebook(Base):
+    __tablename__ = &quot;friends&quot;
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    email = Column(String)
+    phone = Column(String)
+
+    def __repr__(self):
+        return &quot;&lt;Phonebook(name=&#39;%s&#39;, email=&#39;%s&#39;, phone=&#39;%s&#39;)&gt;&quot;\
+            %(self.name, self.email, self.phone)
+</code></pre><p>Now that we have the engine, use the metadata <code>create_all</code> method to actually create the database - if working on a mac, run this from the command line using ipython, if working from a PC just append this line to the .py file that we are building here:</p>
+<pre><code>Base.metadata.create_all(engine)
+</code></pre><h3 id="add-instances-">Add instances:</h3>
+<p>Establish a session in order to interact with the database, and create instances and rows so that we can add them to the session:</p>
+<pre><code># create a list with our friend&#39;s numbers
+friends_numbers = [
+    {&#39;name&#39;: &#39;James Rodriguez&#39;,
+     &#39;email&#39;: &#39;james@email.com&#39;,
+     &#39;phone&#39;: &#39;123-456-7890&#39;},
+    {&#39;name&#39;: &#39;Pibe Valderrama&#39;,
+     &#39;email&#39;: &#39;pibe@email.com&#39;,
+     &#39;phone&#39;: &#39;111-222-3333&#39;},
+    {&#39;name&#39;: &#39;Farid Mondragon&#39;,
+     &#39;email&#39;: &#39;farid@email.com&#39;,
+     &#39;phone&#39;: &#39;222-333-4444&#39;}     
+     ]
+
+# create tables
+Base.metadata.create_all(engine)
+
+# establish a session
+from sqlalchemy.orm import sessionmaker
+
+session = sessionmaker(bind=engine)
+session = session()
+
+# create instances
+# use ** to unpack the key-value pairs
+james = Phonebook(**friends_numbers[0])
+
+# add james to the Phonebook database
+session.add(james)
+session.new
+
+# delete james from the Phonebook database
+session.expunge(james)
+session.new
+
+# add all records from the friends_numbers list into the db
+phonebook_rows = [Phonebook(**p) for p in friends_numbers]
+session.add_all(phonebook_rows)
+session.commit()
+</code></pre><h3 id="query-the-database">Query the database</h3>
+<p>Now you can go ahead a run any query you’d like. All you have to do is use the <code>session</code> method. Like so:</p>
+<pre><code># query the database
+# count how many records we have
+print session.query(Phonebook).count()
+
+# find James Rodriguez record using filter_by
+friend = session.query(Phonebook).filter_by(name=&#39;James Rodriguez&#39;)
+result = list(friend)
+print result
+</code></pre><p>For a list of all available methods, check SQLAlchemy documentation <a href="http://docs.sqlalchemy.org/en/latest/orm/query.html">here</a>.
+The entire code for this article is available <a href="https://github.com/TheBecky/python_awesomeness/blob/master/python_sql.py">here</a>. Send me a note if you have any issues with the above code and would like help debugging becky@datasommelier.com</p>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "Python and SQLAlchemy",
+      date: "2016-04-20T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
