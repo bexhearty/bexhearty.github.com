@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-08-29T10:31:41.618Z</updated>
+  <updated>2016-08-29T10:32:37.395Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -16,9 +16,9 @@
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;Interacting with a SQL database using SQLAlchemy.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Interacting with a SQL database using SQLAlchemy&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Interacting with a SQL database using SQLAlchemy.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Interacting with a SQL database using SQLAlchemy&lt;/p&gt;
 &lt;p&gt;There are various packages and libraries that interact with SQL (SQLAlchemy, Django, pewee, SQLObject, Storm, pony) but the most popular and probably the best and most beautiful Python library ever written is SQLAlchemy.
 SQLAlchemy allows you to write raw SQL directly and operate in SQL tables using them essentially as Python classes - basically, read and write data using SQL and then treat that data as a Python container.&lt;/p&gt;
 &lt;h2 id=&quot;how-to-use-sqlalchemy-&quot;&gt;How to use SQLAlchemy:&lt;/h2&gt;
