@@ -47,19 +47,6 @@ Base.metadata.create_all(engine)
 Establish a session in order to interact with the database, and create instances and rows so that we can add them to the session:
 
 ```
-# create a list with our friend's numbers
-friends_numbers = [
-    {'name': 'James Rodriguez',
-     'email': 'james@email.com',
-     'phone': '123-456-7890'},
-    {'name': 'Pibe Valderrama',
-     'email': 'pibe@email.com',
-     'phone': '111-222-3333'},
-    {'name': 'Farid Mondragon',
-     'email': 'farid@email.com',
-     'phone': '222-333-4444'}     
-     ]
-
 # create tables
 Base.metadata.create_all(engine)
 
@@ -73,13 +60,28 @@ session = session()
 # use ** to unpack the key-value pairs
 james = Phonebook(**friends_numbers[0])
 
-# add james to the Phonebook database
+# example: how to add a single row
+# add james's record to the Phonebook database
 session.add(james)
 session.new
 
-# delete james from the Phonebook database
+# example: how to delete a single row
+# delete james's record from the Phonebook database
 session.expunge(james)
 session.new
+
+# create a list with our friend's numbers
+friends_numbers = [
+    {'name': 'James Rodriguez',
+     'email': 'james@email.com',
+     'phone': '123-456-7890'},
+    {'name': 'Pibe Valderrama',
+     'email': 'pibe@email.com',
+     'phone': '111-222-3333'},
+    {'name': 'Farid Mondragon',
+     'email': 'farid@email.com',
+     'phone': '222-333-4444'}     
+     ]
 
 # add all records from the friends_numbers list into the db
 phonebook_rows = [Phonebook(**p) for p in friends_numbers]
