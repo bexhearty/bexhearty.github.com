@@ -71,20 +71,7 @@ class Phonebook(Base):
 <pre><code>Base.metadata.create_all(engine)
 </code></pre><h3 id="add-instances-">Add instances:</h3>
 <p>Establish a session in order to interact with the database, and create instances and rows so that we can add them to the session:</p>
-<pre><code># create a list with our friend&#39;s numbers
-friends_numbers = [
-    {&#39;name&#39;: &#39;James Rodriguez&#39;,
-     &#39;email&#39;: &#39;james@email.com&#39;,
-     &#39;phone&#39;: &#39;123-456-7890&#39;},
-    {&#39;name&#39;: &#39;Pibe Valderrama&#39;,
-     &#39;email&#39;: &#39;pibe@email.com&#39;,
-     &#39;phone&#39;: &#39;111-222-3333&#39;},
-    {&#39;name&#39;: &#39;Farid Mondragon&#39;,
-     &#39;email&#39;: &#39;farid@email.com&#39;,
-     &#39;phone&#39;: &#39;222-333-4444&#39;}     
-     ]
-
-# create tables
+<pre><code># create tables
 Base.metadata.create_all(engine)
 
 # establish a session
@@ -97,13 +84,28 @@ session = session()
 # use ** to unpack the key-value pairs
 james = Phonebook(**friends_numbers[0])
 
-# add james to the Phonebook database
+# example: how to add a single row
+# add james&#39;s record to the Phonebook database
 session.add(james)
 session.new
 
-# delete james from the Phonebook database
+# example: how to delete a single row
+# delete james&#39;s record from the Phonebook database
 session.expunge(james)
 session.new
+
+# create a list with our friend&#39;s numbers
+friends_numbers = [
+    {&#39;name&#39;: &#39;James Rodriguez&#39;,
+     &#39;email&#39;: &#39;james@email.com&#39;,
+     &#39;phone&#39;: &#39;123-456-7890&#39;},
+    {&#39;name&#39;: &#39;Pibe Valderrama&#39;,
+     &#39;email&#39;: &#39;pibe@email.com&#39;,
+     &#39;phone&#39;: &#39;111-222-3333&#39;},
+    {&#39;name&#39;: &#39;Farid Mondragon&#39;,
+     &#39;email&#39;: &#39;farid@email.com&#39;,
+     &#39;phone&#39;: &#39;222-333-4444&#39;}     
+     ]
 
 # add all records from the friends_numbers list into the db
 phonebook_rows = [Phonebook(**p) for p in friends_numbers]

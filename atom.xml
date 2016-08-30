@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-08-29T19:37:20.792Z</updated>
+  <updated>2016-08-30T10:58:28.289Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -50,20 +50,7 @@ class Phonebook(Base):
 &lt;pre&gt;&lt;code&gt;Base.metadata.create_all(engine)
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;add-instances-&quot;&gt;Add instances:&lt;/h3&gt;
 &lt;p&gt;Establish a session in order to interact with the database, and create instances and rows so that we can add them to the session:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# create a list with our friend&amp;#39;s numbers
-friends_numbers = [
-    {&amp;#39;name&amp;#39;: &amp;#39;James Rodriguez&amp;#39;,
-     &amp;#39;email&amp;#39;: &amp;#39;james@email.com&amp;#39;,
-     &amp;#39;phone&amp;#39;: &amp;#39;123-456-7890&amp;#39;},
-    {&amp;#39;name&amp;#39;: &amp;#39;Pibe Valderrama&amp;#39;,
-     &amp;#39;email&amp;#39;: &amp;#39;pibe@email.com&amp;#39;,
-     &amp;#39;phone&amp;#39;: &amp;#39;111-222-3333&amp;#39;},
-    {&amp;#39;name&amp;#39;: &amp;#39;Farid Mondragon&amp;#39;,
-     &amp;#39;email&amp;#39;: &amp;#39;farid@email.com&amp;#39;,
-     &amp;#39;phone&amp;#39;: &amp;#39;222-333-4444&amp;#39;}     
-     ]
-
-# create tables
+&lt;pre&gt;&lt;code&gt;# create tables
 Base.metadata.create_all(engine)
 
 # establish a session
@@ -76,13 +63,28 @@ session = session()
 # use ** to unpack the key-value pairs
 james = Phonebook(**friends_numbers[0])
 
-# add james to the Phonebook database
+# example: how to add a single row
+# add james&amp;#39;s record to the Phonebook database
 session.add(james)
 session.new
 
-# delete james from the Phonebook database
+# example: how to delete a single row
+# delete james&amp;#39;s record from the Phonebook database
 session.expunge(james)
 session.new
+
+# create a list with our friend&amp;#39;s numbers
+friends_numbers = [
+    {&amp;#39;name&amp;#39;: &amp;#39;James Rodriguez&amp;#39;,
+     &amp;#39;email&amp;#39;: &amp;#39;james@email.com&amp;#39;,
+     &amp;#39;phone&amp;#39;: &amp;#39;123-456-7890&amp;#39;},
+    {&amp;#39;name&amp;#39;: &amp;#39;Pibe Valderrama&amp;#39;,
+     &amp;#39;email&amp;#39;: &amp;#39;pibe@email.com&amp;#39;,
+     &amp;#39;phone&amp;#39;: &amp;#39;111-222-3333&amp;#39;},
+    {&amp;#39;name&amp;#39;: &amp;#39;Farid Mondragon&amp;#39;,
+     &amp;#39;email&amp;#39;: &amp;#39;farid@email.com&amp;#39;,
+     &amp;#39;phone&amp;#39;: &amp;#39;222-333-4444&amp;#39;}     
+     ]
 
 # add all records from the friends_numbers list into the db
 phonebook_rows = [Phonebook(**p) for p in friends_numbers]
