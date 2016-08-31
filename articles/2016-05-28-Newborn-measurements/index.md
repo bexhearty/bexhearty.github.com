@@ -20,6 +20,6 @@ Then we can calculate the z-score, like so:
 
 [My Measure - Mean] / Standard Deviation = z-score
 
-So for us, we get a z-score of 1.82 ( [53.34 - 49.9] / 1.89 = 1.82). Next, we need to find out what is the percentile of our z-score. Looking at a [z-score chart](http://math.arizona.edu/~rsims/ma464/standardnormaltable.pdf), we gather that 1.82 corresponds to 0.9641, meaning 96.41% falls at or below this measure.
+So for us, we get a z-score of 1.82 ( [53.34 - 49.9] / 1.89 = 1.82). Looking at a [z-score chart](http://math.arizona.edu/~rsims/ma464/standardnormaltable.pdf), we gather that 1.82 corresponds to 0.9641, which means that 96.41% of the population fall at or below this measure.
 
 So they'll tell you that your baby is in the 34% in weight, 96% of height, and 90% of brain circumpherence. So what? Does it all mean that my baby is tall, dark, handsome and wicked smart and because of that he is going to be accepted into daycare and then into Harvard, and the become POTUS? Sure mom. Especially if you weigh him after feeding him a big meal and before changing that dirty diaper. 
