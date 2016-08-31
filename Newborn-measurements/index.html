@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Newborn percentiles</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role"><a href="http://www.datasommelier.com/#/home">Data Sommelier </a></p>
+        
+          <ul class="Profile-links">
+            
+            <a class="Profile-link Profile-github-link" href="https://github.com/TheBecky">GitHub</a>
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-email-link" href="mailto:becky@datasommelier.com">Email</a>
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">Newborn percentiles</h1>
+  <time class="Article-date" datetime="2016-05-28T00:00:00.000Z">Friday, 27 May 2016</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>How did the nurse know that my son was born in the 96th percentile?</p>
+<p>When my son was born earlier this month, the nurse measured his length, head circumference, and weight. She then informed us that 96% of male babies were born below his height. How did she know that? </p>
+<p>The concept of a normal distribution is helpful for understanding this percentage. In a normal distribution, most observations are grouped around the middle; more precisely, 34% fall between the mean and +1 standard deviation, and the other 34% -1 standard deviation. Also, in a normal distribution, 50% of the observations fall below the mean, and the other half above the mean. </p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Empirical_Rule.PNG/675px-Empirical_Rule.PNG" alt=""></p>
+<p>This is useful when calculating other interesting statistics, like how many individuals do we expect to fall below or above a particular point.  If a baby is 1 standard deviation above the mean, then we know that such baby is at the 84th percentile (50% which correspond to all the individuals below the mean + 34% which correspond to all the individuals between the mean and 1 standard deviation).</p>
+<p>In statistcs, a z-score is equivalent to how many standard deviations your observation is from the mean. A positive score means that your observation lays above the mean, and a negative score means below the mean. If we have the following input:</p>
+<ul>
+<li>My child measures 53.34 cm of length at birth</li>
+<li>The mean of length in newborn boys is <a href="http://www.who.int/childgrowth/standards/LFA_boys_0_13_zscores.pdf?ua=1">49.9 cm</a></li>
+<li>The standard deviation of length in newborn boys is <a href="http://www.who.int/childgrowth/standards/LFA_boys_0_13_zscores.pdf?ua=1">1.89 cm</a></li>
+</ul>
+<p>Then we can calculate the z-score, like so:</p>
+<p>[My Measure - Mean] / Standard Deviation = z-score</p>
+<p>So for us, we get a z-score of 1.82 ( [53.34 - 49.9] / 1.89 = 1.82). Next, we need to find out what is the percentile of our z-score. Looking at a <a href="http://math.arizona.edu/~rsims/ma464/standardnormaltable.pdf">z-score chart</a>, we gather that 1.82 corresponds to 0.9641, meaning 96.41% falls at or below this measure.</p>
+<p>So they’ll tell you that your baby is in the 34% in weight, 96% of height, and 90% of brain circumpherence. So what? Does it all mean that my baby is tall, dark, handsome and wicked smart and because of that he is going to be accepted into daycare and then into Harvard, and the become POTUS? Sure mom. Especially if you weigh him after feeding him a big meal and before changing that dirty diaper. </p>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "Newborn percentiles",
+      date: "2016-05-28T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>

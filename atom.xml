@@ -3,11 +3,38 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-08-30T10:58:28.289Z</updated>
+  <updated>2016-08-31T04:42:19.001Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
+  <entry>
+    <title>Newborn percentiles</title>
+    <link href="http://blog.datasommelier.com/Newborn-measurements"/>
+    <id>http://blog.datasommelier.com/Newborn-measurements</id>
+    <updated>2016-05-28T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;How did the nurse know that my son was born in the 96th percentile?&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;How did the nurse know that my son was born in the 96th percentile?&lt;/p&gt;
+&lt;p&gt;When my son was born earlier this month, the nurse measured his length, head circumference, and weight. She then informed us that 96% of male babies were born below his height. How did she know that? &lt;/p&gt;
+&lt;p&gt;The concept of a normal distribution is helpful for understanding this percentage. In a normal distribution, most observations are grouped around the middle; more precisely, 34% fall between the mean and +1 standard deviation, and the other 34% -1 standard deviation. Also, in a normal distribution, 50% of the observations fall below the mean, and the other half above the mean. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Empirical_Rule.PNG/675px-Empirical_Rule.PNG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This is useful when calculating other interesting statistics, like how many individuals do we expect to fall below or above a particular point.  If a baby is 1 standard deviation above the mean, then we know that such baby is at the 84th percentile (50% which correspond to all the individuals below the mean + 34% which correspond to all the individuals between the mean and 1 standard deviation).&lt;/p&gt;
+&lt;p&gt;In statistcs, a z-score is equivalent to how many standard deviations your observation is from the mean. A positive score means that your observation lays above the mean, and a negative score means below the mean. If we have the following input:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My child measures 53.34 cm of length at birth&lt;/li&gt;
+&lt;li&gt;The mean of length in newborn boys is &lt;a href=&quot;http://www.who.int/childgrowth/standards/LFA_boys_0_13_zscores.pdf?ua=1&quot;&gt;49.9 cm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The standard deviation of length in newborn boys is &lt;a href=&quot;http://www.who.int/childgrowth/standards/LFA_boys_0_13_zscores.pdf?ua=1&quot;&gt;1.89 cm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then we can calculate the z-score, like so:&lt;/p&gt;
+&lt;p&gt;[My Measure - Mean] / Standard Deviation = z-score&lt;/p&gt;
+&lt;p&gt;So for us, we get a z-score of 1.82 ( [53.34 - 49.9] / 1.89 = 1.82). Next, we need to find out what is the percentile of our z-score. Looking at a &lt;a href=&quot;http://math.arizona.edu/~rsims/ma464/standardnormaltable.pdf&quot;&gt;z-score chart&lt;/a&gt;, we gather that 1.82 corresponds to 0.9641, meaning 96.41% falls at or below this measure.&lt;/p&gt;
+&lt;p&gt;So they’ll tell you that your baby is in the 34% in weight, 96% of height, and 90% of brain circumpherence. So what? Does it all mean that my baby is tall, dark, handsome and wicked smart and because of that he is going to be accepted into daycare and then into Harvard, and the become POTUS? Sure mom. Especially if you weigh him after feeding him a big meal and before changing that dirty diaper. &lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Python and SQLAlchemy</title>
     <link href="http://blog.datasommelier.com/Python-and-SQLAlchemy.md"/>
