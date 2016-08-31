@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-08-31T05:16:41.277Z</updated>
+  <updated>2016-08-31T05:17:01.555Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -32,6 +32,7 @@
 &lt;p&gt;Then we can calculate the z-score, like so:&lt;/p&gt;
 &lt;p&gt;[My Measure - Mean] / Standard Deviation = z-score&lt;/p&gt;
 &lt;p&gt;So for us, we get a z-score of 1.82 ( [53.34 - 49.9] / 1.89 = 1.82). Looking at a &lt;a href=&quot;http://math.arizona.edu/~rsims/ma464/standardnormaltable.pdf&quot;&gt;z-score chart&lt;/a&gt;, we gather that 1.82 corresponds to 0.9641, which means that 96.41% of the population fall at or below this measure.&lt;/p&gt;
+&lt;p&gt;Turns out that according to the World Health Organization the data for some measurements, such as the weight, is not normally distributed - it is right skewed (the right side - big babies - is longer than the left). It made me wonder if it is because all the malnutrition kids data never makes it into the WHO database for lack of resources.  &lt;/p&gt;
 &lt;p&gt;So they’ll tell you that your baby is in the 34% in weight, 96% of height, and 90% of brain circumpherence. So what? Does it all mean that my baby is tall, dark, handsome and wicked smart and because of that he is going to be accepted into daycare and then into Harvard, and the become POTUS? Sure mom. Especially if you weigh him after feeding him a big meal and before changing that dirty diaper. &lt;/p&gt;
 </content>
   </entry>
