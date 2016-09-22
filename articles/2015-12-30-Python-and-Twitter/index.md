@@ -1,6 +1,6 @@
-# Baisc search using the Twitter API
+# Python and the Twitter API
 
-How to leverage Python to run basic text analysis from a collection of Tweets
+Run basic text analytics on a collection of Tweets
 
 The Twitter API allows us to collect data based on a particular keyword, user handle, or hashtag.  We can filter those results by language, geographic location, and either the latest, most popular tweets, or tweets within a specified timeframe. Also, the API provides some tools to run basic text analytics such as finding entities in a particular collection of tweets. To collect and run basic text analytics in a collection of tweets:
 

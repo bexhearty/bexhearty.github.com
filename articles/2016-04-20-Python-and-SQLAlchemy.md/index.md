@@ -17,7 +17,6 @@ Create an engine that establishes a connection with the database and sets the fr
 ```
 from sqlalchemy import create_engine
 engine = create_engine('sqlite:////phonebook.db', echo=True)
-# if working on a PC use:  engine = create_engine('sqlite:///C:\\folder\\path\\phonebook.db', echo=True) 
 ```
 
 ###Define tables: 
