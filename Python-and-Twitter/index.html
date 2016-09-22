@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Python and the Twitter API</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role"><a class="Link" href="http://www.datasommelier.com/index.html" target="_blank">Data Sommelier</a></p>
+        
+          <ul class="Profile-links">
+            
+            <a class="Profile-link Profile-github-link" href="https://github.com/TheBecky">GitHub</a>
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-email-link" href="mailto:becky@datasommelier.com">Email</a>
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">Python and the Twitter API</h1>
+  <time class="Article-date" datetime="2015-12-30T00:00:00.000Z">Tuesday, 29 December 2015</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>Run basic text analytics on a collection of Tweets</p>
+<p>The Twitter API allows us to collect data based on a particular keyword, user handle, or hashtag.  We can filter those results by language, geographic location, and either the latest, most popular tweets, or tweets within a specified timeframe. Also, the API provides some tools to run basic text analytics such as finding entities in a particular collection of tweets. To collect and run basic text analytics in a collection of tweets:</p>
+<ul>
+<li>Connect to the API</li>
+<li>Search Tweets</li>
+<li>Extract Tweet entities</li>
+</ul>
+<h2 id="connect-to-the-twitter-api-">Connect to the Twitter API:</h2>
+<p>To establish a successful connection with the API we first need consumer and oAuth tokens from a newly created <a href="https://apps.twitter.com/">Twitter App</a>, like so:</p>
+<pre><code>import twitter
+
+def oauth_login():
+    CONSUMER_KEY = &#39;0pJAid2aqrRtgwe6dKvPAerp8b&#39;
+    CONSUMER_SECRET = &#39;rfrb0fbGgCvpf1sgtRd7OsrBCT7p8DPWuB8WpeLJ9LfelJW8sp&#39;
+    OAUTH_TOKEN = &#39;15648766-lxT6QBxMgp69gFDsef6FI4KqporqqvOyd4U5t4qD7&#39;
+    OAUTH_TOKEN_SECRET = &#39;KYdm5roVu2xMlo5asSDfs1LGHwYBRL0Gxi5IkXMRZLsuJR2&#39;
+
+    auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
+
+    twitter_api = twitter.Twitter(auth=auth)
+    return twitter_api
+</code></pre><p>Make sure you substitue the tokens with your own credentials as the above keys are just place holders and will not work.</p>
+<h2 id="search-tweets">Search Tweets</h2>
+<p>Lets define two functions. One to find Tweets based in our criteria, and then, another function to select the most favorited Tweets from that collection:</p>
+<pre><code># Language = English
+# Result type =  recent or popular
+# count = how many tweets to return
+# geocode = “latitude,longitude,radius”, for example, “&quot;37.781157,-122.398720,10mi&quot;”
+#           will limit the results for tweets within 10 miles of San Francisco
+# Other parameters not used but available: until, since_id, max_id
+
+def twitter_search(twitter_api, q, max_results=200, **kw):  
+    search_results = twitter_api.search.tweets(q=q, count=100, lang=&#39;en&#39;, result_type=&#39;recent&#39;,  geocode= &quot;37.781157,-122.398720,10mi&quot;, **kw)  
+    statuses = search_results[&#39;statuses&#39;]
+
+    max_results = min(100, max_results)
+
+    for _ in range(10):
+        try:
+            next_results = search_results[&#39;search_metadata&#39;][&#39;next_results&#39;]
+        except KeyError as e:
+            break
+
+        kwargs = dict([ kv.split(&#39;=&#39;) 
+                        for kv in next_results[1:].split(&quot;&amp;&quot;) ])
+
+        search_results = twitter_api.search.tweets(**kwargs)
+        statuses += search_results[&#39;statuses&#39;]
+
+        if len(statuses) &gt; max_results: 
+            break
+
+    return statuses
+
+def find_popular_tweets(twitter_api, statuses, retweet_threshold=30):
+
+    return [ status
+                for status in statuses 
+                    if status[&#39;retweet_count&#39;] &gt; retweet_threshold ] 
+
+twitter_api = oauth_login()
+q = &quot;surf&quot;
+
+search_results = twitter_search(twitter_api, q, max_results=20)
+popular_tweets = find_popular_tweets(twitter_api, search_results)
+
+print (&quot;************POPULAR TWEETS*********************&quot;)
+print (&quot;************(TWEET, RE_TWEET COUNT*************&quot;)
+print (&quot;&quot;)
+for tweet in popular_tweets:
+    print (tweet[&#39;text&#39;].encode(&#39;utf8&#39;), tweet[&#39;retweet_count&#39;])
+</code></pre><h2 id="extract-tweet-entities">Extract Tweet entities</h2>
+<p>Create a function that extracts Tweet entities such as user handles, hashtags, and URLs from our collection.</p>
+<pre><code>def extract_tweet_entities(statuses):
+    if len(statuses) == 0:
+        return [], [], [], []
+
+    screen_names = [ user_mention[&#39;screen_name&#39;] 
+                         for status in statuses
+                            for user_mention in status[&#39;entities&#39;][&#39;user_mentions&#39;] ]
+
+    hashtags = [ hashtag[&#39;text&#39;] 
+                     for status in statuses 
+                        for hashtag in status[&#39;entities&#39;][&#39;hashtags&#39;] ]
+
+    urls = [ url[&#39;expanded_url&#39;] 
+                     for status in statuses 
+                        for url in status[&#39;entities&#39;][&#39;urls&#39;] ]
+
+    return screen_names, hashtags, urls
+
+# provides the entity and the frequency for each collection
+def get_common_tweet_entities(statuses, entity_threshold=3):
+    tweet_entities = [  e
+                        for status in statuses
+                            for entity_type in extract_tweet_entities([status]) 
+                                for e in entity_type 
+                     ]
+    c = Counter(tweet_entities).most_common()
+
+    return [ (k,v) 
+             for (k,v) in c
+                 if v &gt;= entity_threshold
+           ]
+
+twitter_api = oauth_login()
+q = &quot;surf&quot;
+
+search_results = twitter_search(twitter_api, q, max_results=20)
+popular_tweets = find_popular_tweets(twitter_api, search_results)
+
+statuses = twitter_search(twitter_api, q)
+screen_names, hashtags, urls = extract_tweet_entities(statuses)
+
+
+print (&quot;************Tweet Entities*********************&quot;)
+print (&quot;***********************************************&quot;)
+print (&quot;&quot;)
+print (&quot;**************TOP 50 HANDLES*******************&quot;)
+# json.dumps([dict(mpn=pn) for pn in lst])
+print (json.dumps(screen_names[0:50], indent=1))
+print (&quot;&quot;)
+print (&quot;**************TOP 50 HASHTAGS*****************&quot;)
+print(json.dumps(hashtags[0:50], indent=1))
+print (&quot;&quot;)
+print (&quot;**************TOP 50 URLs*********************&quot;)
+print(json.dumps(urls[0:50], indent=1))
+print (&quot;&quot;)
+
+common_entities = get_common_tweet_entities(search_results)
+
+print (&quot;*****************************************************&quot;)
+print (&quot;************Most Common Entities*********************&quot;)
+print (common_entities)
+print (&quot;*****************************************************&quot;)
+print (&quot;*****************************************************&quot;)
+
+
+# calculate average number of words per tweet:
+def analyze_tweet_content(statuses):
+    if len(statuses) == 0:
+        print (&quot;No statuses to analyze&quot;)
+        return
+
+    def average_words(statuses):
+        total_words = sum([ len(s.split()) for s in statuses ]) 
+        return 1.0*total_words/len(statuses)
+
+    status_texts = [ status[&#39;text&#39;] for status in statuses ]
+    screen_names, hashtags, urls, _ = extract_tweet_entities(statuses)
+
+    words = [ w 
+          for t in status_texts 
+              for w in t.split() ]
+
+    print (&quot;Averge words per tweet:&quot;, average_words(status_texts))
+</code></pre><p>To find the account that owns the most favorited tweets of a person:</p>
+<pre><code># Analyze a user&#39;s favorite tweets. Insert user handle
+analyze_tweet_content(search_results)
+print (&quot;*****************************************************&quot;)
+print (&quot;*****************************************************&quot;)
+analyze_favorites(twitter_api, &quot;theebecky&quot;)
+</code></pre><p>The full code can be found <a href="">here</a></p>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "Python and the Twitter API",
+      date: "2015-12-30T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>

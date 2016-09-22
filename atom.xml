@@ -3,11 +3,36 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2016-08-31T05:17:01.555Z</updated>
+  <updated>2016-09-22T05:03:51.979Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
+  <entry>
+    <title>Never forget to take your vitamins again</title>
+    <link href="http://blog.datasommelier.com/zappier-slack-smartthings"/>
+    <id>http://blog.datasommelier.com/zappier-slack-smartthings</id>
+    <updated>2016-09-21T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;SmartThings, IFTTT, Zapier, and Slack to the rescue&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;SmartThings, IFTTT, Zapier, and Slack to the rescue&lt;/p&gt;
+&lt;p&gt;When I worked at Segment, we built bots to complete annoying and mundane tasks. Wishing for something similar at home, I built a series of triggers so that Slackbot records the last time I took my vitamins and then reminds me when I need to take them again.&lt;/p&gt;
+&lt;p&gt;To begin, I used a &lt;a href=&quot;https://shop.smartthings.com/#!/products/samsung-smartthings-multipurpose-sensor&quot;&gt;multipurpose sensor&lt;/a&gt; from SmartThings (used to alert when a door or window opens or closes) and using &lt;a href=&quot;https://smile.amazon.com/Duck-282116-Printed-Inches-Single/dp/B00CJGF6EI/ref=sr_1_1?ie=UTF8&amp;amp;qid=1474492591&amp;amp;sr=8-1&amp;amp;keywords=duck+tape+owl&quot;&gt;this&lt;/a&gt;  awesome duck date, I taped it to the vitamin bottle:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cldup.com/BSgh11Oowo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Next, for each time the sensor closes, I used an IFTTT recipe to trigger a Slack message telling me that I just took a vitamin:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cldup.com/MYzYmI2Fg2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I also had to set another trigger to a Google sheet that records the time the bottle closed (since I wasn’t able to get IFTTT to properly send a &lt;code&gt;/remind&lt;/code&gt; message to Slack):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cldup.com/1BVZAatq_m.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Lastly, I connected Zapier to that Google sheet and created a Zap to Slack with a &lt;code&gt;/remind me to take my vitamins in 12 hours&lt;/code&gt; message:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cldup.com/UW2pYYnmzn.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If I get the slack message when I’m not near my vitamins, I can just hit &lt;code&gt;remind me in 15 minutes&lt;/code&gt; option, and get a new notification later.  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cldup.com/siwQI7CEIT.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This reminder has been so helpful that I am going to replicate a similar project using a Raspberry Pi and a sensor connected to the dog food container. That way both my husband and I know when the dawgs have been fed to avoid double meals.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Newborn percentiles</title>
     <link href="http://blog.datasommelier.com/Newborn-measurements"/>
@@ -60,7 +85,6 @@ SQLAlchemy allows you to write raw SQL directly and operate in SQL tables using 
 &lt;p&gt;Create an engine that establishes a connection with the database and sets the framework in order to make SQL requests. Like so:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;from sqlalchemy import create_engine
 engine = create_engine(&amp;#39;sqlite:////phonebook.db&amp;#39;, echo=True)
-# if working on a PC use:  engine = create_engine(&amp;#39;sqlite:///C:\\folder\\path\\phonebook.db&amp;#39;, echo=True)
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;define-tables-&quot;&gt;Define tables:&lt;/h3&gt;
 &lt;p&gt;Create a class call &lt;code&gt;Base&lt;/code&gt; (using &lt;code&gt;declarative_base&lt;/code&gt;) to define our various tables - SQLAlchemy will refer to this class to create the table schemas. Use the &lt;code&gt;__tablename__&lt;/code&gt; member to name the table and &lt;code&gt;__repr__&lt;/code&gt; method when printing a table row. Like so:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;from sqlalchemy import Column, Integer, String
@@ -143,6 +167,181 @@ The entire code for this article is available &lt;a href=&quot;https://github.co
     <summary type="html">&lt;p&gt;Never.&lt;/p&gt;
 </summary>
     <content type="html">&lt;p&gt;Never.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Python and the Twitter API</title>
+    <link href="http://blog.datasommelier.com/Python-and-Twitter"/>
+    <id>http://blog.datasommelier.com/Python-and-Twitter</id>
+    <updated>2015-12-30T00:00:00.000Z</updated>
+    <author>
+      <name>Becky Jaimes</name>
+    </author>
+    <summary type="html">&lt;p&gt;Run basic text analytics on a collection of Tweets&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;Run basic text analytics on a collection of Tweets&lt;/p&gt;
+&lt;p&gt;The Twitter API allows us to collect data based on a particular keyword, user handle, or hashtag.  We can filter those results by language, geographic location, and either the latest, most popular tweets, or tweets within a specified timeframe. Also, the API provides some tools to run basic text analytics such as finding entities in a particular collection of tweets. To collect and run basic text analytics in a collection of tweets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect to the API&lt;/li&gt;
+&lt;li&gt;Search Tweets&lt;/li&gt;
+&lt;li&gt;Extract Tweet entities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;connect-to-the-twitter-api-&quot;&gt;Connect to the Twitter API:&lt;/h2&gt;
+&lt;p&gt;To establish a successful connection with the API we first need consumer and oAuth tokens from a newly created &lt;a href=&quot;https://apps.twitter.com/&quot;&gt;Twitter App&lt;/a&gt;, like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import twitter
+
+def oauth_login():
+    CONSUMER_KEY = &amp;#39;0pJAid2aqrRtgwe6dKvPAerp8b&amp;#39;
+    CONSUMER_SECRET = &amp;#39;rfrb0fbGgCvpf1sgtRd7OsrBCT7p8DPWuB8WpeLJ9LfelJW8sp&amp;#39;
+    OAUTH_TOKEN = &amp;#39;15648766-lxT6QBxMgp69gFDsef6FI4KqporqqvOyd4U5t4qD7&amp;#39;
+    OAUTH_TOKEN_SECRET = &amp;#39;KYdm5roVu2xMlo5asSDfs1LGHwYBRL0Gxi5IkXMRZLsuJR2&amp;#39;
+
+    auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
+
+    twitter_api = twitter.Twitter(auth=auth)
+    return twitter_api
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Make sure you substitue the tokens with your own credentials as the above keys are just place holders and will not work.&lt;/p&gt;
+&lt;h2 id=&quot;search-tweets&quot;&gt;Search Tweets&lt;/h2&gt;
+&lt;p&gt;Lets define two functions. One to find Tweets based in our criteria, and then, another function to select the most favorited Tweets from that collection:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Language = English
+# Result type =  recent or popular
+# count = how many tweets to return
+# geocode = “latitude,longitude,radius”, for example, “&amp;quot;37.781157,-122.398720,10mi&amp;quot;”
+#           will limit the results for tweets within 10 miles of San Francisco
+# Other parameters not used but available: until, since_id, max_id
+
+def twitter_search(twitter_api, q, max_results=200, **kw):  
+    search_results = twitter_api.search.tweets(q=q, count=100, lang=&amp;#39;en&amp;#39;, result_type=&amp;#39;recent&amp;#39;,  geocode= &amp;quot;37.781157,-122.398720,10mi&amp;quot;, **kw)  
+    statuses = search_results[&amp;#39;statuses&amp;#39;]
+
+    max_results = min(100, max_results)
+
+    for _ in range(10):
+        try:
+            next_results = search_results[&amp;#39;search_metadata&amp;#39;][&amp;#39;next_results&amp;#39;]
+        except KeyError as e:
+            break
+
+        kwargs = dict([ kv.split(&amp;#39;=&amp;#39;) 
+                        for kv in next_results[1:].split(&amp;quot;&amp;amp;&amp;quot;) ])
+
+        search_results = twitter_api.search.tweets(**kwargs)
+        statuses += search_results[&amp;#39;statuses&amp;#39;]
+
+        if len(statuses) &amp;gt; max_results: 
+            break
+
+    return statuses
+
+def find_popular_tweets(twitter_api, statuses, retweet_threshold=30):
+
+    return [ status
+                for status in statuses 
+                    if status[&amp;#39;retweet_count&amp;#39;] &amp;gt; retweet_threshold ] 
+
+twitter_api = oauth_login()
+q = &amp;quot;surf&amp;quot;
+
+search_results = twitter_search(twitter_api, q, max_results=20)
+popular_tweets = find_popular_tweets(twitter_api, search_results)
+
+print (&amp;quot;************POPULAR TWEETS*********************&amp;quot;)
+print (&amp;quot;************(TWEET, RE_TWEET COUNT*************&amp;quot;)
+print (&amp;quot;&amp;quot;)
+for tweet in popular_tweets:
+    print (tweet[&amp;#39;text&amp;#39;].encode(&amp;#39;utf8&amp;#39;), tweet[&amp;#39;retweet_count&amp;#39;])
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;extract-tweet-entities&quot;&gt;Extract Tweet entities&lt;/h2&gt;
+&lt;p&gt;Create a function that extracts Tweet entities such as user handles, hashtags, and URLs from our collection.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def extract_tweet_entities(statuses):
+    if len(statuses) == 0:
+        return [], [], [], []
+
+    screen_names = [ user_mention[&amp;#39;screen_name&amp;#39;] 
+                         for status in statuses
+                            for user_mention in status[&amp;#39;entities&amp;#39;][&amp;#39;user_mentions&amp;#39;] ]
+
+    hashtags = [ hashtag[&amp;#39;text&amp;#39;] 
+                     for status in statuses 
+                        for hashtag in status[&amp;#39;entities&amp;#39;][&amp;#39;hashtags&amp;#39;] ]
+
+    urls = [ url[&amp;#39;expanded_url&amp;#39;] 
+                     for status in statuses 
+                        for url in status[&amp;#39;entities&amp;#39;][&amp;#39;urls&amp;#39;] ]
+
+    return screen_names, hashtags, urls
+
+# provides the entity and the frequency for each collection
+def get_common_tweet_entities(statuses, entity_threshold=3):
+    tweet_entities = [  e
+                        for status in statuses
+                            for entity_type in extract_tweet_entities([status]) 
+                                for e in entity_type 
+                     ]
+    c = Counter(tweet_entities).most_common()
+
+    return [ (k,v) 
+             for (k,v) in c
+                 if v &amp;gt;= entity_threshold
+           ]
+
+twitter_api = oauth_login()
+q = &amp;quot;surf&amp;quot;
+
+search_results = twitter_search(twitter_api, q, max_results=20)
+popular_tweets = find_popular_tweets(twitter_api, search_results)
+
+statuses = twitter_search(twitter_api, q)
+screen_names, hashtags, urls = extract_tweet_entities(statuses)
+
+
+print (&amp;quot;************Tweet Entities*********************&amp;quot;)
+print (&amp;quot;***********************************************&amp;quot;)
+print (&amp;quot;&amp;quot;)
+print (&amp;quot;**************TOP 50 HANDLES*******************&amp;quot;)
+# json.dumps([dict(mpn=pn) for pn in lst])
+print (json.dumps(screen_names[0:50], indent=1))
+print (&amp;quot;&amp;quot;)
+print (&amp;quot;**************TOP 50 HASHTAGS*****************&amp;quot;)
+print(json.dumps(hashtags[0:50], indent=1))
+print (&amp;quot;&amp;quot;)
+print (&amp;quot;**************TOP 50 URLs*********************&amp;quot;)
+print(json.dumps(urls[0:50], indent=1))
+print (&amp;quot;&amp;quot;)
+
+common_entities = get_common_tweet_entities(search_results)
+
+print (&amp;quot;*****************************************************&amp;quot;)
+print (&amp;quot;************Most Common Entities*********************&amp;quot;)
+print (common_entities)
+print (&amp;quot;*****************************************************&amp;quot;)
+print (&amp;quot;*****************************************************&amp;quot;)
+
+
+# calculate average number of words per tweet:
+def analyze_tweet_content(statuses):
+    if len(statuses) == 0:
+        print (&amp;quot;No statuses to analyze&amp;quot;)
+        return
+
+    def average_words(statuses):
+        total_words = sum([ len(s.split()) for s in statuses ]) 
+        return 1.0*total_words/len(statuses)
+
+    status_texts = [ status[&amp;#39;text&amp;#39;] for status in statuses ]
+    screen_names, hashtags, urls, _ = extract_tweet_entities(statuses)
+
+    words = [ w 
+          for t in status_texts 
+              for w in t.split() ]
+
+    print (&amp;quot;Averge words per tweet:&amp;quot;, average_words(status_texts))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To find the account that owns the most favorited tweets of a person:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Analyze a user&amp;#39;s favorite tweets. Insert user handle
+analyze_tweet_content(search_results)
+print (&amp;quot;*****************************************************&amp;quot;)
+print (&amp;quot;*****************************************************&amp;quot;)
+analyze_favorites(twitter_api, &amp;quot;theebecky&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The full code can be found &lt;a href=&quot;&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>

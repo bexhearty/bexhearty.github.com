@@ -19,7 +19,7 @@
         <div class="Profile">
           <a class="Profile-avatar" href="/"></a>
           <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
-          <p class="Profile-role"><a href="http://www.datasommelier.com/#/home">Data Sommelier </a></p>
+          <p class="Profile-role"><a class="Link" href="http://www.datasommelier.com/index.html" target="_blank">Data Sommelier</a></p>
         
           <ul class="Profile-links">
             
@@ -53,7 +53,6 @@ SQLAlchemy allows you to write raw SQL directly and operate in SQL tables using 
 <p>Create an engine that establishes a connection with the database and sets the framework in order to make SQL requests. Like so:</p>
 <pre><code>from sqlalchemy import create_engine
 engine = create_engine(&#39;sqlite:////phonebook.db&#39;, echo=True)
-# if working on a PC use:  engine = create_engine(&#39;sqlite:///C:\\folder\\path\\phonebook.db&#39;, echo=True)
 </code></pre><h3 id="define-tables-">Define tables:</h3>
 <p>Create a class call <code>Base</code> (using <code>declarative_base</code>) to define our various tables - SQLAlchemy will refer to this class to create the table schemas. Use the <code>__tablename__</code> member to name the table and <code>__repr__</code> method when printing a table row. Like so:</p>
 <pre><code>from sqlalchemy import Column, Integer, String
