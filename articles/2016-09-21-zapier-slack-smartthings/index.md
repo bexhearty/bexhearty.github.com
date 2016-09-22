@@ -23,5 +23,5 @@ If I get the slack message when I’m not near my vitamins, I can just hit `remi
 
 ![](https://cldup.com/siwQI7CEIT.png)
 
-This reminder has been so helpful that I am going to replicate a similar project using a Raspberry Pi and a sensor connected to the dog food container. That way both my husband and I know when the dawgs have been fed to avoid double meals.
+This reminder has been so helpful that I am going to replicate a similar project using a Raspberry Pi and a sensor connected to the dog food container. That way both my husband and I know when the dawgs have been fed and unfortunately for them, prevent double dinners.
 
