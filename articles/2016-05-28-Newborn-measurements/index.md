@@ -15,13 +15,15 @@ In statistcs, a z-score is equivalent to how many standard deviations your obser
 * My child measures 53.34 cm of length at birth
 * The mean of length in newborn boys is [49.9 cm](http://www.who.int/childgrowth/standards/LFA_boys_0_13_zscores.pdf?ua=1)
 * The standard deviation of length in newborn boys is [1.89 cm](http://www.who.int/childgrowth/standards/LFA_boys_0_13_zscores.pdf?ua=1)
- 
+
+(The above mean and standard deviation are taken from data at the World Health Organization - the leading organization promoting these percentiles)
+
 Then we can calculate the z-score, like so:
 
 [My Measure - Mean] / Standard Deviation = z-score
 
 So for us, we get a z-score of 1.82 ( [53.34 - 49.9] / 1.89 = 1.82). Looking at a [z-score chart](http://math.arizona.edu/~rsims/ma464/standardnormaltable.pdf), we gather that 1.82 corresponds to 0.9641, which means that 96.41% of the population fall at or below this measure.
 
-Turns out that according to the World Health Organization the data for some measurements, such as the weight, is not normally distributed - it is right skewed (the right side - big babies - is longer than the left). It made me wonder if it is because all the malnutrition kids data never makes it into the WHO database for lack of resources.  
+According to the World Health Organization the data for some measurements such as weight, is [not normally distributed](http://www.who.int/childgrowth/training/module_c_interpreting_indicators.pdf) - it is right skewed (the right side - big babies - is longer than the left). Cross checking this reference by looking at a different data set, from a different source -babies born only in the US- reveals a contradiction: the data set is in fact symmetrical (a little kurtotic but symmetrical). Which raises more questions about the validity of the WHO's percentile obsession.
 
-So they'll tell you that your baby is in the 34% in weight, 96% of height, and 90% of brain circumpherence. So what? Does it all mean that my baby is tall, dark, handsome and wicked smart and because of that he is going to be accepted into daycare and then into Harvard, and the become POTUS? Sure mom. Especially if you weigh him after feeding him a big meal and before changing that dirty diaper. 
+So they'll tell you that your baby is in the 34% in weight, 96% of height, and 90% of brain circumpherence. So what? Does it all mean that my baby is tall, dark, handsome and wicked smart and because of that he is going to be accepted into daycare and then into Harvard, and the become POTUS? Sure mom. Especially if you weigh him after a big meal. 
