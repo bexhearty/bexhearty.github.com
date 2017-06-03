@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Virtual Stacks &amp; Promises</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role"><a class="Link" href="http://www.datasommelier.com/index.html" target="_blank">Data Sommelier</a></p>
+        
+          <ul class="Profile-links">
+            
+            <a class="Profile-link Profile-github-link" href="https://github.com/TheBecky">GitHub</a>
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-email-link" href="mailto:becky@datasommelier.com">Email</a>
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">Virtual Stacks &amp; Promises</h1>
+  <time class="Article-date" datetime="2017-02-20T00:00:00.000Z">Sunday, 19 February 2017</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>The quagmire of async code</p>
+<p>Consider Express middleware. Express allows you to specify a chain of middleware - a number of functions that are called, in order before the final request handler is called. Any middleware might decide that an error occurred, at which point it calls <code>next()</code> with an error, skips all the other middleware, and jumps to the nearest error-handling middleware.  To be able to call functions in the order in which they are added, Express needs functionality similar to the <a href="http://blog.datasommelier.com/the-stack/">JS stack</a>, but because Express was designed to allow middlewares to handle async operations, we are not able to use the JS stack directly. To solve this issue Express implements a ‘virtual stack’ that works like the JS stack, but it doesn’t directly use the JS stack.  </p>
+<p>The virtual stack provides the same mechanics as the JS stack:</p>
+<ul>
+<li>Nesting of operations: middleware like routers in Express, nested function calls in the JS stack</li>
+<li>Sequential operation: consecutive middlewares for Express, consecutive lines of code in the JS stack</li>
+<li>Interruption of the normal execution path, followed by ‘stack unwinding’ and searching for the nearest error handler: error-handling middleware (handles the error) and next(err) (which interrupts the normal execution path) in Express, a catch block (specifically the part that handles the error) and the throw (which is what interrupts the normal excecution path) in the JS stack.</li>
+</ul>
+<h2 id="promises-and-how-they-relate-to-the-stack-">Promises and how they relate to the stack:</h2>
+<p>The fact that we cannot return any values from an async operation is impractical. It means that we can’t do stuff like <code>asyncThing(otherAsyncThing(), anotherAsyncThing())</code>. It essentially breaks down most of the features in the language because we will never have access to the results at the time we need them, whenever an async anything is involved. Promises exist as a solution to this problem.</p>
+<p>A Promise is synchronously created, before the async operation even starts. In most scenarios, in order to produce a useful Promise, the async operation is passed a callback that is specifically designed to tie into the Promise - that callback, upon completion, calls a resolve/reject function, which itself sets values and then calls some hooks on the Promise object; like the registered .then handlers - and finally, from the function that both created the Promise and initiated the async operation with that special callback, the Promise is immediately, synchronously returned, in the same tick.</p>
+<p>The return value doesn’t exists in the same stack but it provides a placeholder object that later on can be exchanged for the value (through the <code>.then</code> handlers - this handlers also get the async result passed into it).</p>
+<p><strong>So whenever you return anything with Promises, we are always returning other Promises.</strong></p>
+<p>Promises build a ‘virtual stack’ and async callbacks are used to wire up all the behaviour. We are able to get the Promise synchronously but the result that that Promise represents was obtained asynchronously.</p>
+<p>This the main reason that promises exist. It’s a way to ‘regain’ language constructs that would work with sync code but in a way that you can also use them with async code.</p>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "Virtual Stacks &amp; Promises",
+      date: "2017-02-20T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>

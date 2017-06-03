@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Stack</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role"><a class="Link" href="http://www.datasommelier.com/index.html" target="_blank">Data Sommelier</a></p>
+        
+          <ul class="Profile-links">
+            
+            <a class="Profile-link Profile-github-link" href="https://github.com/TheBecky">GitHub</a>
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-email-link" href="mailto:becky@datasommelier.com">Email</a>
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">The Stack</h1>
+  <time class="Article-date" datetime="2016-12-10T00:00:00.000Z">Friday, 9 December 2016</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>Why code executes synchronously</p>
+<p>A stack is an ordered colletion of items.
+In programing, the stack is used to track the execution of an application. When a function is called, an item is added on top of the stack; and when a value is returned, an item is popped off the top of the stack.</p>
+<p><img src="http://i.imgur.com/0yoklCem.png" alt=""></p>
+<p>A stack frame is the collection of all data on the stack associated with one function. After an item is popped off the top of the stack, execution of the application is returned to the previous stack frame (the one below it) with access to the return value. For example:</p>
+<pre><code class="lang-javascript">function a() {
+  console.log(&quot;foo&quot;);
+};
+
+function b() {
+console.log(&quot;here is bar!&quot;)
+};
+
+function c() {
+  console.log(&quot;baz&quot;);
+};
+
+a();
+b();
+c();
+
+// &gt; foo
+// &gt; here is bar!
+// &gt; baz
+</code></pre>
+<p>And this is the behaviour if we were to schedule an async callback in one of those sync functions. Note how the callback is scheduled but not excecuted immediately:</p>
+<pre><code class="lang-javascript"> function a() {
+  console.log(&quot;foo&quot;);
+};
+
+function b(cb){
+  setTimeout(cb, 1)
+};
+
+function c() {
+  console.log(&quot;baz&quot;);
+};
+
+a();
+b(()=&gt;console.log(&quot;skip&quot;));
+c();
+
+// &gt; foo
+// &gt; Code in b gets executed - not the async callback that b scheduled (console.log(&quot;skip&quot;)),
+//   only the code that b itself contains (ie. synchronous code).
+// &gt; baz
+// &gt; skip
+</code></pre>
+<p>The execution order:</p>
+<pre><code>--- tick 0 ---
+1) function a
+2) console.log in function a
+3) function b
+4) setTimeout in function b
+5) function c
+6) console.log in function c
+
+--- tick 1 ---
+7) cb that was setTimeout&#39;d in function b
+8) console.log in that cb
+</code></pre><p>(it might also be tick 45213 instead of tick 1, depending on how many ticks occur before the 1ms is over, but the important part is that it’s not tick 0). This is why <strong>code executes synchronously when you call a function even if it doesn’t contain a return statement</strong>.</p>
+<h4 id="how-does-the-timeout-work-and-where-in-the-stack-is-the-callback-">How does the timeout work? and where in the stack is the callback?</h4>
+<p>Because the callback in b is executed in another stack, there’s nothing to return the value to right away. The callback is executed ‘detached’ from the stack in which it was defined. Its important to remember that <strong>any value returned from an async callback (that was invoked directly from the event loop) is lost irrevocably</strong>.</p>
+<h3 id="rules-of-the-stack">Rules of The Stack</h3>
+<ul>
+<li>A ‘return’ means you pop an item off the top of the stack (and pass the return value to the previous item on the stack, returning execution control to it)</li>
+<li>An async callback, executed from the event queue, gets executed with an empty stack to start with</li>
+<li>A callback must unwind the entire stack before the next callback in the queue is executed</li>
+</ul>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "The Stack",
+      date: "2016-12-10T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
