@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2017-06-03T00:11:09.931Z</updated>
+  <updated>2017-06-03T00:13:51.515Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -32,7 +32,7 @@
 &lt;p&gt;The return value doesn’t exists in the same stack but it provides a placeholder object that later on can be exchanged for the value (through the &lt;code&gt;.then&lt;/code&gt; handlers - this handlers also get the async result passed into it).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;So whenever you return anything with Promises, we are always returning other Promises.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Promises build a ‘virtual stack’ and async callbacks are used to wire up all the behaviour. We are able to get the Promise synchronously but the result that that Promise represents was obtained asynchronously.&lt;/p&gt;
-&lt;p&gt;This the main reason that promises exist. It’s a way to ‘regain’ language constructs that would work with sync code but in a way that you can also use them with async code.&lt;/p&gt;
+&lt;p&gt;This the main reason that promises exist. It’s a way to ‘regain’ language constructs that would work with sync code but in a way that you can also use them with async code. Essentially a way to untangle async code.&lt;/p&gt;
 </content>
   </entry>
   <entry>

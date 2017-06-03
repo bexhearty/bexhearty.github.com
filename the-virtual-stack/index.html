@@ -53,7 +53,7 @@
 <p>The return value doesn’t exists in the same stack but it provides a placeholder object that later on can be exchanged for the value (through the <code>.then</code> handlers - this handlers also get the async result passed into it).</p>
 <p><strong>So whenever you return anything with Promises, we are always returning other Promises.</strong></p>
 <p>Promises build a ‘virtual stack’ and async callbacks are used to wire up all the behaviour. We are able to get the Promise synchronously but the result that that Promise represents was obtained asynchronously.</p>
-<p>This the main reason that promises exist. It’s a way to ‘regain’ language constructs that would work with sync code but in a way that you can also use them with async code.</p>
+<p>This the main reason that promises exist. It’s a way to ‘regain’ language constructs that would work with sync code but in a way that you can also use them with async code. Essentially a way to untangle async code.</p>
 
   </div>
 </article>
