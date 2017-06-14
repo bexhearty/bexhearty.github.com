@@ -3,7 +3,7 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2017-06-03T00:13:51.515Z</updated>
+  <updated>2017-06-14T03:41:49.648Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
@@ -16,10 +16,11 @@
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;The quagmire of async code&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Untangling async code&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;The quagmire of async code&lt;/p&gt;
-&lt;p&gt;Consider Express middleware. Express allows you to specify a chain of middleware - a number of functions that are called, in order before the final request handler is called. Any middleware might decide that an error occurred, at which point it calls &lt;code&gt;next()&lt;/code&gt; with an error, skips all the other middleware, and jumps to the nearest error-handling middleware.  To be able to call functions in the order in which they are added, Express needs functionality similar to the &lt;a href=&quot;http://blog.datasommelier.com/the-stack/&quot;&gt;JS stack&lt;/a&gt;, but because Express was designed to allow middlewares to handle async operations, we are not able to use the JS stack directly. To solve this issue Express implements a ‘virtual stack’ that works like the JS stack, but it doesn’t directly use the JS stack.  &lt;/p&gt;
+    <content type="html">&lt;p&gt;Untangling async code&lt;/p&gt;
+&lt;p&gt;Consider Express middleware. Express allows you to specify a chain of middleware - a number of functions that are called, in order before the final request handler is called. Any middleware might decide that an error occurred, at which point it calls &lt;code&gt;next()&lt;/code&gt; with an error, skips all the other middleware, and jumps to the nearest error-handling middleware.  To be able to call functions in the order in which they are added, Express needs functionality similar to the JS stack (when a function is called, an item is added on top of the stack; and when a value is returned, an item is popped off the top of the stack), but because Express was designed to allow middlewares to handle async operations, we are not able to use the JS stack directly.&lt;/p&gt;
+&lt;p&gt;To solve this issue Express implements a ‘virtual stack’ that works like the JS stack, but it doesn’t directly use the JS stack.  &lt;/p&gt;
 &lt;p&gt;The virtual stack provides the same mechanics as the JS stack:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Nesting of operations: middleware like routers in Express, nested function calls in the JS stack&lt;/li&gt;
@@ -36,83 +37,77 @@
 </content>
   </entry>
   <entry>
-    <title>The Stack</title>
-    <link href="http://blog.datasommelier.com/the-stack"/>
-    <id>http://blog.datasommelier.com/the-stack</id>
-    <updated>2016-12-10T00:00:00.000Z</updated>
+    <title>Promises</title>
+    <link href="http://blog.datasommelier.com/promises"/>
+    <id>http://blog.datasommelier.com/promises</id>
+    <updated>2017-01-10T00:00:00.000Z</updated>
     <author>
       <name>Becky Jaimes</name>
     </author>
-    <summary type="html">&lt;p&gt;Why code executes synchronously&lt;/p&gt;
+    <summary type="html">&lt;p&gt;What are promises&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Why code executes synchronously&lt;/p&gt;
-&lt;p&gt;A stack is an ordered colletion of items.
-In programing, the stack is used to track the execution of an application. When a function is called, an item is added on top of the stack; and when a value is returned, an item is popped off the top of the stack.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/0yoklCem.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;A stack frame is the collection of all data on the stack associated with one function. After an item is popped off the top of the stack, execution of the application is returned to the previous stack frame (the one below it) with access to the return value. For example:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;function a() {
-  console.log(&amp;quot;foo&amp;quot;);
-};
-
-function b() {
-console.log(&amp;quot;here is bar!&amp;quot;)
-};
-
-function c() {
-  console.log(&amp;quot;baz&amp;quot;);
-};
-
-a();
-b();
-c();
-
-// &amp;gt; foo
-// &amp;gt; here is bar!
-// &amp;gt; baz
+    <content type="html">&lt;p&gt;What are promises&lt;/p&gt;
+&lt;p&gt;A promise is an object that represents an async operation (process) that’s still in progress.  The purpose of Promises is to make it easier to write sequential code.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;Promise.try(() =&amp;gt; {
+  return taskOne();
+}).then((result) =&amp;gt; {
+  return taskTwo();
+}).then((result) =&amp;gt; {
+  return taskThree();
+});
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And this is the behaviour if we were to schedule an async callback in one of those sync functions. Note how the callback is scheduled but not excecuted immediately:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt; function a() {
-  console.log(&amp;quot;foo&amp;quot;);
-};
-
-function b(cb){
-  setTimeout(cb, 1)
-};
-
-function c() {
-  console.log(&amp;quot;baz&amp;quot;);
-};
-
-a();
-b(()=&amp;gt;console.log(&amp;quot;skip&amp;quot;));
-c();
-
-// &amp;gt; foo
-// &amp;gt; Code in b gets executed - not the async callback that b scheduled (console.log(&amp;quot;skip&amp;quot;)),
-//   only the code that b itself contains (ie. synchronous code).
-// &amp;gt; baz
-// &amp;gt; skip
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The execution order:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;--- tick 0 ---
-1) function a
-2) console.log in function a
-3) function b
-4) setTimeout in function b
-5) function c
-6) console.log in function c
-
---- tick 1 ---
-7) cb that was setTimeout&amp;#39;d in function b
-8) console.log in that cb
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;(it might also be tick 45213 instead of tick 1, depending on how many ticks occur before the 1ms is over, but the important part is that it’s not tick 0). This is why &lt;strong&gt;code executes synchronously when you call a function even if it doesn’t contain a return statement&lt;/strong&gt;.&lt;/p&gt;
-&lt;h4 id=&quot;how-does-the-timeout-work-and-where-in-the-stack-is-the-callback-&quot;&gt;How does the timeout work? and where in the stack is the callback?&lt;/h4&gt;
-&lt;p&gt;Because the callback in b is executed in another stack, there’s nothing to return the value to right away. The callback is executed ‘detached’ from the stack in which it was defined. Its important to remember that &lt;strong&gt;any value returned from an async callback (that was invoked directly from the event loop) is lost irrevocably&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;rules-of-the-stack&quot;&gt;Rules of The Stack&lt;/h3&gt;
+&lt;p&gt;In the above snippet, even though there are technically 6 promises involved, only three implement real functionality:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;A ‘return’ means you pop an item off the top of the stack (and pass the return value to the previous item on the stack, returning execution control to it)&lt;/li&gt;
-&lt;li&gt;An async callback, executed from the event queue, gets executed with an empty stack to start with&lt;/li&gt;
-&lt;li&gt;A callback must unwind the entire stack before the next callback in the queue is executed&lt;/li&gt;
+&lt;li&gt;Promise.try(…)  -&amp;gt; Tracks the result of taskOne below&lt;/li&gt;
+&lt;li&gt;taskOne           -&amp;gt; &lt;strong&gt;Implements real functionality&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;.then(…)        -&amp;gt; Propagate the &lt;code&gt;result&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;taskTwo           -&amp;gt; &lt;strong&gt;Implements real functionality&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;.then(…)        -&amp;gt; Propagate the &lt;code&gt;result&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;taskThree         -&amp;gt; &lt;strong&gt;Implements real functionality&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The order of execution:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;--- tick 0 ---
+ Promise.try called
+ taskOne called
+ a Promise is returned from taskOne
+ return that Promise from the Promise.try callback, Promise.try will now track it
+ first .then called (note, .then itself, *not* the callback) with a callback as argument
+ second .then called, with a callback as argument
+ --- tick 10 ---
+ taskOne Promise resolves
+ Promise.try Promise resolves
+ first .then callback called
+ taskTwo called
+ a Promise is returned from taskTwo
+ return that Promise from the first .then callback, the first .then will now track it
+ --- tick 20 ---
+ taskTwo Promise resolves
+ first .then Promise resolves
+ second .then callback called
+ taskThree called
+ a Promise is returned from taskThree
+ return that Promise from the second .then callback, the second .then will now track it
+ --- tick 30 ---
+ taskThree Promise resolves
+ second .then Promise resolves
+ --- the end ---
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;what-s-the-difference-with-callbacks-&quot;&gt;What’s the difference with callbacks?&lt;/h3&gt;
+&lt;p&gt;The main difference between Promises and callbacks is that a Promise is a placeholder object you get access to immediately that represents the in-progress operation; in a callback you have to immediately specify the next behaviour.&lt;/p&gt;
+&lt;p&gt;Nested callbacks also allow for writing sequential async code, but are more difficult to use right.
+Similar functionality of the above snippet as a series of nested callbacks:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;taskOne((err, result) =&amp;gt; {
+  taskTwo((err, result) =&amp;gt; {
+    taskThree((err, result) =&amp;gt; {
+      // ...
+    });
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With error-first callbacks you have to &lt;strong&gt;immediately&lt;/strong&gt; specify the next code to run when a task completes. This is not true for Promises. With Promises you are able to attach behaviour at any time including after the Promise has already resolved. This allows for a lot of improvements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compose things easier - &lt;code&gt;Promise.all([promise1, promise2])&lt;/code&gt; will produce a combined Promise that resolves when &lt;code&gt;promise1&lt;/code&gt; and &lt;code&gt;promise2&lt;/code&gt; both resolve. &lt;code&gt;Promise.all&lt;/code&gt; wires up things internally, which it can do because it can specify behaviour at any time on &lt;code&gt;promise1&lt;/code&gt; and &lt;code&gt;promise2&lt;/code&gt;, including its own behaviour.&lt;/li&gt;
+&lt;li&gt;Propagate errors automatically - Because behaviour can be attached at any time, you can return a Promise from another Promise’s &lt;code&gt;.then&lt;/code&gt; callback, and then that other Promise can wire up error propagation automatically.&lt;/li&gt;
+&lt;li&gt;The returned value isn’t the actual result, but it can be returned and passed around just as easily.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>

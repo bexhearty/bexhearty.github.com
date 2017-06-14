@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Promises</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role"><a class="Link" href="http://www.datasommelier.com/index.html" target="_blank">Data Sommelier</a></p>
+        
+          <ul class="Profile-links">
+            
+            <a class="Profile-link Profile-github-link" href="https://github.com/TheBecky">GitHub</a>
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-email-link" href="mailto:becky@datasommelier.com">Email</a>
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">Promises</h1>
+  <time class="Article-date" datetime="2017-01-10T00:00:00.000Z">Monday, 9 January 2017</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>What are promises</p>
+<p>A promise is an object that represents an async operation (process) that’s still in progress.  The purpose of Promises is to make it easier to write sequential code.</p>
+<pre><code class="lang-javascript">Promise.try(() =&gt; {
+  return taskOne();
+}).then((result) =&gt; {
+  return taskTwo();
+}).then((result) =&gt; {
+  return taskThree();
+});
+</code></pre>
+<p>In the above snippet, even though there are technically 6 promises involved, only three implement real functionality:</p>
+<ul>
+<li>Promise.try(…)  -&gt; Tracks the result of taskOne below</li>
+<li>taskOne           -&gt; <strong>Implements real functionality</strong></li>
+<li>.then(…)        -&gt; Propagate the <code>result</code></li>
+<li>taskTwo           -&gt; <strong>Implements real functionality</strong></li>
+<li>.then(…)        -&gt; Propagate the <code>result</code></li>
+<li>taskThree         -&gt; <strong>Implements real functionality</strong></li>
+</ul>
+<p>The order of execution:</p>
+<pre><code>--- tick 0 ---
+ Promise.try called
+ taskOne called
+ a Promise is returned from taskOne
+ return that Promise from the Promise.try callback, Promise.try will now track it
+ first .then called (note, .then itself, *not* the callback) with a callback as argument
+ second .then called, with a callback as argument
+ --- tick 10 ---
+ taskOne Promise resolves
+ Promise.try Promise resolves
+ first .then callback called
+ taskTwo called
+ a Promise is returned from taskTwo
+ return that Promise from the first .then callback, the first .then will now track it
+ --- tick 20 ---
+ taskTwo Promise resolves
+ first .then Promise resolves
+ second .then callback called
+ taskThree called
+ a Promise is returned from taskThree
+ return that Promise from the second .then callback, the second .then will now track it
+ --- tick 30 ---
+ taskThree Promise resolves
+ second .then Promise resolves
+ --- the end ---
+</code></pre><h3 id="what-s-the-difference-with-callbacks-">What’s the difference with callbacks?</h3>
+<p>The main difference between Promises and callbacks is that a Promise is a placeholder object you get access to immediately that represents the in-progress operation; in a callback you have to immediately specify the next behaviour.</p>
+<p>Nested callbacks also allow for writing sequential async code, but are more difficult to use right.
+Similar functionality of the above snippet as a series of nested callbacks:</p>
+<pre><code class="lang-javascript">taskOne((err, result) =&gt; {
+  taskTwo((err, result) =&gt; {
+    taskThree((err, result) =&gt; {
+      // ...
+    });
+  });
+});
+</code></pre>
+<p>With error-first callbacks you have to <strong>immediately</strong> specify the next code to run when a task completes. This is not true for Promises. With Promises you are able to attach behaviour at any time including after the Promise has already resolved. This allows for a lot of improvements:</p>
+<ul>
+<li>Compose things easier - <code>Promise.all([promise1, promise2])</code> will produce a combined Promise that resolves when <code>promise1</code> and <code>promise2</code> both resolve. <code>Promise.all</code> wires up things internally, which it can do because it can specify behaviour at any time on <code>promise1</code> and <code>promise2</code>, including its own behaviour.</li>
+<li>Propagate errors automatically - Because behaviour can be attached at any time, you can return a Promise from another Promise’s <code>.then</code> callback, and then that other Promise can wire up error propagation automatically.</li>
+<li>The returned value isn’t the actual result, but it can be returned and passed around just as easily.</li>
+</ul>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "Promises",
+      date: "2017-01-10T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>

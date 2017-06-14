@@ -39,8 +39,9 @@
   <h1 class="Article-title Heading Heading--huge">Virtual Stacks &amp; Promises</h1>
   <time class="Article-date" datetime="2017-02-20T00:00:00.000Z">Sunday, 19 February 2017</time>
   <div class="Article-content Prose Prose--medium">
-    <p>The quagmire of async code</p>
-<p>Consider Express middleware. Express allows you to specify a chain of middleware - a number of functions that are called, in order before the final request handler is called. Any middleware might decide that an error occurred, at which point it calls <code>next()</code> with an error, skips all the other middleware, and jumps to the nearest error-handling middleware.  To be able to call functions in the order in which they are added, Express needs functionality similar to the <a href="http://blog.datasommelier.com/the-stack/">JS stack</a>, but because Express was designed to allow middlewares to handle async operations, we are not able to use the JS stack directly. To solve this issue Express implements a ‘virtual stack’ that works like the JS stack, but it doesn’t directly use the JS stack.  </p>
+    <p>Untangling async code</p>
+<p>Consider Express middleware. Express allows you to specify a chain of middleware - a number of functions that are called, in order before the final request handler is called. Any middleware might decide that an error occurred, at which point it calls <code>next()</code> with an error, skips all the other middleware, and jumps to the nearest error-handling middleware.  To be able to call functions in the order in which they are added, Express needs functionality similar to the JS stack (when a function is called, an item is added on top of the stack; and when a value is returned, an item is popped off the top of the stack), but because Express was designed to allow middlewares to handle async operations, we are not able to use the JS stack directly.</p>
+<p>To solve this issue Express implements a ‘virtual stack’ that works like the JS stack, but it doesn’t directly use the JS stack.  </p>
 <p>The virtual stack provides the same mechanics as the JS stack:</p>
 <ul>
 <li>Nesting of operations: middleware like routers in Express, nested function calls in the JS stack</li>
