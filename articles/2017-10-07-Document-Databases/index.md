@@ -2,6 +2,7 @@
 Use a relational database like PostgreSQL unless you have a specific reason not to
 
 ### When to use MongoDB?
+
 Never.
 
 MongoDB is a document-oriented database. These type of databases do not have the concept of tables or predefined columns; instead, document databases store data as a collection of records without schemas, structure or relations to other records. In MongoDB's case, it stores the data under collections (instead of tables) where each row of the collection is one JSON object (without columns).
