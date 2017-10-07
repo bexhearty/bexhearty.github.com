@@ -9,7 +9,7 @@ MongoDB is a document-oriented database. These type of databases do not have the
 
 You'll find many articles talking you out of using MongoDB, so let's skip that part. Something important to note is that many of those articles are written by users that dislike MongoDB for the wrong reasons: they've tried to use a document database when dealing with relational data. And even though it is somewhat forgivable because schema design is hard, using document storage when dealing with relational data is a poor architectural choice (at least most of the time).
 
-There are other articles telling you that you shouldn't use MongoDB because it is a poorly engineered storage option run on marketing and not on technical merit. There are security and support issues have been part of MongoDB since its inception making it a poor choice even if you do need a document store. Those are the better reasons to stay away from MongoDB.
+There are other articles telling you that you shouldn't use MongoDB because it is a poorly engineered storage option run on marketing and not on technical merit. Security and support issues have been part of MongoDB since its inception making it a poor choice even if you do need a document store. Those are the better reasons to stay away from MongoDB.
 
 Because most data is relational, use cases of databases that are designed to store, represent, or work with documents tend to be very specific. A search engine that is constantly executing queries that require more than matching an exact string is one example:
 
