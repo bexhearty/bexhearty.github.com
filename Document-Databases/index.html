@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>What database should I use?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="stylesheet" href="/index.css">
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load('GoKlsjKAo3qj1YDUNsB3Co69yWUZMIUC');
+      }}();
+    </script>
+  </head>
+  <body>
+    <div class="Layout">
+      <div class="Layout-nav">
+        <div class="Profile">
+          <a class="Profile-avatar" href="/"></a>
+          <h1 class="Profile-name Heading Heading--medium"><a href="/">Becky Jaimes</a></h4>
+          <p class="Profile-role"><a class="Link" href="http://www.datasommelier.com/index.html" target="_blank">Data Sommelier</a></p>
+        
+          <ul class="Profile-links">
+            
+            <a class="Profile-link Profile-github-link" href="https://github.com/TheBecky">GitHub</a>
+            
+            
+            
+            
+            
+            <a class="Profile-link Profile-email-link" href="mailto:becky@datasommelier.com">Email</a>
+            <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+          </ul>
+        
+        </div>      </div>
+      <div class="Layout-main"><article class="Article">
+  <a class="Article-home" href="/">Home</a>
+  <h1 class="Article-title Heading Heading--huge">What database should I use?</h1>
+  <time class="Article-date" datetime="2017-10-07T00:00:00.000Z">Friday, 6 October 2017</time>
+  <div class="Article-content Prose Prose--medium">
+    <p>Use a relational database like PostgreSQL unless you have a specific reason not to</p>
+<h3 id="when-to-use-mongodb-">When to use MongoDB?</h3>
+<p>Never.</p>
+<p>MongoDB is a document-oriented database. These type of databases do not have the concept of tables or predefined columns; instead, document databases store data as a collection of records without schemas, structure or relations to other records. In MongoDB’s case, it stores the data under collections (instead of tables) where each row of the collection is one JSON object (without columns).</p>
+<p>You’ll find many articles talking you out of using MongoDB, so let’s skip that part. Something important to note is that many of those articles are written by users that dislike MongoDB for the wrong reasons: they’ve tried to use a document database when dealing with relational data. And even though it is somewhat forgivable because schema design is hard, using document storage when dealing with relational data is a poor architectural choice (at least most of the time).</p>
+<p>There are other articles telling you that you shouldn’t use MongoDB because it is a poorly engineered storage option run on marketing and not on technical merit. There are security and support issues have been part of MongoDB since its inception making it a poor choice even if you do need a document store. Those are the better reasons to stay away from MongoDB.</p>
+<p>Because most data is relational, use cases of databases that are designed to store, represent, or work with documents tend to be very specific. A search engine that is constantly executing queries that require more than matching an exact string is one example:</p>
+<p><img src="https://i.imgur.com/QOcPX3r.png" alt=""></p>
+<p>Notice how the results of querying “longboarding in bolinas” yields results that don’t exactly match the input string. If we had to join data from different tables (or even from the same table) in order to get those results, it could take a long time; instead, we can do a faster search by querying a document database that stores a ‘denormalized’ version of the data which could then be used to create normalized search indexes.</p>
+<p>An example of the indexing process is when variants of a term are mapped to a single, standardized form. For instance mapping <em>“surfing”</em> and <em>“surfer”</em> to <em>“surf”</em> ignoring the distinction between <em>surfing</em> and <em>surfer</em>. This is why when using normalized search indexes, a query for <em>“longboarding in bolinas”</em> ([“longboard”, “bolinas”]) could yield its exact match  <em>“longboarding in bolinas”</em> and also other results including similar phrases such as <em>“Continue on to Bolinas, which has stellar longboard waves…”</em>.</p>
+<p>Full-text search engine queries could get very complex. The main record and all of its related searchable data should be in a single object — even if some of that related data would <em>normally</em> be part of a separate record. This means faster results because with one lookup you are able to get the applicable record instead of following relations.</p>
+<h3 id="which-are-the-best-document-stores-">Which are the best document stores?</h3>
+<p>It depends on your requirements. Cases where document storage is the right solution are almost always really specific, like the previous search example. It also just so happens that PostgreSQL can be used as a document store, because you can store and work with arbitrarily nested data (through a JSONB column and the associated json_* functions). It’s not something commonly used but it can be useful in some cases like for API scraping (so that you can store the original API response even if its exact format may vary over time, outside of your control or knowledge).</p>
+<p>A better question would be something like “If I want to build a search engine, what are the best solutions?” in which case you might consider ElasticSearch (or the underlying tech, Lucene).  The usual answer to “What database should I use?” is <strong>“Use an RDBMS like PostgreSQL unless you have a specific reason not to”</strong>.</p>
+
+  </div>
+</article>
+<script>
+  analytics.page('Article', {
+    article: {
+      name: "What database should I use?",
+      date: "2017-10-07T00:00:00.000Z"
+    }
+  });
+</script>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
