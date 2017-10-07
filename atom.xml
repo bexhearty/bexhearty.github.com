@@ -3,39 +3,11 @@
   <title>Becky Jaimes</title>
   <link href="http://blog.datasommelier.com/atom.xml" rel="self"/>
   <link href="http://blog.datasommelier.com"/>
-  <updated>2017-06-14T03:41:49.648Z</updated>
+  <updated>2017-10-07T18:19:29.981Z</updated>
   <id>http://blog.datasommelier.com</id>
   <author>
     <name>Becky Jaimes</name>
   </author>
-  <entry>
-    <title>Virtual Stacks &amp; Promises</title>
-    <link href="http://blog.datasommelier.com/the-virtual-stack"/>
-    <id>http://blog.datasommelier.com/the-virtual-stack</id>
-    <updated>2017-02-20T00:00:00.000Z</updated>
-    <author>
-      <name>Becky Jaimes</name>
-    </author>
-    <summary type="html">&lt;p&gt;Untangling async code&lt;/p&gt;
-</summary>
-    <content type="html">&lt;p&gt;Untangling async code&lt;/p&gt;
-&lt;p&gt;Consider Express middleware. Express allows you to specify a chain of middleware - a number of functions that are called, in order before the final request handler is called. Any middleware might decide that an error occurred, at which point it calls &lt;code&gt;next()&lt;/code&gt; with an error, skips all the other middleware, and jumps to the nearest error-handling middleware.  To be able to call functions in the order in which they are added, Express needs functionality similar to the JS stack (when a function is called, an item is added on top of the stack; and when a value is returned, an item is popped off the top of the stack), but because Express was designed to allow middlewares to handle async operations, we are not able to use the JS stack directly.&lt;/p&gt;
-&lt;p&gt;To solve this issue Express implements a ‘virtual stack’ that works like the JS stack, but it doesn’t directly use the JS stack.  &lt;/p&gt;
-&lt;p&gt;The virtual stack provides the same mechanics as the JS stack:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Nesting of operations: middleware like routers in Express, nested function calls in the JS stack&lt;/li&gt;
-&lt;li&gt;Sequential operation: consecutive middlewares for Express, consecutive lines of code in the JS stack&lt;/li&gt;
-&lt;li&gt;Interruption of the normal execution path, followed by ‘stack unwinding’ and searching for the nearest error handler: error-handling middleware (handles the error) and next(err) (which interrupts the normal execution path) in Express, a catch block (specifically the part that handles the error) and the throw (which is what interrupts the normal excecution path) in the JS stack.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;promises-and-how-they-relate-to-the-stack-&quot;&gt;Promises and how they relate to the stack:&lt;/h2&gt;
-&lt;p&gt;The fact that we cannot return any values from an async operation is impractical. It means that we can’t do stuff like &lt;code&gt;asyncThing(otherAsyncThing(), anotherAsyncThing())&lt;/code&gt;. It essentially breaks down most of the features in the language because we will never have access to the results at the time we need them, whenever an async anything is involved. Promises exist as a solution to this problem.&lt;/p&gt;
-&lt;p&gt;A Promise is synchronously created, before the async operation even starts. In most scenarios, in order to produce a useful Promise, the async operation is passed a callback that is specifically designed to tie into the Promise - that callback, upon completion, calls a resolve/reject function, which itself sets values and then calls some hooks on the Promise object; like the registered .then handlers - and finally, from the function that both created the Promise and initiated the async operation with that special callback, the Promise is immediately, synchronously returned, in the same tick.&lt;/p&gt;
-&lt;p&gt;The return value doesn’t exists in the same stack but it provides a placeholder object that later on can be exchanged for the value (through the &lt;code&gt;.then&lt;/code&gt; handlers - this handlers also get the async result passed into it).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;So whenever you return anything with Promises, we are always returning other Promises.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Promises build a ‘virtual stack’ and async callbacks are used to wire up all the behaviour. We are able to get the Promise synchronously but the result that that Promise represents was obtained asynchronously.&lt;/p&gt;
-&lt;p&gt;This the main reason that promises exist. It’s a way to ‘regain’ language constructs that would work with sync code but in a way that you can also use them with async code. Essentially a way to untangle async code.&lt;/p&gt;
-</content>
-  </entry>
   <entry>
     <title>Promises</title>
     <link href="http://blog.datasommelier.com/promises"/>
